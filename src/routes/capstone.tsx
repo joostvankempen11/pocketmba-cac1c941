@@ -4,6 +4,7 @@ import { AppShell } from "@/components/AppShell";
 import { FeedbackCard } from "@/components/Feedback";
 import { capstoneSections } from "@/content/curriculum";
 import { gradeAssignment } from "@/lib/ai.functions";
+import { useServerFn } from "@tanstack/react-start";
 import { useProgress } from "@/lib/progress-store";
 import { Loader2, Trophy } from "lucide-react";
 
@@ -68,6 +69,7 @@ function CapstoneSection({
   businessContext: string;
   onSaved: (r: NonNullable<ReturnType<typeof useProgress.getState>["capstone"][string]>) => void;
 }) {
+  const grade = useServerFn(gradeAssignment);
   const [submission, setSubmission] = useState(prior?.submission ?? "");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -79,7 +81,7 @@ function CapstoneSection({
     setLoading(true);
     setError(null);
     try {
-      const fb = await gradeAssignment({
+      const fb = await grade({
         data: {
           assignmentTitle: section.title,
           prompt: `BUSINESS CONTEXT (for grader): ${businessContext || "Not provided — grade on internal consistency."}\n\nSECTION PROMPT:\n${section.prompt}`,

@@ -4,6 +4,7 @@ import { AppShell } from "@/components/AppShell";
 import { FeedbackCard } from "@/components/Feedback";
 import { getWeek } from "@/content/curriculum";
 import { gradeAssignment } from "@/lib/ai.functions";
+import { useServerFn } from "@tanstack/react-start";
 import { useProgress } from "@/lib/progress-store";
 import { Loader2 } from "lucide-react";
 
@@ -23,6 +24,7 @@ function AssignmentPage() {
 
   const prior = useProgress((s) => s.assignments[`${weekNum}-${a.id}`]);
   const save = useProgress((s) => s.setAssignment);
+  const grade = useServerFn(gradeAssignment);
 
   const [submission, setSubmission] = useState(prior?.submission ?? "");
   const [loading, setLoading] = useState(false);
@@ -34,7 +36,7 @@ function AssignmentPage() {
     setLoading(true);
     setError(null);
     try {
-      const fb = await gradeAssignment({
+      const fb = await grade({
         data: {
           assignmentTitle: a.title,
           prompt: a.prompt,

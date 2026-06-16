@@ -9,16 +9,29 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TutorRouteImport } from './routes/tutor'
 import { Route as CurriculumRouteImport } from './routes/curriculum'
+import { Route as CapstoneRouteImport } from './routes/capstone'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WeekWeekRouteImport } from './routes/week.$week'
 import { Route as QuizWeekRouteImport } from './routes/quiz.$week'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as LessonWeekLessonRouteImport } from './routes/lesson.$week.$lesson'
+import { Route as AssignmentWeekIdRouteImport } from './routes/assignment.$week.$id'
 
+const TutorRoute = TutorRouteImport.update({
+  id: '/tutor',
+  path: '/tutor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CurriculumRoute = CurriculumRouteImport.update({
   id: '/curriculum',
   path: '/curriculum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CapstoneRoute = CapstoneRouteImport.update({
+  id: '/capstone',
+  path: '/capstone',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -46,75 +59,115 @@ const LessonWeekLessonRoute = LessonWeekLessonRouteImport.update({
   path: '/lesson/$week/$lesson',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AssignmentWeekIdRoute = AssignmentWeekIdRouteImport.update({
+  id: '/assignment/$week/$id',
+  path: '/assignment/$week/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/capstone': typeof CapstoneRoute
   '/curriculum': typeof CurriculumRoute
+  '/tutor': typeof TutorRoute
   '/api/chat': typeof ApiChatRoute
   '/quiz/$week': typeof QuizWeekRoute
   '/week/$week': typeof WeekWeekRoute
+  '/assignment/$week/$id': typeof AssignmentWeekIdRoute
   '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/capstone': typeof CapstoneRoute
   '/curriculum': typeof CurriculumRoute
+  '/tutor': typeof TutorRoute
   '/api/chat': typeof ApiChatRoute
   '/quiz/$week': typeof QuizWeekRoute
   '/week/$week': typeof WeekWeekRoute
+  '/assignment/$week/$id': typeof AssignmentWeekIdRoute
   '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/capstone': typeof CapstoneRoute
   '/curriculum': typeof CurriculumRoute
+  '/tutor': typeof TutorRoute
   '/api/chat': typeof ApiChatRoute
   '/quiz/$week': typeof QuizWeekRoute
   '/week/$week': typeof WeekWeekRoute
+  '/assignment/$week/$id': typeof AssignmentWeekIdRoute
   '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/capstone'
     | '/curriculum'
+    | '/tutor'
     | '/api/chat'
     | '/quiz/$week'
     | '/week/$week'
+    | '/assignment/$week/$id'
     | '/lesson/$week/$lesson'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/capstone'
     | '/curriculum'
+    | '/tutor'
     | '/api/chat'
     | '/quiz/$week'
     | '/week/$week'
+    | '/assignment/$week/$id'
     | '/lesson/$week/$lesson'
   id:
     | '__root__'
     | '/'
+    | '/capstone'
     | '/curriculum'
+    | '/tutor'
     | '/api/chat'
     | '/quiz/$week'
     | '/week/$week'
+    | '/assignment/$week/$id'
     | '/lesson/$week/$lesson'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CapstoneRoute: typeof CapstoneRoute
   CurriculumRoute: typeof CurriculumRoute
+  TutorRoute: typeof TutorRoute
   ApiChatRoute: typeof ApiChatRoute
   QuizWeekRoute: typeof QuizWeekRoute
   WeekWeekRoute: typeof WeekWeekRoute
+  AssignmentWeekIdRoute: typeof AssignmentWeekIdRoute
   LessonWeekLessonRoute: typeof LessonWeekLessonRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tutor': {
+      id: '/tutor'
+      path: '/tutor'
+      fullPath: '/tutor'
+      preLoaderRoute: typeof TutorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/curriculum': {
       id: '/curriculum'
       path: '/curriculum'
       fullPath: '/curriculum'
       preLoaderRoute: typeof CurriculumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/capstone': {
+      id: '/capstone'
+      path: '/capstone'
+      fullPath: '/capstone'
+      preLoaderRoute: typeof CapstoneRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -152,15 +205,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LessonWeekLessonRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/assignment/$week/$id': {
+      id: '/assignment/$week/$id'
+      path: '/assignment/$week/$id'
+      fullPath: '/assignment/$week/$id'
+      preLoaderRoute: typeof AssignmentWeekIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CapstoneRoute: CapstoneRoute,
   CurriculumRoute: CurriculumRoute,
+  TutorRoute: TutorRoute,
   ApiChatRoute: ApiChatRoute,
   QuizWeekRoute: QuizWeekRoute,
   WeekWeekRoute: WeekWeekRoute,
+  AssignmentWeekIdRoute: AssignmentWeekIdRoute,
   LessonWeekLessonRoute: LessonWeekLessonRoute,
 }
 export const routeTree = rootRouteImport
