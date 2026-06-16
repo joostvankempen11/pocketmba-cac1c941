@@ -69,7 +69,7 @@ export function TutorChat({ context, sessionId, compact = false }: { context?: s
                 )}
               >
                 {m.role === "assistant" ? (
-                  <div className="prose prose-sm dark:prose-invert max-w-none [&_p]:my-2 [&_ul]:my-2 [&_pre]:my-2">
+                  <div className="markdown text-sm leading-relaxed">
                     <ReactMarkdown>{text}</ReactMarkdown>
                   </div>
                 ) : (
