@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "PocketMBA" },
+      { name: "description", content: "MBA Fast Track offers a comprehensive 12-week MBA program within a mobile application." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "PocketMBA" },
+      { property: "og:description", content: "MBA Fast Track offers a comprehensive 12-week MBA program within a mobile application." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "PocketMBA" },
+      { name: "twitter:description", content: "MBA Fast Track offers a comprehensive 12-week MBA program within a mobile application." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c156682b-f10c-4d38-8b58-5d6367facb7e/id-preview-abc2082c--30979ff8-edbb-4141-b117-b04b9002bb06.lovable.app-1781593846620.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c156682b-f10c-4d38-8b58-5d6367facb7e/id-preview-abc2082c--30979ff8-edbb-4141-b117-b04b9002bb06.lovable.app-1781593846620.png" },
     ],
     links: [
       {
