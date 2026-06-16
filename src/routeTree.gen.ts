@@ -9,12 +9,31 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as CurriculumRouteImport } from './routes/curriculum'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as WeekWeekRouteImport } from './routes/week.$week'
+import { Route as QuizWeekRouteImport } from './routes/quiz.$week'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
+import { Route as LessonWeekLessonRouteImport } from './routes/lesson.$week.$lesson'
 
+const CurriculumRoute = CurriculumRouteImport.update({
+  id: '/curriculum',
+  path: '/curriculum',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeekWeekRoute = WeekWeekRouteImport.update({
+  id: '/week/$week',
+  path: '/week/$week',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizWeekRoute = QuizWeekRouteImport.update({
+  id: '/quiz/$week',
+  path: '/quiz/$week',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiChatRoute = ApiChatRouteImport.update({
@@ -22,40 +41,101 @@ const ApiChatRoute = ApiChatRouteImport.update({
   path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LessonWeekLessonRoute = LessonWeekLessonRouteImport.update({
+  id: '/lesson/$week/$lesson',
+  path: '/lesson/$week/$lesson',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/curriculum': typeof CurriculumRoute
   '/api/chat': typeof ApiChatRoute
+  '/quiz/$week': typeof QuizWeekRoute
+  '/week/$week': typeof WeekWeekRoute
+  '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/curriculum': typeof CurriculumRoute
   '/api/chat': typeof ApiChatRoute
+  '/quiz/$week': typeof QuizWeekRoute
+  '/week/$week': typeof WeekWeekRoute
+  '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/curriculum': typeof CurriculumRoute
   '/api/chat': typeof ApiChatRoute
+  '/quiz/$week': typeof QuizWeekRoute
+  '/week/$week': typeof WeekWeekRoute
+  '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/chat'
+  fullPaths:
+    | '/'
+    | '/curriculum'
+    | '/api/chat'
+    | '/quiz/$week'
+    | '/week/$week'
+    | '/lesson/$week/$lesson'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/chat'
-  id: '__root__' | '/' | '/api/chat'
+  to:
+    | '/'
+    | '/curriculum'
+    | '/api/chat'
+    | '/quiz/$week'
+    | '/week/$week'
+    | '/lesson/$week/$lesson'
+  id:
+    | '__root__'
+    | '/'
+    | '/curriculum'
+    | '/api/chat'
+    | '/quiz/$week'
+    | '/week/$week'
+    | '/lesson/$week/$lesson'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CurriculumRoute: typeof CurriculumRoute
   ApiChatRoute: typeof ApiChatRoute
+  QuizWeekRoute: typeof QuizWeekRoute
+  WeekWeekRoute: typeof WeekWeekRoute
+  LessonWeekLessonRoute: typeof LessonWeekLessonRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/curriculum': {
+      id: '/curriculum'
+      path: '/curriculum'
+      fullPath: '/curriculum'
+      preLoaderRoute: typeof CurriculumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/week/$week': {
+      id: '/week/$week'
+      path: '/week/$week'
+      fullPath: '/week/$week'
+      preLoaderRoute: typeof WeekWeekRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz/$week': {
+      id: '/quiz/$week'
+      path: '/quiz/$week'
+      fullPath: '/quiz/$week'
+      preLoaderRoute: typeof QuizWeekRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/chat': {
@@ -65,12 +145,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lesson/$week/$lesson': {
+      id: '/lesson/$week/$lesson'
+      path: '/lesson/$week/$lesson'
+      fullPath: '/lesson/$week/$lesson'
+      preLoaderRoute: typeof LessonWeekLessonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CurriculumRoute: CurriculumRoute,
   ApiChatRoute: ApiChatRoute,
+  QuizWeekRoute: QuizWeekRoute,
+  WeekWeekRoute: WeekWeekRoute,
+  LessonWeekLessonRoute: LessonWeekLessonRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

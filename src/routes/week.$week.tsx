@@ -13,8 +13,9 @@ export const Route = createFileRoute("/week/$week")({
 
 function WeekPage() {
   const { week } = Route.useParams();
-  const w = getWeek(Number(week));
-  if (!w) throw notFound();
+  const maybeW = getWeek(Number(week));
+  if (!maybeW) throw notFound();
+  const w = maybeW;
   const completed = useProgress((s) => s.completedLessons);
   const quiz = useProgress((s) => s.quizzes[w.week]);
   const assignment = useProgress((s) => s.assignments[`${w.week}-${w.assignment.id}`]);

@@ -16,11 +16,13 @@ export const Route = createFileRoute("/lesson/$week/$lesson")({
 function LessonPage() {
   const { week, lesson } = Route.useParams();
   const weekNum = Number(week);
-  const w = getWeek(weekNum);
-  if (!w) throw notFound();
-  const idx = w.lessons.findIndex((l) => l.id === lesson);
-  const l = w.lessons[idx];
-  if (!l) throw notFound();
+  const maybeW = getWeek(weekNum);
+  if (!maybeW) throw notFound();
+  const w = maybeW;
+  const idx = w.lessons.findIndex((x) => x.id === lesson);
+  const maybeL = w.lessons[idx];
+  if (!maybeL) throw notFound();
+  const l = maybeL;
 
   const markComplete = useProgress((s) => s.markLessonComplete);
   const isComplete = useProgress((s) => Boolean(s.completedLessons[`${weekNum}-${l.id}`]));

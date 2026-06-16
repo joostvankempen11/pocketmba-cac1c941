@@ -13,8 +13,9 @@ export const Route = createFileRoute("/quiz/$week")({
 
 function QuizPage() {
   const { week } = Route.useParams();
-  const w = getWeek(Number(week));
-  if (!w) throw notFound();
+  const maybeW = getWeek(Number(week));
+  if (!maybeW) throw notFound();
+  const w = maybeW;
 
   const setQuizResult = useProgress((s) => s.setQuizResult);
   const prior = useProgress((s) => s.quizzes[w.week]);
