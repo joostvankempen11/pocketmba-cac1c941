@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import ReactMarkdown from "react-markdown";
 import { AppShell } from "@/components/AppShell";
 import { TutorChat } from "@/components/TutorChat";
+import { FurtherStudy } from "@/components/FurtherStudy";
 import { getWeek } from "@/content/curriculum";
 import { useProgress } from "@/lib/progress-store";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
@@ -43,6 +44,10 @@ function LessonPage() {
           </Link>
           <div className="markdown mt-4 max-w-[68ch]">
             <ReactMarkdown>{l.body}</ReactMarkdown>
+          </div>
+
+          <div className="max-w-[68ch]">
+            <FurtherStudy videos={l.videos} readings={l.readings} />
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-border pt-6">

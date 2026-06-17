@@ -1,8 +1,17 @@
+export type Resource = {
+  title: string;
+  source: string; // e.g. "Harvard Business Review", "YouTube — Aswath Damodaran"
+  url: string;
+  note?: string;
+};
+
 export type Lesson = {
   id: string;
   title: string;
   summary: string;
   body: string; // markdown
+  videos?: Resource[];
+  readings?: Resource[];
 };
 
 export type QuizQuestion = {
