@@ -25,3 +25,9 @@
     }
   }
 }
+
+{
+  "compilerOptions": {
+    "skipLibCheck": true
+  }
+}
