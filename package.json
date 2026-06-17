@@ -11,7 +11,8 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "@tanstack/react-router": "^1.168.25",
-    "@tanstack/react-query": "^5.0.0"
+    "@tanstack/react-query": "^5.0.0",
+    "tw-animate-css": "^1.2.0"
   },
   "devDependencies": {
     "vite": "^7.3.0",
