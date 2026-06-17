@@ -1,3 +1,4 @@
+import handler from "../dist/server/server.js";
 
-// api/index.js
-export { default } from "../dist/server/server.js";
+export default handler;
+``
