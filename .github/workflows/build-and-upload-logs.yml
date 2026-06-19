@@ -1,0 +1,60 @@
+name: Build and upload logs
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies and capture output
+        run: |
+          set -o pipefail
+          echo "=== npm ci ===" > build-log.txt
+          npm ci 2>&1 | tee -a build-log.txt || true
+
+      - name: Build and capture output
+        run: |
+          echo "=== npm run build ===" >> build-log.txt
+          npm run build 2>&1 | tee -a build-log.txt || true
+
+      - name: Check for dist directory
+        id: check_dist
+        run: |
+          if [ -d "dist" ]; then
+            echo "found=true" >> $GITHUB_OUTPUT
+            ls -la dist > dist-listing.txt || true
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Upload build log
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build-log.txt
+
+      - name: Upload dist artifact (only if present)
+        if: steps.check_dist.outputs.found == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Upload dist listing (if present)
+        if: steps.check_dist.outputs.found == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-listing
+          path: dist-listing.txt
