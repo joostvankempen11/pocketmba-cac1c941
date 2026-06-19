@@ -14,14 +14,6 @@ export default defineConfig({
   vite: {
     build: {
       outDir: 'dist',
-      rollupOptions: {
-        output: {
-          dir: 'dist',
-        },
-      },
-    },
-    ssr: {
-      noExternal: ['@tanstack/react-router', '@tanstack/react-query', 'swr'],
     },
   },
 });
