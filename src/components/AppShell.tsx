@@ -1,7 +1,7 @@
 import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
-import { BookOpen, ChevronLeft, GraduationCap, LayoutDashboard, MessagesSquare, Trophy } from "lucide-react";
+import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, MessagesSquare, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
@@ -94,11 +94,10 @@ export function AppShell({ children }: { children: ReactNode }) {
             {canGoBack && (
               <button
                 onClick={() => navigate({ to: ".." })}
-                className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium text-primary hover:bg-primary/10"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm"
                 aria-label="Go back"
               >
-                <ChevronLeft className="h-5 w-5" />
-                Back
+                <ArrowLeft className="h-5 w-5" />
               </button>
             )}
             <Link to="/" className="flex items-center gap-2">
