@@ -6,14 +6,8 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Trigger republish
 export default defineConfig({
   tanstackStart: {
     ssr: false,
-  },
-  vite: {
-    build: {
-      outDir: 'dist',
-    },
   },
 });
