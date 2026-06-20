@@ -1,7 +1,7 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
-import { BookOpen, GraduationCap, LayoutDashboard, MessagesSquare, Trophy } from "lucide-react";
+import { BookOpen, ChevronLeft, GraduationCap, LayoutDashboard, MessagesSquare, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
