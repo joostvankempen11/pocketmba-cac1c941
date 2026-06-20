@@ -1,7 +1,7 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
-import { BookOpen, GraduationCap, LayoutDashboard, MessagesSquare, Trophy } from "lucide-react";
+import { BookOpen, ChevronLeft, GraduationCap, LayoutDashboard, MessagesSquare, Trophy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
@@ -60,6 +60,9 @@ export function AppShell({ children }: { children: ReactNode }) {
     </Link>
   );
 
+  const navigate = useNavigate();
+  const canGoBack = pathname !== "/";
+
   return (
     <div className="flex min-h-screen bg-background text-foreground">
       <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-sidebar-border bg-sidebar md:flex">
@@ -86,11 +89,23 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
       </aside>
       <main className="min-w-0 flex-1">
-        <div className="border-b border-border bg-background/80 px-4 py-3 md:hidden">
-          <Link to="/" className="flex items-center gap-2">
-            <GraduationCap className="h-5 w-5 text-primary" />
-            <span className="text-sm font-semibold">12-Week MBA</span>
-          </Link>
+        <div className="flex items-center justify-between border-b border-border bg-background/80 px-4 py-3 md:hidden">
+          <div className="flex items-center gap-2">
+            {canGoBack && (
+              <button
+                onClick={() => navigate({ to: ".." })}
+                className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium text-primary hover:bg-primary/10"
+                aria-label="Go back"
+              >
+                <ChevronLeft className="h-5 w-5" />
+                Back
+              </button>
+            )}
+            <Link to="/" className="flex items-center gap-2">
+              <GraduationCap className="h-5 w-5 text-primary" />
+              <span className="text-sm font-semibold">12-Week MBA</span>
+            </Link>
+          </div>
         </div>
         {children}
       </main>
