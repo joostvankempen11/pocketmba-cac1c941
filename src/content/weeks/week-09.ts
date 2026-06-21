@@ -68,7 +68,7 @@ The research converges on a small set of behaviors that reliably predict leaders
 
 None of these are mysterious. All can be learned. The hardest part is doing them consistently under stress.`,
       videos: [
-        { title: "Leadership Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=leadership%20foundations" }, 
+        { title: "Simon Sinek — How Great Leaders Inspire Action (TED)", source: "YouTube", videoId: "qp0HIF3SfI4", fallbackSearchQuery: "what is leadership explained" },
         { title: "Simon Sinek — Why Good Leaders Make You Feel Safe (TED)", source: "YouTube — TED", url: "https://www.youtube.com/watch?v=lmyZMtPVodo" },
         { title: "John Kotter — The Difference Between Leadership and Management", source: "YouTube — Kotter Inc.", url: "https://www.youtube.com/watch?v=2sjQ1zxd6IY" },
       ],
@@ -131,7 +131,7 @@ Companies that produce many leaders (GE in its prime, IBM, Procter & Gamble, McK
 
 The "growth at all costs" startup pattern — promote anyone you can't lose, fire anyone who can't keep up — produces volatile leadership and high turnover. The pattern that scales: hire deliberately for trajectory, develop systematically, and have the courage to make leadership changes when the role outgrows the person.`,
       videos: [
-        { title: "Leadership Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=leadership%20foundations" }, 
+        { title: "Situational leadership (search)", source: "YouTube search", fallbackSearchQuery: "situational leadership explained" },
         { title: "Situational Leadership Explained — Ken Blanchard", source: "YouTube — The Ken Blanchard Companies", url: "https://www.youtube.com/watch?v=9Q4Z32iCC0o" },
         { title: "The 70-20-10 Model for Development", source: "YouTube — Center for Creative Leadership", url: "https://www.youtube.com/watch?v=YJ-MVCJxBN8" },
       ],
@@ -199,7 +199,7 @@ Gary Klein's tool: before making a decision, imagine it has failed catastrophica
 
 Even excellent decision processes produce bad outcomes some of the time. Mature leaders separate process from outcome, own results without abandoning process, learn from what they could have known and accept what they couldn't, and resist the seduction of fast pattern-matching from a single salient failure.`,
       videos: [
-        { title: "Leadership Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=leadership%20foundations" }, 
+        { title: "Decision making under uncertainty (search)", source: "YouTube search", fallbackSearchQuery: "decision making under uncertainty explained" },
         { title: "Annie Duke — Thinking in Bets", source: "YouTube — Google Talks", url: "https://www.youtube.com/watch?v=Lk3iEHM4i7s" },
         { title: "Daniel Kahneman — Thinking, Fast and Slow", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=CjVQJdIrDJ0" },
       ],
@@ -274,7 +274,7 @@ Even the hardest conversation has a humane shape: be direct (don't make the pers
 
 The complement is being *coachable*: thanking people for feedback even when it's wrong, sitting with discomfort before responding, separating the message from the messenger, and acting visibly on the parts that land. Senior leaders who can't take feedback poison their teams' truth-telling. Those who can multiply it.`,
       videos: [
-        { title: "Leadership Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=leadership%20foundations" }, 
+        { title: "Feedback & difficult conversations (search)", source: "YouTube search", fallbackSearchQuery: "how to give feedback difficult conversations explained" },
         { title: "Kim Scott — Radical Candor (Google Talks)", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=MYRfTwOG8a4" },
         { title: "Patrick Lencioni on Crucial Conversations", source: "YouTube — VitalSmarts", url: "https://www.youtube.com/watch?v=22KkRPLm5dQ" },
       ],

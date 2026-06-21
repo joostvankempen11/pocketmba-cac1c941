@@ -48,7 +48,7 @@ This is harder than it looks. Expect to revise each section at least once based 
 
 The point isn't to launch the business in your capstone. It's to have built the *mental model* of a complete business that you can re-apply to every situation you encounter for the rest of your career. Reading a 10-K, evaluating a new initiative, considering a job offer at a startup, sitting on a board — the same integrated framework applies. You now have it.`,
       videos: [
-        { title: "Writing a Business Plan", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=business%20plan%20development" }, 
+        { title: "How to write a business plan (search)", source: "YouTube search", fallbackSearchQuery: "how to write a business plan explained" },
         { title: "How to Write a Business Plan (Y Combinator)", source: "YouTube — Y Combinator", url: "https://www.youtube.com/watch?v=PHHl6JKzC6w" },
         { title: "Aswath Damodaran — The Business of Storytelling", source: "YouTube — NYU Stern", url: "https://www.youtube.com/watch?v=zoaG93muvKs" },
       ],

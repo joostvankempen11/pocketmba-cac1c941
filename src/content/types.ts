@@ -1,8 +1,14 @@
 export type Resource = {
   title: string;
   source: string; // e.g. "Harvard Business Review", "YouTube — Aswath Damodaran"
-  url: string;
+  url?: string;
   note?: string;
+  /** YouTube video id; if set, video is embedded as an iframe. */
+  videoId?: string;
+  /** Optional start time in seconds for the YouTube embed. */
+  startSeconds?: number;
+  /** Search query used when the video is unavailable, removed, or has no videoId. */
+  fallbackSearchQuery?: string;
 };
 
 export type Lesson = {

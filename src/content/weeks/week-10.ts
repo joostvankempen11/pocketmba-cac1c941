@@ -59,7 +59,7 @@ A frequent failure mode: optimizing a single metric until the system breaks else
 
 Most decisions in most organizations are made at levels 1-3. Moving the median decision up a rung is one of the highest-leverage investments a leadership team can make.`,
       videos: [
-        { title: "Data Analytics for Business Professionals", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=data%20analytics%20for%20business%20professionals" }, 
+        { title: "Data-driven decision making (search)", source: "YouTube search", fallbackSearchQuery: "data driven decision making explained" },
         { title: "Hans Rosling — The Best Stats You've Ever Seen (TED)", source: "YouTube — TED", url: "https://www.youtube.com/watch?v=hVimVzgtD6w" },
         { title: "Cassie Kozyrkov — What is Decision Intelligence?", source: "YouTube — Google Cloud Tech", url: "https://www.youtube.com/watch?v=u47B5dPjJYM" },
       ],
@@ -120,7 +120,7 @@ When a test for a rare event flags positive, the probability the event actually 
 
 The Bayesian update: posterior ∝ likelihood × prior. Always ask "what was the base rate?" before treating a positive signal as evidence.`,
       videos: [
-        { title: "Data Analytics for Business Professionals", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=data%20analytics%20for%20business%20professionals" }, 
+        { title: "StatQuest — Hypothesis Testing and the Null Hypothesis", source: "YouTube", videoId: "vemZtEM63GY", fallbackSearchQuery: "hypothesis testing explained statistics" },
         { title: "Statistics Explained — Khan Academy", source: "YouTube — Khan Academy (intro statistics playlist)", url: "https://www.youtube.com/playlist?list=PL1328115D3D8A2566" },
         { title: "Why Most Published Research Findings Are False — Ioannidis", source: "YouTube — TEDMED", url: "https://www.youtube.com/watch?v=4HQGzQVlS8w" },
       ],
@@ -183,7 +183,7 @@ The hard part is organizational, not technical. The patterns that work:
 
 Booking.com, Microsoft, Airbnb, and Netflix have published extensively about their experimentation programs — running tens of thousands of experiments per year and finding that ~10-30% of changes actually improve the metric the team confidently expected to improve. The base rate of confident-but-wrong is humbling.`,
       videos: [
-        { title: "Data Analytics for Business Professionals", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=data%20analytics%20for%20business%20professionals" }, 
+        { title: "A/B testing done right (search)", source: "YouTube search", fallbackSearchQuery: "A/B testing explained statistics StatQuest" },
         { title: "A/B Testing — Trustworthy Online Controlled Experiments (Ron Kohavi)", source: "YouTube — Stanford MS&E", url: "https://www.youtube.com/watch?v=qYE6e2u8tME" },
         { title: "Experimentation at Scale — Airbnb", source: "YouTube — InfoQ", url: "https://www.youtube.com/watch?v=Xh4Cn1bsm6c" },
       ],
@@ -253,7 +253,7 @@ The minimum viable analytical skill set for a senior manager:
 
 Most analytical disasters in business are not from wrong models — they're from these basics not being applied to clear analyses.`,
       videos: [
-        { title: "Data Analytics for Business Professionals", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=data%20analytics%20for%20business%20professionals" }, 
+        { title: "StatQuest — R-squared explained", source: "YouTube", videoId: "2AQKmw14mHM", fallbackSearchQuery: "correlation vs causation explained" },
         { title: "Joshua Angrist — Causal Inference and Natural Experiments", source: "YouTube — Marginal Revolution University", url: "https://www.youtube.com/watch?v=eLliMP1AZJk" },
         { title: "Judea Pearl — The Causal Revolution", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=zHjdd--W6o4" },
       ],
