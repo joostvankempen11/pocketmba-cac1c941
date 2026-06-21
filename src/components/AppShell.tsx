@@ -1,4 +1,4 @@
-import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
+import { Link, useRouterState, useRouter } from "@tanstack/react-router";
 import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
 import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, MessagesSquare, Trophy } from "lucide-react";
@@ -60,7 +60,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     </Link>
   );
 
-  const navigate = useNavigate();
+  const router = useRouter();
   const canGoBack = pathname !== "/";
 
   return (
@@ -93,7 +93,13 @@ export function AppShell({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-2">
             {canGoBack && (
               <button
-                onClick={() => navigate({ to: ".." })}
+                onClick={() => {
+                  if (typeof window !== "undefined" && window.history.length > 1) {
+                    router.history.back();
+                  } else {
+                    router.navigate({ to: "/" });
+                  }
+                }}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm"
                 aria-label="Go back"
               >
