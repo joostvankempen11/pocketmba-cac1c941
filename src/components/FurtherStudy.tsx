@@ -3,6 +3,21 @@ import { BookOpen, PlayCircle, ExternalLink } from "lucide-react";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
+function getYouTubeId(url: string): string | null {
+  try {
+    const u = new URL(url);
+    if (u.hostname === "youtu.be") return u.pathname.slice(1) || null;
+    if (u.hostname.endsWith("youtube.com")) {
+      if (u.pathname === "/watch") return u.searchParams.get("v");
+      const m = u.pathname.match(/^\/(embed|shorts|v)\/([^/]+)/);
+      if (m) return m[2];
+    }
+  } catch {
+    /* noop */
+  }
+  return null;
+}
+
 function hostFromUrl(url: string) {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -58,26 +73,46 @@ export function FurtherStudy({
           <h3 className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
             <PlayCircle className="h-3.5 w-3.5" /> Videos
           </h3>
-          <ul className="grid gap-2 sm:grid-cols-2">
-            {videos.map((v) => (
-              <li key={v.url}>
-                <a
-                  href={v.url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="group block rounded-md border border-border bg-card/40 p-3 hover:border-primary/60 hover:bg-accent"
+          <ul className="grid gap-4 sm:grid-cols-2">
+            {videos.map((v) => {
+              const ytId = getYouTubeId(v.url);
+              return (
+                <li
+                  key={v.url}
+                  className="overflow-hidden rounded-md border border-border bg-card/40"
                 >
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="min-w-0">
-                      <div className="truncate text-sm font-medium">{v.title}</div>
-                      <div className="truncate text-xs text-muted-foreground">{v.source}</div>
-                      {v.note && <div className="mt-1 text-xs text-muted-foreground">{v.note}</div>}
+                  {ytId ? (
+                    <div className="relative aspect-video w-full bg-black">
+                      <iframe
+                        src={`https://www.youtube-nocookie.com/embed/${ytId}`}
+                        title={v.title}
+                        loading="lazy"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 h-full w-full"
+                      />
                     </div>
-                    <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground group-hover:text-foreground" />
-                  </div>
-                </a>
-              </li>
-            ))}
+                  ) : null}
+                  <a
+                    href={v.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="group block p-3 hover:bg-accent"
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="min-w-0">
+                        <div className="truncate text-sm font-medium">{v.title}</div>
+                        <div className="truncate text-xs text-muted-foreground">{v.source}</div>
+                        {v.note && (
+                          <div className="mt-1 text-xs text-muted-foreground">{v.note}</div>
+                        )}
+                      </div>
+                      <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0 text-muted-foreground group-hover:text-foreground" />
+                    </div>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
