@@ -47,7 +47,7 @@ function LessonPage() {
           </div>
 
           <div className="max-w-[68ch]">
-            <FurtherStudy videos={l.videos} readings={l.readings} />
+            <FurtherStudy videos={l.videos} readings={l.readings} lessonTitle={l.title} />
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-border pt-6">
