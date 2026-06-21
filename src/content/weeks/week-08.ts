@@ -52,7 +52,7 @@ Three robust findings managers ignore at their peril:
 - Be cautious with narrow incentives on cognitive work. Use *teams* and *outcomes* rather than individual KPIs where possible.
 - Recognize publicly and specifically. Recognition is one of the most under-used and highest-ROI levers in management.`,
       videos: [
-        { title: "Organizational Behavior Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=organizational%20behavior%20foundations" }, 
+        { title: "Dan Pink — The Puzzle of Motivation (TED)", source: "YouTube", videoId: "rrkrvAUbU9Y", fallbackSearchQuery: "what motivates people at work explained" },
         { title: "Dan Pink — The Puzzle of Motivation (TED)", source: "YouTube — TED", url: "https://www.youtube.com/watch?v=rrkrvAUbU9Y" },
         { title: "RSA Animate — Drive: The Surprising Truth About What Motivates Us", source: "YouTube — RSA", url: "https://www.youtube.com/watch?v=u6XAPnuFjJc" },
       ],
@@ -116,7 +116,7 @@ Counter-measures: explicit dissent (red team, devil's advocate), private predict
 
 Hackman's research on teams: the strongest predictor of team performance is not the talent of individual members but the team's *design* — clear and challenging goals, the right people, enabling structure, supportive context, expert coaching. Top performers in poorly designed teams underperform mediocre performers in well-designed teams.`,
       videos: [
-        { title: "Organizational Behavior Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=organizational%20behavior%20foundations" }, 
+        { title: "Teams & group performance (search)", source: "YouTube search", fallbackSearchQuery: "Google Project Aristotle what makes a great team" },
         { title: "Amy Edmondson — Building a Psychologically Safe Workplace (TEDx)", source: "YouTube — TEDx", url: "https://www.youtube.com/watch?v=LhoLuui9gX8" },
         { title: "Patrick Lencioni — The Five Dysfunctions of a Team", source: "YouTube — TableGroup", url: "https://www.youtube.com/watch?v=GCxct4CR-To" },
       ],
@@ -180,7 +180,7 @@ The most reliable lever is **selection and consequences**. Hire people who match
 
 Large organizations don't have a single culture — they have many, often in tension. Engineering vs sales, finance vs marketing, HQ vs field, legacy business unit vs new division. Strong overall cultures don't eliminate subcultures; they ensure subcultures share enough core assumptions to operate as a system.`,
       videos: [
-        { title: "Organizational Behavior Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=organizational%20behavior%20foundations" }, 
+        { title: "Organizational culture (search)", source: "YouTube search", fallbackSearchQuery: "what is organizational culture explained" },
         { title: "Reed Hastings — Building the Netflix Culture", source: "YouTube — Stanford GSB", url: "https://www.youtube.com/watch?v=8x6tjeu_S5w" },
         { title: "Simon Sinek — The Infinite Game / Trusting Teams", source: "YouTube — Simon Sinek", url: "https://www.youtube.com/watch?v=tye525dEpaQ" },
       ],
@@ -258,7 +258,7 @@ The test: would you be comfortable if your tactics were public? If your boss, yo
 
 Long careers in functional cultures are built on durable trust. Short careers in dysfunctional ones can be built on manipulation. Choose the long career.`,
       videos: [
-        { title: "Organizational Behavior Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=organizational%20behavior%20foundations" }, 
+        { title: "Power, politics, influence (search)", source: "YouTube search", fallbackSearchQuery: "office politics influence at work explained" },
         { title: "Jeffrey Pfeffer — Power: Why Some People Have It and Others Don't", source: "YouTube — Stanford GSB", url: "https://www.youtube.com/watch?v=PgGUKxbWE-Y" },
         { title: "Robert Cialdini — Science of Persuasion", source: "YouTube — Influence at Work", url: "https://www.youtube.com/watch?v=cFdCzN7RYbw" },
       ],

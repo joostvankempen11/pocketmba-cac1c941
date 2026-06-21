@@ -56,7 +56,7 @@ Investors look for fit between the founders and the problem. The strongest signa
 
 Solo founders are rarer and harder than co-founder teams in early stage; the data suggests teams of 2-3 with complementary skills (technical + go-to-market) outperform both solo founders and large founding teams.`,
       videos: [
-        { title: "Entrepreneurship Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=entrepreneurship%20foundations" }, 
+        { title: "Opportunity, problem, market (search)", source: "YouTube search", fallbackSearchQuery: "Y Combinator how to evaluate a startup idea" },
         { title: "Peter Thiel — Competition is for Losers", source: "YouTube — Stanford eCorner / How to Start a Startup", url: "https://www.youtube.com/watch?v=3Fx5Q8xGU8k" },
         { title: "Y Combinator — How to Get Startup Ideas (Paul Graham)", source: "YouTube — Y Combinator", url: "https://www.youtube.com/watch?v=Th8JoIan4dg" },
       ],
@@ -126,7 +126,7 @@ For these, the discipline transfers but the *methods* adapt — pilot programs, 
 
 Once you have signal — customers using, retaining, referring; revenue growing without you pushing — the game changes. The new question is whether *the business model* scales: can you acquire customers at acceptable cost, deliver at acceptable margins, and build the operational capacity for 10x? Many startups achieve product-market fit and then die in the scaling phase because they assumed scale would be easy.`,
       videos: [
-        { title: "Entrepreneurship Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=entrepreneurship%20foundations" }, 
+        { title: "Lean startup & validated learning (search)", source: "YouTube search", fallbackSearchQuery: "Eric Ries lean startup explained" },
         { title: "Eric Ries — The Lean Startup", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=fEvKo90qBns" },
         { title: "Steve Blank — Customer Development", source: "YouTube — Stanford", url: "https://www.youtube.com/watch?v=xOOEvKBJfTU" },
       ],
@@ -202,7 +202,7 @@ Day-one moats are rare. But the business model should have a credible path to on
 
 A great product without a path to defensibility gets copied and competed to zero margin. Defensibility doesn't come from the technology alone — it comes from the *system* of choices that compound over time.`,
       videos: [
-        { title: "Entrepreneurship Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=entrepreneurship%20foundations" }, 
+        { title: "Business model design (search)", source: "YouTube search", fallbackSearchQuery: "business model canvas explained" },
         { title: "Alex Osterwalder — Business Model Canvas Explained", source: "YouTube — Strategyzer", url: "https://www.youtube.com/watch?v=QoAOzMTLP5s" },
         { title: "Andrew Chen — The Cold Start Problem (Network Effects)", source: "YouTube — a16z", url: "https://www.youtube.com/watch?v=qBKvgYDGZjI" },
       ],
@@ -271,7 +271,7 @@ If the answer to all three is no, the program is theater. If yes to all three, i
 
 Even if you never start a company, learning startup methods is now a leadership skill. The pace of change in most industries means that every senior leader will be responsible for some H2 or H3 venture inside their organization. The discipline of validated learning, MVPs, business model design, and protecting innovation from antibodies is general-purpose — not just startup folklore.`,
       videos: [
-        { title: "Entrepreneurship Foundations", source: "LinkedIn Learning", url: "https://www.linkedin.com/learning/search?keywords=entrepreneurship%20foundations" }, 
+        { title: "Corporate innovation (search)", source: "YouTube search", fallbackSearchQuery: "corporate innovation explained" },
         { title: "Clayton Christensen — The Innovator's Dilemma", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=qDrMAzCHFUU" },
         { title: "Rita McGrath — The End of Competitive Advantage", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=Si9DphPEXJM" },
       ],
