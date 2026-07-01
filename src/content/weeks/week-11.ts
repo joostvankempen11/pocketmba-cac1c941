@@ -56,9 +56,8 @@ Investors look for fit between the founders and the problem. The strongest signa
 
 Solo founders are rarer and harder than co-founder teams in early stage; the data suggests teams of 2-3 with complementary skills (technical + go-to-market) outperform both solo founders and large founding teams.`,
       videos: [
-        { title: "Opportunity, problem, market (search)", source: "YouTube search", fallbackSearchQuery: "Y Combinator how to evaluate a startup idea" },
-        { title: "Peter Thiel — Competition is for Losers", source: "YouTube — Stanford eCorner / How to Start a Startup", url: "https://www.youtube.com/watch?v=3Fx5Q8xGU8k" },
-        { title: "Y Combinator — How to Get Startup Ideas (Paul Graham)", source: "YouTube — Y Combinator", url: "https://www.youtube.com/watch?v=Th8JoIan4dg" },
+        { title: "Peter Thiel \u2014 Competition is for Losers", source: "YouTube \u2014 Stanford eCorner / How to Start a Startup", url: "https://www.youtube.com/watch?v=3Fx5Q8xGU8k", fallbackSearchQuery: "Peter Thiel competition losers" },
+        { title: "Y Combinator \u2014 How to Get Startup Ideas (Paul Graham)", source: "YouTube \u2014 Y Combinator", url: "https://www.youtube.com/watch?v=Th8JoIan4dg", fallbackSearchQuery: "Paul Graham startup ideas" },
       ],
       readings: [
         { title: "Why Startups Fail: A New Postmortem", source: "Harvard Business Review", url: "https://hbr.org/2021/05/why-start-ups-fail" },
@@ -126,9 +125,9 @@ For these, the discipline transfers but the *methods* adapt — pilot programs, 
 
 Once you have signal — customers using, retaining, referring; revenue growing without you pushing — the game changes. The new question is whether *the business model* scales: can you acquire customers at acceptable cost, deliver at acceptable margins, and build the operational capacity for 10x? Many startups achieve product-market fit and then die in the scaling phase because they assumed scale would be easy.`,
       videos: [
-        { title: "Lean startup & validated learning (search)", source: "YouTube search", fallbackSearchQuery: "Eric Ries lean startup explained" },
-        { title: "Eric Ries — The Lean Startup", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=fEvKo90qBns" },
-        { title: "Steve Blank — Customer Development", source: "YouTube — Stanford", url: "https://www.youtube.com/watch?v=xOOEvKBJfTU" },
+        { title: "Eric Ries \u2014 The Lean Startup", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=fEvKo90qBns", fallbackSearchQuery: "Eric Ries lean startup" },
+        { title: "Steve Blank \u2014 Customer Development", source: "YouTube \u2014 Stanford", url: "https://www.youtube.com/watch?v=xOOEvKBJfTU", fallbackSearchQuery: "Steve Blank customer development" },
+        { title: "Steve Blank \u2014 Customer Development", source: "YouTube", videoId: "xr2zFXblSRM", fallbackSearchQuery: "Steve Blank customer development" },
       ],
       readings: [
         { title: "Why the Lean Start-Up Changes Everything", source: "Harvard Business Review (Eric Ries / Steve Blank)", url: "https://hbr.org/2013/05/why-the-lean-start-up-changes-everything" },
@@ -202,9 +201,9 @@ Day-one moats are rare. But the business model should have a credible path to on
 
 A great product without a path to defensibility gets copied and competed to zero margin. Defensibility doesn't come from the technology alone — it comes from the *system* of choices that compound over time.`,
       videos: [
-        { title: "Business model design (search)", source: "YouTube search", fallbackSearchQuery: "business model canvas explained" },
-        { title: "Alex Osterwalder — Business Model Canvas Explained", source: "YouTube — Strategyzer", url: "https://www.youtube.com/watch?v=QoAOzMTLP5s" },
-        { title: "Andrew Chen — The Cold Start Problem (Network Effects)", source: "YouTube — a16z", url: "https://www.youtube.com/watch?v=qBKvgYDGZjI" },
+        { title: "Alex Osterwalder \u2014 Business Model Canvas Explained", source: "YouTube \u2014 Strategyzer", url: "https://www.youtube.com/watch?v=QoAOzMTLP5s", fallbackSearchQuery: "business model canvas" },
+        { title: "Andrew Chen \u2014 The Cold Start Problem (Network Effects)", source: "YouTube \u2014 a16z", url: "https://www.youtube.com/watch?v=qBKvgYDGZjI", fallbackSearchQuery: "Andrew Chen cold start problem" },
+        { title: "Andrew Chen \u2014 The Cold Start Problem", source: "YouTube", videoId: "-ILjMq1T13g", fallbackSearchQuery: "Andrew Chen cold start network effects" },
       ],
       readings: [
         { title: "Reinventing Your Business Model", source: "Harvard Business Review (Johnson, Christensen, Kagermann)", url: "https://hbr.org/2008/12/reinventing-your-business-model" },
@@ -271,9 +270,9 @@ If the answer to all three is no, the program is theater. If yes to all three, i
 
 Even if you never start a company, learning startup methods is now a leadership skill. The pace of change in most industries means that every senior leader will be responsible for some H2 or H3 venture inside their organization. The discipline of validated learning, MVPs, business model design, and protecting innovation from antibodies is general-purpose — not just startup folklore.`,
       videos: [
-        { title: "Corporate innovation (search)", source: "YouTube search", fallbackSearchQuery: "corporate innovation explained" },
-        { title: "Clayton Christensen — The Innovator's Dilemma", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=qDrMAzCHFUU" },
-        { title: "Rita McGrath — The End of Competitive Advantage", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=Si9DphPEXJM" },
+        { title: "Clayton Christensen \u2014 The Innovator's Dilemma", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=qDrMAzCHFUU", fallbackSearchQuery: "Christensen innovator's dilemma" },
+        { title: "Rita McGrath \u2014 The End of Competitive Advantage", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=Si9DphPEXJM", fallbackSearchQuery: "Rita McGrath end competitive advantage" },
+        { title: "Rita McGrath \u2014 The End of Competitive Advantage", source: "YouTube", videoId: "wqmVsECbG8E", fallbackSearchQuery: "Rita McGrath transient advantage" },
       ],
       readings: [
         { title: "The Innovator's DNA", source: "Harvard Business Review (Christensen, Dyer, Gregersen)", url: "https://hbr.org/2009/12/the-innovators-dna" },
@@ -283,10 +282,25 @@ Even if you never start a company, learning startup methods is now a leadership 
   ],
   quiz: [
     { id: "q1", prompt: "The riskiest assumption to test first in an early-stage startup is usually:", choices: ["The pricing page conversion rate", "Whether the problem is real and urgent for a defined segment", "Server scalability", "The logo and brand voice"], answerIndex: 1, explanation: "Most startup failure is building something nobody urgently wants; validate the problem before optimizing anything else." },
-    { id: "q2", prompt: "An MVP is best defined as:", choices: ["Version 1.0 of the product with fewer features", "The smallest experiment that produces validated learning about the next decision", "A prototype shown to investors", "The first paid version"], answerIndex: 1, explanation: "MVPs are often not products at all — videos, landing pages, manual delivery — anything that resolves uncertainty fast." },
-    { id: "q3", prompt: "Indirect (cross-side) network effects occur when:", choices: ["More users of the same type make the product more valuable to each other", "More users on one side attract more users on another side", "Data improves the product", "Switching costs rise"], answerIndex: 1, explanation: "Marketplaces have cross-side network effects: more buyers attract more sellers and vice versa." },
-    { id: "q4", prompt: "Christensen's Innovator's Dilemma argues that great incumbents struggle with disruption because:", choices: ["They lack capital", "They listen too closely to best customers and best margins, which steers them away from low-end disruptors", "Their employees are less talented", "They don't believe in disruption"], answerIndex: 1, explanation: "Rational resource allocation to existing customers leads incumbents to ignore disruptors until too late." },
-    { id: "q5", prompt: "A corporate innovation program is most likely to be 'theater' when:", choices: ["It runs hackathons", "It reports to the CEO with autonomous capital", "Promising ventures have no clear path to scale and no real authority to deploy capital", "It funds external startups"], answerIndex: 2, explanation: "Visible activity without authority, capital, or exit ramps signals innovation theater rather than real practice." },
+    { id: "q2", prompt: "A market that is small but growing fast, with underserved customers, is often better than:", choices: ["A large, mature market with dominant incumbents", "Any small market", "No market", "A regulated market"], answerIndex: 0, explanation: "Non-consensus small-and-growing markets have historically produced outsized outcomes." },
+    { id: "q3", prompt: "Peter Thiel's 'competition is for losers' argues that:", choices: ["Never enter a competitive market", "Durable value comes from carving out a monopoly-like position, not competing on undifferentiated features", "Ignore competitors", "Only fund monopolies"], answerIndex: 1, explanation: "Escape competition through differentiation, network effects, or new markets." },
+    { id: "q4", prompt: "A founder should evaluate an opportunity primarily by:", choices: ["Their personal excitement", "Depth and urgency of the problem, market size/growth, and unfair advantage", "Whether investors like it", "Competitor count only"], answerIndex: 1, explanation: "Excitement is table stakes; the three variables above determine expected value." },
+    { id: "q5", prompt: "A 'painkiller' offer is preferable to a 'vitamin' offer because:", choices: ["Painkillers are cheaper", "Urgent, high-pain problems produce faster adoption and willingness to pay", "Vitamins are illegal", "Painkillers require less marketing"], answerIndex: 1, explanation: "Solving an acute problem shortens sales cycles and increases retention." },
+    { id: "q6", prompt: "An MVP is best defined as:", choices: ["Version 1.0 of the product with fewer features", "The smallest experiment that produces validated learning about the next decision", "A prototype shown to investors", "The first paid version"], answerIndex: 1, explanation: "MVPs are often not products at all — videos, landing pages, manual delivery — anything that resolves uncertainty fast." },
+    { id: "q7", prompt: "Vanity metrics differ from actionable metrics in that they:", choices: ["Are hard to measure", "Look good but do not inform decisions", "Are always wrong", "Require more data"], answerIndex: 1, explanation: "Focus on metrics that change behavior, not those that make slides look good." },
+    { id: "q8", prompt: "Steve Blank's customer development starts with:", choices: ["Building the product", "Getting out of the building to talk to potential customers about their problem", "Fundraising", "Hiring sales"], answerIndex: 1, explanation: "Discovery precedes validation, creation, and scaling in the model." },
+    { id: "q9", prompt: "Pivoting is best defined as:", choices: ["Giving up", "A structured change of strategy or product hypothesis based on validated learning", "Cutting the team", "Changing the logo"], answerIndex: 1, explanation: "Pivots are informed by what tests actually revealed, not panic." },
+    { id: "q10", prompt: "A founder who runs a 'concierge MVP' is:", choices: ["Building sophisticated software up front", "Delivering the solution manually to a few customers to validate demand and learn the workflow", "Outsourcing to an agency", "Skipping validation"], answerIndex: 1, explanation: "Manual delivery lets you learn the job-to-be-done before automating it." },
+    { id: "q11", prompt: "Indirect (cross-side) network effects occur when:", choices: ["More users of the same type make the product more valuable to each other", "More users on one side attract more users on another side", "Data improves the product", "Switching costs rise"], answerIndex: 1, explanation: "Marketplaces have cross-side network effects: more buyers attract more sellers and vice versa." },
+    { id: "q12", prompt: "The Business Model Canvas's nine building blocks include all EXCEPT:", choices: ["Customer segments", "Key partners", "Cost structure", "Vision statement"], answerIndex: 3, explanation: "The canvas focuses on operational and economic building blocks; vision sits above the canvas." },
+    { id: "q13", prompt: "A common failure of two-sided marketplaces is:", choices: ["Too much liquidity", "The 'cold start' problem — neither side shows up without the other", "Regulatory approval", "Excess supply"], answerIndex: 1, explanation: "Solving cold start usually requires seeding one side or focusing on a narrow initial slice." },
+    { id: "q14", prompt: "A firm's business model is more defensible when:", choices: ["It relies solely on a single low price", "It combines strong unit economics with network effects, switching costs, or scale advantages", "It copies a competitor exactly", "It ignores costs"], answerIndex: 1, explanation: "Layered advantages make imitation harder." },
+    { id: "q15", prompt: "Revenue model choice (subscription vs one-time vs marketplace take-rate) primarily affects:", choices: ["Nothing important", "Retention economics, cash flow patterns, and required CAC discipline", "Only accounting", "Only tax"], answerIndex: 1, explanation: "The model shapes CLV, working capital, and the entire growth engine." },
+    { id: "q16", prompt: "Christensen's Innovator's Dilemma argues that great incumbents struggle with disruption because:", choices: ["They lack capital", "They listen too closely to best customers and best margins, which steers them away from low-end disruptors", "Their employees are less talented", "They don't believe in disruption"], answerIndex: 1, explanation: "Rational resource allocation to existing customers leads incumbents to ignore disruptors until too late." },
+    { id: "q17", prompt: "A corporate innovation program is most likely to be 'theater' when:", choices: ["It runs hackathons", "It reports to the CEO with autonomous capital", "Promising ventures have no clear path to scale and no real authority to deploy capital", "It funds external startups"], answerIndex: 2, explanation: "Visible activity without authority, capital, or exit ramps signals innovation theater rather than real practice." },
+    { id: "q18", prompt: "A useful structural response to the innovator's dilemma is:", choices: ["Ignore new entrants", "Create separate autonomous units with different metrics, resources, and freedom to cannibalize", "Cut R&D", "Merge with the disruptor immediately"], answerIndex: 1, explanation: "Ambidextrous organizations protect the core while allowing new models to grow with different rules." },
+    { id: "q19", prompt: "Rita McGrath's 'transient advantage' thesis is that:", choices: ["Advantages are permanent once earned", "Competitive advantages are increasingly short-lived, requiring a portfolio of moves rather than one big bet", "Advantage is irrelevant", "Only cost advantages matter"], answerIndex: 1, explanation: "Firms need continuous reconfiguration, not a single defensible position forever." },
+    { id: "q20", prompt: "A large incumbent evaluating a disruptive opportunity should measure success by:", choices: ["Same margins as core business", "Learning velocity and option value early on, with different KPIs from the mature business", "Immediate profit", "Legacy customer approval only"], answerIndex: 1, explanation: "New ventures need discovery-driven metrics, not core-business hurdle rates." },
   ],
   assignment: {
     id: "a1",

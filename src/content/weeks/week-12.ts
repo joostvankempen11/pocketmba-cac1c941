@@ -48,9 +48,10 @@ This is harder than it looks. Expect to revise each section at least once based 
 
 The point isn't to launch the business in your capstone. It's to have built the *mental model* of a complete business that you can re-apply to every situation you encounter for the rest of your career. Reading a 10-K, evaluating a new initiative, considering a job offer at a startup, sitting on a board — the same integrated framework applies. You now have it.`,
       videos: [
-        { title: "How to write a business plan (search)", source: "YouTube search", fallbackSearchQuery: "how to write a business plan explained" },
-        { title: "How to Write a Business Plan (Y Combinator)", source: "YouTube — Y Combinator", url: "https://www.youtube.com/watch?v=PHHl6JKzC6w" },
-        { title: "Aswath Damodaran — The Business of Storytelling", source: "YouTube — NYU Stern", url: "https://www.youtube.com/watch?v=zoaG93muvKs" },
+        { title: "How to Write a Business Plan (Y Combinator)", source: "YouTube \u2014 Y Combinator", url: "https://www.youtube.com/watch?v=PHHl6JKzC6w", fallbackSearchQuery: "how to write business plan YC" },
+        { title: "Aswath Damodaran \u2014 The Business of Storytelling", source: "YouTube \u2014 NYU Stern", url: "https://www.youtube.com/watch?v=zoaG93muvKs", fallbackSearchQuery: "Damodaran business of storytelling" },
+        { title: "How to Write a Business Plan", source: "YouTube", videoId: "n6ecdYd8T6o", fallbackSearchQuery: "how to write business plan" },
+        { title: "The Business of Storytelling", source: "YouTube", videoId: "WKIZ0bicfFw", fallbackSearchQuery: "business of storytelling numbers narrative" },
       ],
       readings: [
         { title: "How to Write a Great Business Plan", source: "Harvard Business Review (Sahlman)", url: "https://hbr.org/1997/07/how-to-write-a-great-business-plan" },
@@ -61,6 +62,9 @@ The point isn't to launch the business in your capstone. It's to have built the 
   quiz: [
     { id: "q1", prompt: "The capstone's main goal is to:", choices: ["Test memorization", "Integrate concepts across the program into one coherent plan", "Generate revenue", "Replace formal MBA"], answerIndex: 1, explanation: "Synthesis is the point — applying many frameworks consistently to one situation." },
     { id: "q2", prompt: "Strong capstone work is mostly characterized by:", choices: ["Length", "Internal consistency, specificity, and honest risk analysis", "Beautiful design", "Citations of every reading"], answerIndex: 1, explanation: "Substance beats form; the grader looks for a coherent, evidence-rich plan that hangs together end-to-end." },
+    { id: "q3", prompt: "A capstone financial model is most useful when it:", choices: ["Contains 20 tabs", "Ties assumptions transparently to strategy and shows how the business generates cash under multiple scenarios", "Hides sensitivities", "Uses only one scenario"], answerIndex: 1, explanation: "Models are decision tools; transparent assumptions and scenario analysis matter more than complexity." },
+    { id: "q4", prompt: "A common capstone weakness is:", choices: ["Too much data", "A gap between strategic narrative and the financial or operational plan", "Being too specific", "Considering competitors"], answerIndex: 1, explanation: "Great capstones align story, numbers, and execution steps." },
+    { id: "q5", prompt: "Damodaran's 'business of storytelling' point is that:", choices: ["Numbers alone convince investors", "A strong plan pairs a credible narrative with disciplined numbers, each constraining the other", "Stories don't matter", "Only spreadsheets matter"], answerIndex: 1, explanation: "The best plans bridge story and number so that both are testable." },
   ],
   assignment: {
     id: "a1",

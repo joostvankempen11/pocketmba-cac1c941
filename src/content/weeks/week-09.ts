@@ -68,9 +68,10 @@ The research converges on a small set of behaviors that reliably predict leaders
 
 None of these are mysterious. All can be learned. The hardest part is doing them consistently under stress.`,
       videos: [
-        { title: "Simon Sinek — How Great Leaders Inspire Action (TED)", source: "YouTube", videoId: "qp0HIF3SfI4", fallbackSearchQuery: "what is leadership explained" },
-        { title: "Simon Sinek — Why Good Leaders Make You Feel Safe (TED)", source: "YouTube — TED", url: "https://www.youtube.com/watch?v=lmyZMtPVodo" },
-        { title: "John Kotter — The Difference Between Leadership and Management", source: "YouTube — Kotter Inc.", url: "https://www.youtube.com/watch?v=2sjQ1zxd6IY" },
+        { title: "Simon Sinek \u2014 How Great Leaders Inspire Action (TED)", source: "YouTube", videoId: "qp0HIF3SfI4", fallbackSearchQuery: "what is leadership explained" },
+        { title: "Simon Sinek \u2014 Why Good Leaders Make You Feel Safe (TED)", source: "YouTube \u2014 TED", url: "https://www.youtube.com/watch?v=lmyZMtPVodo", fallbackSearchQuery: "Simon Sinek leaders feel safe" },
+        { title: "John Kotter \u2014 The Difference Between Leadership and Management", source: "YouTube \u2014 Kotter Inc.", url: "https://www.youtube.com/watch?v=2sjQ1zxd6IY", fallbackSearchQuery: "Kotter leadership vs management" },
+        { title: "John Kotter \u2014 The Difference Between Leadership and Management", source: "YouTube", videoId: "Dz8AiOQEQmk", fallbackSearchQuery: "Kotter leadership management difference" },
       ],
       readings: [
         { title: "What Leaders Really Do", source: "Harvard Business Review (Kotter)", url: "https://hbr.org/2001/12/what-leaders-really-do" },
@@ -131,9 +132,10 @@ Companies that produce many leaders (GE in its prime, IBM, Procter & Gamble, McK
 
 The "growth at all costs" startup pattern — promote anyone you can't lose, fire anyone who can't keep up — produces volatile leadership and high turnover. The pattern that scales: hire deliberately for trajectory, develop systematically, and have the courage to make leadership changes when the role outgrows the person.`,
       videos: [
-        { title: "Situational leadership (search)", source: "YouTube search", fallbackSearchQuery: "situational leadership explained" },
-        { title: "Situational Leadership Explained — Ken Blanchard", source: "YouTube — The Ken Blanchard Companies", url: "https://www.youtube.com/watch?v=9Q4Z32iCC0o" },
-        { title: "The 70-20-10 Model for Development", source: "YouTube — Center for Creative Leadership", url: "https://www.youtube.com/watch?v=YJ-MVCJxBN8" },
+        { title: "Situational Leadership Explained \u2014 Ken Blanchard", source: "YouTube \u2014 The Ken Blanchard Companies", url: "https://www.youtube.com/watch?v=9Q4Z32iCC0o", fallbackSearchQuery: "Ken Blanchard situational leadership" },
+        { title: "The 70-20-10 Model for Development", source: "YouTube \u2014 Center for Creative Leadership", url: "https://www.youtube.com/watch?v=YJ-MVCJxBN8", fallbackSearchQuery: "70-20-10 model development" },
+        { title: "Situational Leadership", source: "YouTube", videoId: "bAuwgjmF5xc", fallbackSearchQuery: "situational leadership styles" },
+        { title: "The 70-20-10 Model for Development", source: "YouTube", videoId: "lV4wq9LUAJs", fallbackSearchQuery: "70-20-10 model leadership development" },
       ],
       readings: [
         { title: "Why You Should Have (at Least) Two Careers", source: "Harvard Business Review", url: "https://hbr.org/2017/04/why-you-should-have-at-least-two-careers" },
@@ -199,9 +201,9 @@ Gary Klein's tool: before making a decision, imagine it has failed catastrophica
 
 Even excellent decision processes produce bad outcomes some of the time. Mature leaders separate process from outcome, own results without abandoning process, learn from what they could have known and accept what they couldn't, and resist the seduction of fast pattern-matching from a single salient failure.`,
       videos: [
-        { title: "Decision making under uncertainty (search)", source: "YouTube search", fallbackSearchQuery: "decision making under uncertainty explained" },
-        { title: "Annie Duke — Thinking in Bets", source: "YouTube — Google Talks", url: "https://www.youtube.com/watch?v=Lk3iEHM4i7s" },
-        { title: "Daniel Kahneman — Thinking, Fast and Slow", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=CjVQJdIrDJ0" },
+        { title: "Annie Duke \u2014 Thinking in Bets", source: "YouTube \u2014 Google Talks", url: "https://www.youtube.com/watch?v=Lk3iEHM4i7s", fallbackSearchQuery: "Annie Duke thinking in bets" },
+        { title: "Daniel Kahneman \u2014 Thinking, Fast and Slow", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=CjVQJdIrDJ0", fallbackSearchQuery: "Kahneman thinking fast slow" },
+        { title: "Thinking in Bets", source: "YouTube", videoId: "uYNsSeYjkp4", fallbackSearchQuery: "Annie Duke thinking in bets" },
       ],
       readings: [
         { title: "Before You Make That Big Decision...", source: "Harvard Business Review (Kahneman et al.)", url: "https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision" },
@@ -274,9 +276,9 @@ Even the hardest conversation has a humane shape: be direct (don't make the pers
 
 The complement is being *coachable*: thanking people for feedback even when it's wrong, sitting with discomfort before responding, separating the message from the messenger, and acting visibly on the parts that land. Senior leaders who can't take feedback poison their teams' truth-telling. Those who can multiply it.`,
       videos: [
-        { title: "Feedback & difficult conversations (search)", source: "YouTube search", fallbackSearchQuery: "how to give feedback difficult conversations explained" },
-        { title: "Kim Scott — Radical Candor (Google Talks)", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=MYRfTwOG8a4" },
-        { title: "Patrick Lencioni on Crucial Conversations", source: "YouTube — VitalSmarts", url: "https://www.youtube.com/watch?v=22KkRPLm5dQ" },
+        { title: "Feedback & difficult conversations (search)", source: "YouTube search", url: "https://www.youtube.com/results?search_query=how+to+give+feedback+difficult+conversations+explained", fallbackSearchQuery: "how to give feedback difficult conversations explained" },
+        { title: "Kim Scott \u2014 Radical Candor (Google Talks)", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=MYRfTwOG8a4", fallbackSearchQuery: "Kim Scott Radical Candor" },
+        { title: "Patrick Lencioni on Crucial Conversations", source: "YouTube \u2014 VitalSmarts", url: "https://www.youtube.com/watch?v=22KkRPLm5dQ", fallbackSearchQuery: "Lencioni crucial conversations" },
       ],
       readings: [
         { title: "The Feedback Fallacy", source: "Harvard Business Review", url: "https://hbr.org/2019/03/the-feedback-fallacy" },
@@ -286,10 +288,25 @@ The complement is being *coachable*: thanking people for feedback even when it's
   ],
   quiz: [
     { id: "q1", prompt: "Kotter's distinction is that management copes with complexity while leadership copes with:", choices: ["Headcount", "Change", "Compliance", "Quarterly earnings"], answerIndex: 1, explanation: "Management is about planning, organizing, and controlling; leadership is about setting direction and motivating change." },
-    { id: "q2", prompt: "In situational leadership, a D1 (enthusiastic beginner) is best matched with:", choices: ["Delegating", "Supporting", "Coaching", "Directing"], answerIndex: 3, explanation: "Beginners need high direction; supportive but light-touch styles fail them." },
-    { id: "q3", prompt: "Annie Duke's 'resulting' refers to:", choices: ["Reporting outcomes accurately", "Judging decisions only by their outcomes, ignoring luck and process", "Setting goals by result", "Backward-looking analytics"], answerIndex: 1, explanation: "Resulting confuses outcome quality with decision quality and destroys learning." },
-    { id: "q4", prompt: "Kim Scott's Radical Candor combines:", choices: ["Care personally and challenge directly", "Politeness and ambition", "Speed and quality", "Process and intuition"], answerIndex: 0, explanation: "Caring without challenging is ruinous empathy; challenging without caring is obnoxious aggression." },
-    { id: "q5", prompt: "Bezos's 'two-way door' decisions are:", choices: ["Reversible decisions that should be made fast at lower levels", "Decisions requiring board approval", "Public commitments", "Capital allocation"], answerIndex: 0, explanation: "Reversible decisions deserve speed; only irreversible ones merit the deliberation many organizations apply universally." },
+    { id: "q2", prompt: "A common failure of newly promoted managers is:", choices: ["Delegating too much", "Continuing to do individual-contributor work rather than leading others", "Setting too high a vision", "Over-communicating"], answerIndex: 1, explanation: "The transition requires letting go of hands-on execution." },
+    { id: "q3", prompt: "Which is primarily a leadership (not management) activity?", choices: ["Approving expense reports", "Setting direction and aligning people to a shared vision", "Running the weekly staff meeting", "Filing HR paperwork"], answerIndex: 1, explanation: "Direction-setting and alignment are core leadership tasks." },
+    { id: "q4", prompt: "Servant leadership emphasizes:", choices: ["The leader is the smartest person", "The leader's job is to remove obstacles and develop others so the team can succeed", "Command and control", "Charisma above all"], answerIndex: 1, explanation: "Greenleaf's model inverts the pyramid toward enabling others." },
+    { id: "q5", prompt: "A CEO who consistently makes reversible (two-way door) decisions slowly is:", choices: ["Prudent", "Under-utilizing organizational speed; those decisions should be pushed down and made quickly", "Following best practice", "Reducing risk"], answerIndex: 1, explanation: "Bezos's insight: only irreversible decisions justify slow deliberation." },
+    { id: "q6", prompt: "In situational leadership, a D1 (enthusiastic beginner) is best matched with:", choices: ["Delegating", "Supporting", "Coaching", "Directing"], answerIndex: 3, explanation: "Beginners need high direction; supportive but light-touch styles fail them." },
+    { id: "q7", prompt: "A high-competence, low-commitment employee (D3) benefits most from:", choices: ["Directing", "Coaching", "Supporting", "Delegating"], answerIndex: 2, explanation: "Supporting builds confidence for someone who can do the work but hesitates." },
+    { id: "q8", prompt: "The 70-20-10 model suggests development comes mainly from:", choices: ["Formal training", "On-the-job experience, with additional learning from others and courses", "Certifications alone", "Reading books"], answerIndex: 1, explanation: "Stretch assignments drive the majority of adult skill growth." },
+    { id: "q9", prompt: "A manager who uses the same leadership style with every direct report is likely:", choices: ["Efficient", "Under-developing some people and micromanaging others", "Fair", "Following best practice"], answerIndex: 1, explanation: "Different development levels require different mixes of direction and support." },
+    { id: "q10", prompt: "Feedback that develops people best is:", choices: ["Annual and general", "Specific, timely, and behaviorally focused", "Anonymous 360s only", "Kept until performance review"], answerIndex: 1, explanation: "Frequent, specific behavioral feedback drives learning." },
+    { id: "q11", prompt: "Annie Duke's 'resulting' refers to:", choices: ["Reporting outcomes accurately", "Judging decisions only by their outcomes, ignoring luck and process", "Setting goals by result", "Backward-looking analytics"], answerIndex: 1, explanation: "Resulting confuses outcome quality with decision quality and destroys learning." },
+    { id: "q12", prompt: "A decision made with only a 30% success probability that ends up succeeding was:", choices: ["A great decision", "Not necessarily a great decision — outcome ≠ decision quality", "Definitely bad", "Impossible to evaluate"], answerIndex: 1, explanation: "Under uncertainty, evaluate the process and information, not just the result." },
+    { id: "q13", prompt: "A pre-mortem asks the team to:", choices: ["Celebrate wins in advance", "Imagine the project has failed and describe why, before starting", "Skip planning", "Only assess after the launch"], answerIndex: 1, explanation: "Prospective hindsight surfaces risks people wouldn't otherwise voice." },
+    { id: "q14", prompt: "A manager repeatedly overweights recent vivid failures. This is closest to:", choices: ["Anchoring", "Availability bias", "Sunk-cost fallacy", "Base-rate neglect"], answerIndex: 1, explanation: "Availability makes recent/memorable events feel more likely than they are." },
+    { id: "q15", prompt: "For an irreversible, high-consequence decision under uncertainty, best practice is to:", choices: ["Decide quickly to move on", "Slow down, consider multiple options, and stress-test with dissenting views", "Delegate downward", "Let the loudest voice decide"], answerIndex: 1, explanation: "One-way-door decisions deserve deliberate process." },
+    { id: "q16", prompt: "Kim Scott's Radical Candor combines:", choices: ["Care personally and challenge directly", "Politeness and ambition", "Speed and quality", "Process and intuition"], answerIndex: 0, explanation: "Caring without challenging is ruinous empathy; challenging without caring is obnoxious aggression." },
+    { id: "q17", prompt: "Which is closest to 'ruinous empathy' in Radical Candor?", choices: ["Direct critical feedback", "Withholding hard feedback to avoid discomfort", "Public shaming", "Rigid rules"], answerIndex: 1, explanation: "Kindness that withholds truth hurts people's growth." },
+    { id: "q18", prompt: "The Situation–Behavior–Impact (SBI) model gives feedback in the form:", choices: ["Judgment of the person", "Situation, specific observed behavior, and its impact", "Compliment sandwich", "Anonymous survey"], answerIndex: 1, explanation: "SBI keeps feedback behavioral and non-personal." },
+    { id: "q19", prompt: "A difficult conversation is most likely to go well when the manager:", choices: ["Ambushes the employee", "Prepares, opens with the intent, listens actively, and separates observation from interpretation", "Uses only email", "Involves HR from the start"], answerIndex: 1, explanation: "Structure and listening reduce defensiveness." },
+    { id: "q20", prompt: "A team that avoids conflict entirely is likely to:", choices: ["Deliver higher-quality decisions", "Produce worse decisions because dissent isn't surfaced", "Become highly innovative", "Have very high trust"], answerIndex: 1, explanation: "Productive conflict is a feature of high-performing teams (Lencioni)." },
   ],
   assignment: {
     id: "a1",
