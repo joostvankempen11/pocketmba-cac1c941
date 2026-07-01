@@ -24,15 +24,15 @@ export function TutorChat({ context, sessionId, compact = false }: { context?: s
   const isLoading = status === "submitted" || status === "streaming";
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const hasInteracted = useRef(false);
 
   useEffect(() => {
-    inputRef.current?.focus();
-  }, [sessionId]);
-  useEffect(() => {
-    if (status === "ready") inputRef.current?.focus();
-  }, [status]);
-  useEffect(() => {
-    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
+    // Only scroll the internal chat pane once the user has actually sent a message,
+    // and stay inside the chat container (never scroll the page or steal focus on load).
+    if (!hasInteracted.current) return;
+    const el = scrollRef.current;
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
   }, [messages, status]);
 
   async function submit() {
