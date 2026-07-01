@@ -52,9 +52,8 @@ Three robust findings managers ignore at their peril:
 - Be cautious with narrow incentives on cognitive work. Use *teams* and *outcomes* rather than individual KPIs where possible.
 - Recognize publicly and specifically. Recognition is one of the most under-used and highest-ROI levers in management.`,
       videos: [
-        { title: "Dan Pink — The Puzzle of Motivation (TED)", source: "YouTube", videoId: "rrkrvAUbU9Y", fallbackSearchQuery: "what motivates people at work explained" },
-        { title: "Dan Pink — The Puzzle of Motivation (TED)", source: "YouTube — TED", url: "https://www.youtube.com/watch?v=rrkrvAUbU9Y" },
-        { title: "RSA Animate — Drive: The Surprising Truth About What Motivates Us", source: "YouTube — RSA", url: "https://www.youtube.com/watch?v=u6XAPnuFjJc" },
+        { title: "Dan Pink \u2014 The Puzzle of Motivation (TED)", source: "YouTube", videoId: "rrkrvAUbU9Y", fallbackSearchQuery: "what motivates people at work explained" },
+        { title: "RSA Animate \u2014 Drive: The Surprising Truth About What Motivates Us", source: "YouTube \u2014 RSA", url: "https://www.youtube.com/watch?v=u6XAPnuFjJc", fallbackSearchQuery: "RSA Animate Drive Dan Pink" },
       ],
       readings: [
         { title: "One More Time: How Do You Motivate Employees?", source: "Harvard Business Review (Herzberg, classic)", url: "https://hbr.org/2003/01/one-more-time-how-do-you-motivate-employees" },
@@ -116,9 +115,8 @@ Counter-measures: explicit dissent (red team, devil's advocate), private predict
 
 Hackman's research on teams: the strongest predictor of team performance is not the talent of individual members but the team's *design* — clear and challenging goals, the right people, enabling structure, supportive context, expert coaching. Top performers in poorly designed teams underperform mediocre performers in well-designed teams.`,
       videos: [
-        { title: "Teams & group performance (search)", source: "YouTube search", fallbackSearchQuery: "Google Project Aristotle what makes a great team" },
-        { title: "Amy Edmondson — Building a Psychologically Safe Workplace (TEDx)", source: "YouTube — TEDx", url: "https://www.youtube.com/watch?v=LhoLuui9gX8" },
-        { title: "Patrick Lencioni — The Five Dysfunctions of a Team", source: "YouTube — TableGroup", url: "https://www.youtube.com/watch?v=GCxct4CR-To" },
+        { title: "Amy Edmondson \u2014 Building a Psychologically Safe Workplace (TEDx)", source: "YouTube \u2014 TEDx", url: "https://www.youtube.com/watch?v=LhoLuui9gX8", fallbackSearchQuery: "Amy Edmondson psychological safety" },
+        { title: "Cognitive Diversity", source: "YouTube", videoId: "E5UHfcwal0M", fallbackSearchQuery: "cognitive diversity teams performance" },
       ],
       readings: [
         { title: "The High-Performance Team", source: "Harvard Business Review", url: "https://hbr.org/2005/07/the-discipline-of-teams" },
@@ -180,9 +178,10 @@ The most reliable lever is **selection and consequences**. Hire people who match
 
 Large organizations don't have a single culture — they have many, often in tension. Engineering vs sales, finance vs marketing, HQ vs field, legacy business unit vs new division. Strong overall cultures don't eliminate subcultures; they ensure subcultures share enough core assumptions to operate as a system.`,
       videos: [
-        { title: "Organizational culture (search)", source: "YouTube search", fallbackSearchQuery: "what is organizational culture explained" },
-        { title: "Reed Hastings — Building the Netflix Culture", source: "YouTube — Stanford GSB", url: "https://www.youtube.com/watch?v=8x6tjeu_S5w" },
-        { title: "Simon Sinek — The Infinite Game / Trusting Teams", source: "YouTube — Simon Sinek", url: "https://www.youtube.com/watch?v=tye525dEpaQ" },
+        { title: "Reed Hastings \u2014 Building the Netflix Culture", source: "YouTube \u2014 Stanford GSB", url: "https://www.youtube.com/watch?v=8x6tjeu_S5w", fallbackSearchQuery: "Reed Hastings Netflix culture" },
+        { title: "Simon Sinek \u2014 The Infinite Game / Trusting Teams", source: "YouTube \u2014 Simon Sinek", url: "https://www.youtube.com/watch?v=tye525dEpaQ", fallbackSearchQuery: "Simon Sinek infinite game" },
+        { title: "Building the Netflix Culture", source: "YouTube", videoId: "IrGkeGExJfw", fallbackSearchQuery: "Netflix culture Reed Hastings" },
+        { title: "Simon Sinek \u2014 The Infinite Game", source: "YouTube", videoId: "5BrpWXC5ua8", fallbackSearchQuery: "Simon Sinek infinite game leadership" },
       ],
       readings: [
         { title: "Culture Is Not the Culprit", source: "Harvard Business Review", url: "https://hbr.org/2016/04/culture-is-not-the-culprit" },
@@ -258,9 +257,10 @@ The test: would you be comfortable if your tactics were public? If your boss, yo
 
 Long careers in functional cultures are built on durable trust. Short careers in dysfunctional ones can be built on manipulation. Choose the long career.`,
       videos: [
-        { title: "Power, politics, influence (search)", source: "YouTube search", fallbackSearchQuery: "office politics influence at work explained" },
-        { title: "Jeffrey Pfeffer — Power: Why Some People Have It and Others Don't", source: "YouTube — Stanford GSB", url: "https://www.youtube.com/watch?v=PgGUKxbWE-Y" },
-        { title: "Robert Cialdini — Science of Persuasion", source: "YouTube — Influence at Work", url: "https://www.youtube.com/watch?v=cFdCzN7RYbw" },
+        { title: "Jeffrey Pfeffer \u2014 Power: Why Some People Have It and Others Don't", source: "YouTube \u2014 Stanford GSB", url: "https://www.youtube.com/watch?v=PgGUKxbWE-Y", fallbackSearchQuery: "Jeffrey Pfeffer power" },
+        { title: "Robert Cialdini \u2014 Science of Persuasion", source: "YouTube \u2014 Influence at Work", url: "https://www.youtube.com/watch?v=cFdCzN7RYbw", fallbackSearchQuery: "Cialdini science of persuasion" },
+        { title: "Jeffrey Pfeffer \u2014 Power", source: "YouTube", videoId: "j-FOpdvuxFU", fallbackSearchQuery: "Jeffrey Pfeffer power organizations" },
+        { title: "Simon Sinek \u2014 Influence Without Authority", source: "YouTube", videoId: "pkclW79ZoZU", fallbackSearchQuery: "influence without authority Simon Sinek" },
       ],
       readings: [
         { title: "Managing Up", source: "Harvard Business Review", url: "https://hbr.org/2015/01/managing-up" },
@@ -270,10 +270,25 @@ Long careers in functional cultures are built on durable trust. Short careers in
   ],
   quiz: [
     { id: "q1", prompt: "Self-determination theory's three needs are:", choices: ["Pay, status, growth", "Autonomy, competence, relatedness", "Power, achievement, affiliation", "Safety, esteem, self-actualization"], answerIndex: 1, explanation: "Deci and Ryan identified autonomy, competence, and relatedness as universal psychological needs underlying intrinsic motivation." },
-    { id: "q2", prompt: "Google's Project Aristotle found that the strongest predictor of team effectiveness was:", choices: ["Average IQ", "Tenure", "Psychological safety", "Diversity"], answerIndex: 2, explanation: "Psychological safety enabled the other factors (structure, meaning, impact, dependability) to matter." },
-    { id: "q3", prompt: "Schein's three levels of culture are:", choices: ["Mission, vision, values", "Artifacts, espoused values, underlying assumptions", "People, process, technology", "Strategy, structure, systems"], answerIndex: 1, explanation: "The deepest layer (assumptions) drives behavior; the surface artifacts often lie about what the culture really is." },
-    { id: "q4", prompt: "French and Raven's most *durable* sources of power tend to be:", choices: ["Legitimate and coercive", "Expert and referent", "Reward and coercive", "Informational and legitimate"], answerIndex: 1, explanation: "Expert and referent power outlast titles; they're rooted in competence and relationships." },
-    { id: "q5", prompt: "Brooks's Law states that adding people to a late project:", choices: ["Always speeds it up", "Makes it later, because coordination cost rises", "Has no effect", "Reduces cost"], answerIndex: 1, explanation: "Coordination cost grows quadratically; new members need ramp-up time, slowing existing members." },
+    { id: "q2", prompt: "Dan Pink argues that traditional 'if–then' rewards work well for:", choices: ["Creative, heuristic tasks", "Routine, rules-based tasks with a clear algorithm", "Long-term innovation", "All tasks equally"], answerIndex: 1, explanation: "Contingent rewards help simple mechanical work but can crowd out intrinsic motivation for creative tasks." },
+    { id: "q3", prompt: "Herzberg's hygiene factors (e.g., pay, working conditions) primarily:", choices: ["Motivate strongly when present", "Create dissatisfaction when absent but don't produce motivation on their own", "Are irrelevant", "Substitute for intrinsic drivers"], answerIndex: 1, explanation: "Hygiene sets a floor; motivators (achievement, growth, recognition) drive engagement." },
+    { id: "q4", prompt: "A manager gives an intrinsically motivated engineer a small cash bonus for each bug fixed. The most likely medium-term effect is:", choices: ["Sustained higher productivity", "Crowding out of intrinsic motivation and gaming the metric", "No effect", "Reduced turnover"], answerIndex: 1, explanation: "Extrinsic rewards can undermine intrinsic drive and warp behavior toward the metric." },
+    { id: "q5", prompt: "Which of these is closest to an 'autonomy' lever for a knowledge worker?", choices: ["Micromanaging tasks", "Letting them choose how to solve the problem", "Setting rigid hours", "Denying training budget"], answerIndex: 1, explanation: "Autonomy is about control over how, when, and with whom work is done." },
+    { id: "q6", prompt: "Google's Project Aristotle found that the strongest predictor of team effectiveness was:", choices: ["Average IQ", "Tenure", "Psychological safety", "Diversity"], answerIndex: 2, explanation: "Psychological safety enabled the other factors (structure, meaning, impact, dependability) to matter." },
+    { id: "q7", prompt: "Psychological safety is best defined as:", choices: ["Everyone agrees", "Being safe to take interpersonal risks — asking questions, admitting mistakes, offering ideas", "Job security", "Physical safety"], answerIndex: 1, explanation: "Edmondson: safety without lowering the performance bar." },
+    { id: "q8", prompt: "Tuckman's stages of team development in order are:", choices: ["Forming, storming, norming, performing", "Storming, forming, norming, adjourning", "Norming, storming, forming, performing", "Forming, performing, storming, norming"], answerIndex: 0, explanation: "The classic sequence with 'adjourning' added later." },
+    { id: "q9", prompt: "Cognitive diversity contributes to team performance most when:", choices: ["Everyone thinks alike", "Different perspectives are surfaced and integrated on complex, novel problems", "Speed is the only criterion", "Tasks are highly routine"], answerIndex: 1, explanation: "Diversity helps with complexity; simple tasks benefit less from divergent views." },
+    { id: "q10", prompt: "A team consistently produces work that meets its stated goals but members privately disagree. The likely failure mode is:", choices: ["Groupthink and low psychological safety", "Excessive conflict", "Too much innovation", "Over-communication"], answerIndex: 0, explanation: "Fear of dissent produces surface agreement and worse decisions." },
+    { id: "q11", prompt: "Schein's three levels of culture are:", choices: ["Mission, vision, values", "Artifacts, espoused values, underlying assumptions", "People, process, technology", "Strategy, structure, systems"], answerIndex: 1, explanation: "The deepest layer (assumptions) drives behavior; the surface artifacts often lie about what the culture really is." },
+    { id: "q12", prompt: "The most reliable signal of a company's actual culture is:", choices: ["Its mission statement", "What behaviors get rewarded, tolerated, and punished", "The office decor", "Its careers page"], answerIndex: 1, explanation: "Behavior — especially who gets promoted or fired — reveals real assumptions." },
+    { id: "q13", prompt: "Netflix's culture memo argues that:", choices: ["Process should scale with people", "Freedom and responsibility with high talent density outperforms process-heavy cultures", "Rules prevent errors", "Consensus is essential"], answerIndex: 1, explanation: "Hastings prioritizes talent density and few rules over bureaucratic control." },
+    { id: "q14", prompt: "Simon Sinek's 'infinite game' claim is that:", choices: ["Business is finite and score-based", "Winning requires playing for the long term with a just cause, not quarter-to-quarter", "Culture doesn't matter", "Purpose is optional"], answerIndex: 1, explanation: "Infinite-mindset leaders keep the game going rather than 'winning' short-term." },
+    { id: "q15", prompt: "A merger between two firms with very different cultures often fails because:", choices: ["Financial models were wrong", "Underlying assumptions clash and behaviors don't converge, destroying value", "Regulators intervene", "Products overlap"], answerIndex: 1, explanation: "Cultural integration is the top under-priced risk in M&A." },
+    { id: "q16", prompt: "French and Raven's most *durable* sources of power tend to be:", choices: ["Legitimate and coercive", "Expert and referent", "Reward and coercive", "Informational and legitimate"], answerIndex: 1, explanation: "Expert and referent power outlast titles; they're rooted in competence and relationships." },
+    { id: "q17", prompt: "A junior manager needs cross-functional support without formal authority. The best approach is:", choices: ["Escalate every disagreement", "Build relationships, understand others' goals, and trade value", "Send more emails", "Demand compliance"], answerIndex: 1, explanation: "Influence without authority relies on reciprocity and mutual interest." },
+    { id: "q18", prompt: "Cialdini's principle of 'reciprocity' predicts that:", choices: ["People forget favors", "Small unsolicited favors materially increase future compliance", "People only respond to money", "Reciprocity is illegal"], answerIndex: 1, explanation: "Reciprocation is one of the most robust social influence effects." },
+    { id: "q19", prompt: "A leader who exclusively relies on positional (legitimate) power is likely to see:", choices: ["Rapid engagement", "Compliance without commitment; ideas and effort go elsewhere", "Innovation flourish", "Low turnover"], answerIndex: 1, explanation: "Rank-only leadership yields malicious compliance and disengagement." },
+    { id: "q20", prompt: "Pfeffer's view of organizational politics is that:", choices: ["It should always be avoided", "It is inherent in organizations; effective leaders learn to navigate it ethically to get things done", "It reflects bad leadership only", "It disappears in flat structures"], answerIndex: 1, explanation: "Power dynamics are structural; ignoring them is a career-limiting choice." },
   ],
   assignment: {
     id: "a1",

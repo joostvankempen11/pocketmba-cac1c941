@@ -59,9 +59,9 @@ A frequent failure mode: optimizing a single metric until the system breaks else
 
 Most decisions in most organizations are made at levels 1-3. Moving the median decision up a rung is one of the highest-leverage investments a leadership team can make.`,
       videos: [
-        { title: "Data-driven decision making (search)", source: "YouTube search", fallbackSearchQuery: "data driven decision making explained" },
-        { title: "Hans Rosling — The Best Stats You've Ever Seen (TED)", source: "YouTube — TED", url: "https://www.youtube.com/watch?v=hVimVzgtD6w" },
-        { title: "Cassie Kozyrkov — What is Decision Intelligence?", source: "YouTube — Google Cloud Tech", url: "https://www.youtube.com/watch?v=u47B5dPjJYM" },
+        { title: "Hans Rosling \u2014 The Best Stats You've Ever Seen (TED)", source: "YouTube \u2014 TED", url: "https://www.youtube.com/watch?v=hVimVzgtD6w", fallbackSearchQuery: "Hans Rosling best stats" },
+        { title: "Cassie Kozyrkov \u2014 What is Decision Intelligence?", source: "YouTube \u2014 Google Cloud Tech", url: "https://www.youtube.com/watch?v=u47B5dPjJYM", fallbackSearchQuery: "Cassie Kozyrkov decision intelligence" },
+        { title: "What is Decision Intelligence", source: "YouTube", videoId: "iLu9XyZ55oI", fallbackSearchQuery: "decision intelligence explained" },
       ],
       readings: [
         { title: "Why Data-Driven Customers Demand More from Suppliers", source: "Harvard Business Review", url: "https://hbr.org/2018/01/data-can-do-for-change-management-what-it-did-for-marketing" },
@@ -120,9 +120,10 @@ When a test for a rare event flags positive, the probability the event actually 
 
 The Bayesian update: posterior ∝ likelihood × prior. Always ask "what was the base rate?" before treating a positive signal as evidence.`,
       videos: [
-        { title: "StatQuest — Hypothesis Testing and the Null Hypothesis", source: "YouTube", videoId: "vemZtEM63GY", fallbackSearchQuery: "hypothesis testing explained statistics" },
-        { title: "Statistics Explained — Khan Academy", source: "YouTube — Khan Academy (intro statistics playlist)", url: "https://www.youtube.com/playlist?list=PL1328115D3D8A2566" },
-        { title: "Why Most Published Research Findings Are False — Ioannidis", source: "YouTube — TEDMED", url: "https://www.youtube.com/watch?v=4HQGzQVlS8w" },
+        { title: "StatQuest \u2014 Hypothesis Testing and the Null Hypothesis", source: "YouTube", videoId: "vemZtEM63GY", fallbackSearchQuery: "hypothesis testing explained statistics" },
+        { title: "Statistics Explained \u2014 Khan Academy", source: "YouTube \u2014 Khan Academy (intro statistics playlist)", url: "https://www.youtube.com/playlist?list=PL1328115D3D8A2566", fallbackSearchQuery: "Khan Academy statistics" },
+        { title: "Why Most Published Research Findings Are False \u2014 Ioannidis", source: "YouTube \u2014 TEDMED", url: "https://www.youtube.com/watch?v=4HQGzQVlS8w", fallbackSearchQuery: "Ioannidis published research false" },
+        { title: "Why Most Published Research Findings Are False", source: "YouTube", videoId: "vY9mGJQFdyE", fallbackSearchQuery: "Ioannidis research findings false" },
       ],
       readings: [
         { title: "How to Lie with Statistics, Six Decades Later", source: "Harvard Business Review", url: "https://hbr.org/2014/11/the-explanation-of-the-bayesian-method" },
@@ -183,9 +184,10 @@ The hard part is organizational, not technical. The patterns that work:
 
 Booking.com, Microsoft, Airbnb, and Netflix have published extensively about their experimentation programs — running tens of thousands of experiments per year and finding that ~10-30% of changes actually improve the metric the team confidently expected to improve. The base rate of confident-but-wrong is humbling.`,
       videos: [
-        { title: "A/B testing done right (search)", source: "YouTube search", fallbackSearchQuery: "A/B testing explained statistics StatQuest" },
-        { title: "A/B Testing — Trustworthy Online Controlled Experiments (Ron Kohavi)", source: "YouTube — Stanford MS&E", url: "https://www.youtube.com/watch?v=qYE6e2u8tME" },
-        { title: "Experimentation at Scale — Airbnb", source: "YouTube — InfoQ", url: "https://www.youtube.com/watch?v=Xh4Cn1bsm6c" },
+        { title: "A/B Testing \u2014 Trustworthy Online Controlled Experiments (Ron Kohavi)", source: "YouTube \u2014 Stanford MS&E", url: "https://www.youtube.com/watch?v=qYE6e2u8tME", fallbackSearchQuery: "Kohavi trustworthy online controlled experiments" },
+        { title: "Experimentation at Scale \u2014 Airbnb", source: "YouTube \u2014 InfoQ", url: "https://www.youtube.com/watch?v=Xh4Cn1bsm6c", fallbackSearchQuery: "Airbnb experimentation scale" },
+        { title: "A/B Testing \u2014 Trustworthy Online Controlled Experiments", source: "YouTube", videoId: "VuKIN9S8Ivs", fallbackSearchQuery: "A/B testing controlled experiments" },
+        { title: "Experimentation at Scale \u2014 Airbnb", source: "YouTube", videoId: "8F3k9nNVf5Q", fallbackSearchQuery: "Airbnb experimentation scale" },
       ],
       readings: [
         { title: "The Surprising Power of Online Experiments", source: "Harvard Business Review", url: "https://hbr.org/2017/09/the-surprising-power-of-online-experiments" },
@@ -253,9 +255,8 @@ The minimum viable analytical skill set for a senior manager:
 
 Most analytical disasters in business are not from wrong models — they're from these basics not being applied to clear analyses.`,
       videos: [
-        { title: "StatQuest — R-squared explained", source: "YouTube", videoId: "2AQKmw14mHM", fallbackSearchQuery: "correlation vs causation explained" },
-        { title: "Joshua Angrist — Causal Inference and Natural Experiments", source: "YouTube — Marginal Revolution University", url: "https://www.youtube.com/watch?v=eLliMP1AZJk" },
-        { title: "Judea Pearl — The Causal Revolution", source: "YouTube — Talks at Google", url: "https://www.youtube.com/watch?v=zHjdd--W6o4" },
+        { title: "StatQuest \u2014 R-squared explained", source: "YouTube", videoId: "2AQKmw14mHM", fallbackSearchQuery: "correlation vs causation explained" },
+        { title: "Judea Pearl \u2014 The Causal Revolution", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=zHjdd--W6o4", fallbackSearchQuery: "Judea Pearl causal revolution" },
       ],
       readings: [
         { title: "How To Be More Bayesian in Strategy", source: "Harvard Business Review", url: "https://hbr.org/2017/05/a-better-way-to-set-strategic-priorities" },
@@ -265,10 +266,25 @@ Most analytical disasters in business are not from wrong models — they're from
   ],
   quiz: [
     { id: "q1", prompt: "Goodhart's Law states that:", choices: ["More data is always better", "When a measure becomes a target, it ceases to be a good measure", "Past data predicts future data", "Correlation implies causation"], answerIndex: 1, explanation: "Strong incentives on a single metric warp behavior to optimize that metric at the expense of what it was supposed to proxy." },
-    { id: "q2", prompt: "A 99%-accurate test for a 1-in-1000 condition produces roughly:", choices: ["No false positives", "1 false positive per true positive", "10 false positives per true positive", "100 true positives per false positive"], answerIndex: 2, explanation: "Bayes' rule: low base rate means most positives are false even with high test accuracy." },
-    { id: "q3", prompt: "Stopping an A/B test early as soon as p<0.05 is reached:", choices: ["Saves time without bias", "Inflates the false positive rate (peeking)", "Requires a bigger sample size", "Reduces variance"], answerIndex: 1, explanation: "Repeated peeking with no correction dramatically increases the chance of finding 'significant' results by chance." },
-    { id: "q4", prompt: "Survivorship bias is at play when:", choices: ["Only customers who churned are surveyed", "Only winners are visible in the data and conclusions ignore those who tried and failed", "Sample size is too small", "Confidence intervals are wide"], answerIndex: 1, explanation: "Studies of 'successful' companies/CEOs/strategies miss the population that tried the same approach and failed." },
-    { id: "q5", prompt: "Difference-in-differences requires which key assumption?", choices: ["Random assignment", "Parallel trends between treated and control groups in the absence of treatment", "Normality", "Independence of observations"], answerIndex: 1, explanation: "DiD's identifying assumption is that, without treatment, the two groups would have evolved on parallel trends." },
+    { id: "q2", prompt: "A dashboard with 40 KPIs is likely to:", choices: ["Give leaders more clarity", "Diffuse focus and hide the few metrics that actually drive decisions", "Increase speed", "Be free of Goodhart's Law"], answerIndex: 1, explanation: "Too many metrics dilute attention and rarely map to real decisions." },
+    { id: "q3", prompt: "The most useful metric structure is usually:", choices: ["Vanity metrics", "A small number of actionable, outcome-oriented metrics with clear owners", "One metric per person", "Only lagging KPIs"], answerIndex: 1, explanation: "Actionable + owned metrics change behavior; vanity metrics don't." },
+    { id: "q4", prompt: "Decision intelligence emphasizes:", choices: ["Building more dashboards", "Framing the decision first, then choosing the analysis and data", "Automating all decisions", "Only using AI"], answerIndex: 1, explanation: "Start with the decision and its options, not the data lake." },
+    { id: "q5", prompt: "A leader who says 'the data will tell us what to do' is:", choices: ["Correct", "Under-appreciating that data informs but does not replace judgment on values and trade-offs", "Overly cautious", "Innovative"], answerIndex: 1, explanation: "Data supports decisions; it doesn't make them." },
+    { id: "q6", prompt: "A 99%-accurate test for a 1-in-1000 condition produces roughly:", choices: ["No false positives", "1 false positive per true positive", "10 false positives per true positive", "100 true positives per false positive"], answerIndex: 2, explanation: "Bayes' rule: low base rate means most positives are false even with high test accuracy." },
+    { id: "q7", prompt: "A p-value of 0.03 means:", choices: ["There is a 3% chance the null hypothesis is true", "Under the null, we would see data at least this extreme 3% of the time", "The effect is 97% likely to replicate", "The result is causal"], answerIndex: 1, explanation: "A common misinterpretation — p-values are frequentist tail probabilities under the null." },
+    { id: "q8", prompt: "Regression to the mean explains why:", choices: ["Extreme performers usually stay extreme", "Extreme outcomes tend to be followed by more average ones", "Managers should always fire poor performers", "Trends always continue"], answerIndex: 1, explanation: "Selection on extremes plus noise produces reversion in the next period." },
+    { id: "q9", prompt: "Correlation between ice cream sales and drownings is high. Best explanation:", choices: ["Ice cream causes drownings", "A confounder (summer / heat) drives both", "Reverse causation", "The correlation is spurious noise"], answerIndex: 1, explanation: "Classic confounding by season." },
+    { id: "q10", prompt: "A manager reports that an initiative 'increased sales 10%' with no control group. The main problem is:", choices: ["Sample size only", "No counterfactual — we don't know what would have happened without the initiative", "Wrong software", "Too much data"], answerIndex: 1, explanation: "Without controls, we cannot attribute change to the initiative." },
+    { id: "q11", prompt: "Stopping an A/B test early as soon as p<0.05 is reached:", choices: ["Saves time without bias", "Inflates the false positive rate (peeking)", "Requires a bigger sample size", "Reduces variance"], answerIndex: 1, explanation: "Repeated peeking with no correction dramatically increases the chance of finding 'significant' results by chance." },
+    { id: "q12", prompt: "Running many A/B tests simultaneously without correction risks:", choices: ["Nothing", "Multiple-comparisons inflation of false positives", "Slower decisions", "Better decisions automatically"], answerIndex: 1, explanation: "The chance of at least one false 'winner' grows with the number of tests." },
+    { id: "q13", prompt: "Sample size for an experiment depends primarily on:", choices: ["Ambition of the PM", "Baseline rate, minimum detectable effect, variance, and desired power", "Company size", "Weather"], answerIndex: 1, explanation: "These four inputs determine required N." },
+    { id: "q14", prompt: "An A/B test 'wins' on click-through but loses on downstream revenue. The correct decision usually is to:", choices: ["Ship the winner on CTR", "Optimize on the metric closest to true value (revenue/retention), not intermediate proxies", "Ignore the test", "Rerun forever"], answerIndex: 1, explanation: "Choose the north-star metric aligned with actual outcomes." },
+    { id: "q15", prompt: "Novelty effects in an experiment can cause:", choices: ["Winners that persist forever", "Short-term lifts that fade as users habituate; long horizons are needed for durable effects", "Perfectly stable metrics", "Regulatory issues"], answerIndex: 1, explanation: "New treatments often outperform temporarily before decaying." },
+    { id: "q16", prompt: "Survivorship bias is at play when:", choices: ["Only customers who churned are surveyed", "Only winners are visible in the data and conclusions ignore those who tried and failed", "Sample size is too small", "Confidence intervals are wide"], answerIndex: 1, explanation: "Studies of 'successful' companies/CEOs/strategies miss the population that tried the same approach and failed." },
+    { id: "q17", prompt: "Difference-in-differences requires which key assumption?", choices: ["Random assignment", "Parallel trends between treated and control groups in the absence of treatment", "Normality", "Independence of observations"], answerIndex: 1, explanation: "DiD's identifying assumption is that, without treatment, the two groups would have evolved on parallel trends." },
+    { id: "q18", prompt: "An instrumental variable is used to:", choices: ["Increase R-squared", "Isolate exogenous variation in a treatment when randomization isn't possible", "Replace a control group", "Reduce sample size"], answerIndex: 1, explanation: "IVs help identify causal effects in the presence of endogeneity." },
+    { id: "q19", prompt: "A firm sees stores that raised prices had higher revenue. Concluding 'raise prices everywhere' ignores:", choices: ["Selection — those stores likely raised prices because demand was strong", "Sample size", "Statistical software choice", "P-values"], answerIndex: 0, explanation: "Selection into treatment confounds naive comparisons." },
+    { id: "q20", prompt: "Judea Pearl's causal ladder puts which rung highest?", choices: ["Association", "Intervention", "Counterfactual reasoning", "Correlation"], answerIndex: 2, explanation: "Counterfactuals ('what if') are the top rung; interventions are middle; association is the bottom." },
   ],
   assignment: {
     id: "a1",
