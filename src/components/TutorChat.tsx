@@ -38,6 +38,7 @@ export function TutorChat({ context, sessionId, compact = false }: { context?: s
   async function submit() {
     const text = input.trim();
     if (!text || isLoading) return;
+    hasInteracted.current = true;
     setInput("");
     await sendMessage({ text });
   }
