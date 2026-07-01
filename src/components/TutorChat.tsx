@@ -23,7 +23,6 @@ export function TutorChat({ context, sessionId, compact = false }: { context?: s
   const [input, setInput] = useState("");
   const isLoading = status === "submitted" || status === "streaming";
   const scrollRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLTextAreaElement>(null);
   const hasInteracted = useRef(false);
 
   useEffect(() => {
@@ -92,7 +91,6 @@ export function TutorChat({ context, sessionId, compact = false }: { context?: s
         className="flex items-end gap-2 border-t border-border p-3"
       >
         <textarea
-          ref={inputRef}
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
