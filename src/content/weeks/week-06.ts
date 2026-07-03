@@ -10,7 +10,39 @@ export const week06: Week = {
       id: "l1",
       title: "Porter's Five Forces",
       summary: "Industry structure sets the ceiling on long-run profitability. The firm fights for a share of what structure allows.",
-      body: `# Porter's Five Forces\n\nMichael Porter's 1979 framework remains the most widely taught tool in strategy because it cleanly explains why some industries (rating agencies, pharma, defense) are reliably profitable and others (airlines, retail, restaurants) are reliably not. The five forces *together* set the *industry's* attractiveness; individual firms fight within that ceiling.\n\n## 1. Rivalry among existing competitors\n\nHigh when: many comparable competitors, slow industry growth, high fixed costs (pressure to fill capacity), low switching costs, undifferentiated products, high exit barriers. US airlines historically check every box; rivalry is brutal, average industry returns barely cover cost of capital.\n\n## 2. Threat of new entrants\n\nHigh when entry barriers are low — capital requirements, scale economies, brand strength, regulatory licenses, network effects, access to distribution. Software-as-a-service had low barriers a decade ago and rivers of capital flowed in; today AI infrastructure has high barriers (model training cost, chip access) and few entrants.\n\n## 3. Bargaining power of suppliers\n\nHigh when suppliers are concentrated, switching costs are high, no substitutes, the input is critical. The premier example: the relationship between TSMC and almost every fabless chip company in the world.\n\n## 4. Bargaining power of buyers\n\nHigh when buyers are concentrated, switching costs are low, the product is undifferentiated, buyers are price-sensitive or vertically integrated. Walmart's relationship with most of its CPG suppliers is the textbook case.\n\n## 5. Threat of substitutes\n\nHigh when substitutes offer comparable value at lower price or higher quality. Long-distance phone calls were destroyed by email and then by free internet voice calls. Video rental stores were destroyed by streaming. Coal-fired electricity is being destroyed by gas and renewables.\n\n## How to use it\n\n- **Industry selection** — entrepreneurs and investors should pick *good* industries, not just good companies. A mediocre operator in a great industry (Moody's, Visa) routinely outperforms a great operator in a bad one.\n- **Competitive moves** — *change* the forces in your favor: lock in customers, integrate a critical supplier, raise entry barriers with brand or scale, kill substitutes by matching their value at lower cost.\n- **Investment thesis** — when an industry's forces are shifting (consolidation, deregulation, technology disruption), profit pools migrate. Spotting the migration early is the strategist's job.\n\n## A note on completeness\n\nPorter's framework misses *complementors* (Brandenburger-Nalebuff added them as a sixth force in *Co-opetition*) and arguably understates *demand-side network effects* — both critical to modern platform businesses. Use Five Forces as the structural skeleton, then layer on platform and ecosystem thinking.`,
+      body: `# Porter's Five Forces
+
+Michael Porter's 1979 framework remains the most widely taught tool in strategy because it cleanly explains why some industries (rating agencies, pharma, defense) are reliably profitable and others (airlines, retail, restaurants) are reliably not. The five forces *together* set the *industry's* attractiveness; individual firms fight within that ceiling. For a manager, understanding these forces is like checking the weather before a voyage; you need to know if you are sailing into a calm harbor where profits come easy or a hurricane where even the best-run ship might sink.
+
+## 1. Rivalry among existing competitors
+
+High when: many comparable competitors, slow industry growth, high fixed costs (pressure to fill capacity), low switching costs, undifferentiated products, high exit barriers. US airlines historically check every box; rivalry is brutal, average industry returns barely cover cost of capital. Think of high fixed costs like a restaurant that must pay rent and chef salaries regardless of whether customers show up; this creates a desperate urge to cut prices just to get people in the door, which eventually hurts everyone's profits. Low switching costs mean customers can walk across the street to a competitor for a 5-cent difference without any hassle.
+
+## 2. Threat of new entrants
+
+High when entry barriers are low — capital requirements, scale economies, brand strength, regulatory licenses, network effects, access to distribution. Software-as-a-service had low barriers a decade ago and rivers of capital flowed in; today AI infrastructure has high barriers (model training cost, chip access) and few entrants. If it is easy for a "guy in a garage" to start a business exactly like yours tomorrow, your profit margins will constantly be under pressure. High entry barriers act like a moat around a castle, protecting the gold inside from outsiders.
+
+## 3. Bargaining power of suppliers
+
+High when suppliers are concentrated, switching costs are high, no substitutes, the input is critical. The premier example: the relationship between TSMC and almost every fabless chip company in the world. If you run a coffee shop and there is only one company in town that roasts beans, they can raise prices whenever they want because they know you have nowhere else to go. When suppliers have the upper hand, they "squeeze" your margins by capturing the value for themselves.
+
+## 4. Bargaining power of buyers
+
+High when buyers are concentrated, switching costs are low, the product is undifferentiated, buyers are price-sensitive or vertically integrated. Walmart's relationship with most of its CPG suppliers is the textbook case. "Concentrated" buyers means a few large customers hold all the cards. If 80% of your sales go to one big retailer, that retailer effectively dictates your profit margin because losing their business would end your company. They are the ones in the driver's seat during price negotiations.
+
+## 5. Threat of substitutes
+
+High when substitutes offer comparable value at lower price or higher quality. Long-distance phone calls were destroyed by email and then by free internet voice calls. Video rental stores were destroyed by streaming. Coal-fired electricity is being destroyed by gas and renewables. A substitute isn't just a direct competitor (like Pepsi vs. Coke); it's a different way of solving the same problem. If you sell expensive glass bottles, your threat isn't just other glass makers—it's the aluminum can and the plastic pouch.
+
+## How to use it
+
+- **Industry selection** — entrepreneurs and investors should pick *good* industries, not just good companies. A mediocre operator in a great industry (Moody's, Visa) routinely outperforms a great operator in a bad one. It is much easier to succeed when the structural "gravity" of the industry is pulling you upward.
+- **Competitive moves** — *change* the forces in your favor: lock in customers, integrate a critical supplier, raise entry barriers with brand or scale, kill substitutes by matching their value at lower cost. For example, a gym might use a 12-month contract to artificially raise "switching costs," making it harder for a rival to steal their members.
+- **Investment thesis** — when an industry's forces are shifting (consolidation, deregulation, technology disruption), profit pools migrate. Spotting the migration early is the strategist's job. If three of the five major players in an industry merge, rivalry usually drops, and the remaining players often see profits rise.
+
+## A note on completeness
+
+Porter's framework misses *complementors* (Brandenburger-Nalebuff added them as a sixth force in *Co-opetition*) and arguably understates *demand-side network effects* — both critical to modern platform businesses. Complementors are products that make yours more valuable (like apps making a smartphone more useful). Use Five Forces as the structural skeleton, then layer on platform and ecosystem thinking to see the full picture of modern competition.`,
       videos: [
         { title: "Michael Porter's 5 Forces Model Explained", source: "YouTube", videoId: "XCWHSeDU-zk", fallbackSearchQuery: "Porter's Five Forces explained" },
         { title: "The Explainer \u2014 Porter's Five Forces", source: "YouTube \u2014 HBR", url: "https://www.youtube.com/watch?v=mYF2_FBCvXw", fallbackSearchQuery: "HBR explainer five forces" },
@@ -19,12 +51,47 @@ export const week06: Week = {
         { title: "The Five Competitive Forces That Shape Strategy", source: "Harvard Business Review", url: "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy" },
         { title: "What Is Strategy?", source: "Harvard Business Review", url: "https://hbr.org/1996/11/what-is-strategy" },
       ],
+      exercise: { id: "ex1", scenario: "You are a consultant for 'QuickClean,' a franchise of ultra-convenience dry cleaners located in a city with hundreds of independent laundry shops. A new government regulation is about to be passed that requires all dry cleaners to purchase a $100,000 specialized air-filtration system, and a major chemical supplier has just acquired its two biggest rivals, becoming the sole provider of cleaning fluid in the region.", task: "Analyze how these two specific changes (the regulation and the supplier merger) alter two of Porter's Five Forces for QuickClean, and explain whether the industry's overall 'attractiveness' for a current owner has increased or decreased based on those shifts." }
     },
     {
       id: "l2",
       title: "Generic strategies",
       summary: "Cost leadership, differentiation, focus — and the strategic decision to make trade-offs.",
-      body: `# Generic strategies\n\nPorter argued firms must pick one of three positions, and *commit*:\n\n## Cost leadership\n\nBecome the lowest-cost producer in the industry. Capture share at average prices, or earn average margins at low prices. Requires obsessive scale, process discipline, low overhead, automation, hard supplier negotiation. Examples: Walmart, Costco, Southwest historically, Vanguard.\n\nDanger: *one* lower-cost competitor enters and the position collapses. The pursuit of cost leadership often kills the capacity to differentiate later.\n\n## Differentiation\n\nOffer something the market perceives as unique — design, brand, performance, service, distribution. Customers pay a premium. Examples: Apple, Hermès, Disney, Mercedes.\n\nDanger: customers stop perceiving the difference (commoditization), or the price gap to good-enough alternatives gets too wide.\n\n## Focus\n\nPick a narrow segment — geographic, demographic, vertical — and serve it better than the generalists can. Within focus, you can still be cost-focused (regional grocer) or differentiation-focused (veterinary EHR software).\n\n## The "stuck in the middle" warning\n\nPorter's most famous claim: trying to be both low-cost *and* differentiated leaves you stuck in the middle — out-priced by the low-cost player, out-featured by the differentiator. Empirically this is too strong (Toyota arguably achieved both; IKEA built a focused-cost-differentiation hybrid), but the underlying caution stands: strategy is the choice of what *not* to do.\n\n## Strategy as fit\n\nIn *What Is Strategy?* (1996) Porter sharpened this: strategy is a *coherent set of activities* that reinforce each other and create trade-offs competitors can't replicate. Southwest's point-to-point routing, single aircraft type, fast turnarounds, no meals, and direct booking are *each* small advantages — their interlock creates a position that hub-and-spoke airlines literally cannot copy without dismantling their own systems.\n\n## Operational effectiveness ≠ strategy\n\nDoing the same activities better than rivals (operational effectiveness) is necessary but not sufficient — best practices diffuse. *Strategy* is doing *different* activities, or the same ones in a different configuration.`,
+      body: `# Generic strategies
+
+Porter argued firms must pick one of three positions, and *commit*. In business, this is called a "Generic Strategy" because these paths apply to any industry, whether you are selling software or soda. Without choosing, a company risks being mediocre at everything and profitable at nothing.
+
+## Cost leadership
+
+Become the lowest-cost producer in the industry. Capture share at average prices, or earn average margins at low prices. This isn't just about being "cheap" for the customer; it's about having the lowest internal expenses. Requires obsessive scale (buying in huge volumes to get discounts), process discipline, low overhead (minimal fancy offices or perks), automation, hard supplier negotiation. Examples: Walmart, Costco, Southwest historically, Vanguard.
+
+Think of a local bakery that buys flour by the ton to get a 40% discount and uses a specialized machine to bag loaves faster than any human. Because their costs are so low, they can sell bread for $2 and still make a profit, while a smaller rival would lose money at that price.
+
+Danger: *one* lower-cost competitor enters and the position collapses. If someone else finds a cheaper way to make the same product, your only advantage vanishes. The pursuit of cost leadership often kills the capacity to differentiate later because your culture becomes focused entirely on cutting, not creating.
+
+## Differentiation
+
+Offer something the market perceives as unique — design, brand, performance, service, distribution. Customers pay a premium, meaning they are willing to pay more than the "utility" value of the item because of the prestige or better experience. Examples: Apple, Hermès, Disney, Mercedes.
+
+Imagine a different bakery that uses organic, heirloom grains and offers a beautiful café experience with expert baristas. People pay $9 for a loaf here not because it fills them up better, but because it tastes unique and feels like a luxury.
+
+Danger: customers stop perceiving the difference (commoditization), which happens when high-end features become standard everywhere, or the price gap to good-enough alternatives gets too wide. If the $2 bread tastes almost as good as the $9 bread, the differentiator is in trouble.
+
+## Focus
+
+Pick a narrow segment — geographic, demographic, vertical — and serve it better than the generalists can. A "vertical" simply means a specific industry niche. Within focus, you can still be cost-focused (regional grocer) or differentiation-focused (veterinary EHR software—Electronic Health Records built specifically for vets rather than general doctors).
+
+## The "stuck in the middle" warning
+
+Porter's most famous claim: trying to be both low-cost *and* differentiated leaves you stuck in the middle — out-priced by the low-cost player, out-featured by the differentiator. You end up being a "Jack of all trades, master of none." Empirically this is too strong (Toyota arguably achieved both through supreme manufacturing efficiency; IKEA built a focused-cost-differentiation hybrid), but the underlying caution stands: strategy is the choice of what *not* to do.
+
+## Strategy as fit
+
+In *What Is Strategy?* (1996) Porter sharpened this: strategy is a *coherent set of activities* that reinforce each other and create trade-offs competitors can't replicate. A trade-off is a "fork in the road" where choosing Path A makes Path B impossible. Southwest's point-to-point routing, single aircraft type (which simplifies maintenance and training), fast turnarounds, no meals, and direct booking are *each* small advantages — their interlock creates a position that hub-and-spoke airlines literally cannot copy without dismantling their own systems. If a legacy airline tried to copy Southwest's no-meal policy, they'd still have the high costs of their complex fleets, so they wouldn't actually achieve the low-cost benefit.
+
+## Operational effectiveness ≠ strategy
+
+Doing the same activities better than rivals (operational effectiveness) is necessary but not sufficient — best practices diffuse. This means that if everyone starts using the same efficient software, no one has an advantage anymore; you've just raised the floor for everyone. *Strategy* is doing *different* activities, or the same ones in a different configuration. If you are just "running the race faster," you are being effective. If you are "choosing a different race entirely," you have a strategy.`,
       videos: [
         { title: "Michael Porter's Generic Strategies Explained", source: "YouTube", videoId: "V14kuqYEsxE", fallbackSearchQuery: "Porter generic strategies" },
         { title: "What Is Strategy? \u2014 Michael Porter", source: "YouTube \u2014 HBS", url: "https://www.youtube.com/watch?v=GsmDvkPzCBM", fallbackSearchQuery: "what is strategy Porter HBS" },
@@ -34,6 +101,7 @@ export const week06: Week = {
         { title: "What Is Strategy?", source: "Harvard Business Review", url: "https://hbr.org/1996/11/what-is-strategy" },
         { title: "Reinventing Your Business Model", source: "Harvard Business Review", url: "https://hbr.org/2008/12/reinventing-your-business-model" },
       ],
+      exercise: { id: "ex1", scenario: "You are the manager of 'Urban Grind,' a high-end independent coffee shop known for its rare beans and expert baristas. A massive international chain just opened across the street offering basic coffee at half your price, and a new 'automated' kiosk opened nearby that serves decent lattes with zero staff. Your investors are panicked and suggesting you should start offering 'budget' coffee combos to compete with the chain while also buying even more expensive roasting equipment to stay ahead of the kiosk.", task: "Identify which of the three generic strategies Urban Grind is currently using, then write a one-paragraph response to your investors explaining why attempting to compete on both price and premium quality simultaneously risks leaving the business 'stuck in the middle' and what specific trade-off you must protect." }
     },
     {
       id: "l3",

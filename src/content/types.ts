@@ -18,6 +18,7 @@ export type Lesson = {
   body: string; // markdown
   videos?: Resource[];
   readings?: Resource[];
+  exercise?: Exercise;
 };
 
 export type QuizQuestion = {
@@ -33,6 +34,12 @@ export type Assignment = {
   title: string;
   prompt: string;
   rubric: string;
+};
+
+export type Exercise = {
+  id: string;
+  scenario: string;
+  task: string;
 };
 
 export type Week = {
