@@ -10,7 +10,59 @@ export const week03: Week = {
       id: "l1",
       title: "Time value of money",
       summary: "A dollar today is worth more than a dollar tomorrow. Quantify the gap and most of finance falls out.",
-      body: `# Time value of money\\n\\nThe single most important idea in finance: **a dollar today is worth more than a dollar tomorrow.** Today's dollar can be invested to earn a return; tomorrow's dollar is exposed to inflation, default, and opportunity cost. Every valuation technique in corporate finance — DCF, bond pricing, mortgage math, lease analysis, pension funding — is just an application of this one idea.\\n\\nThink of it this way: If I offer you $100 today or $100 next year, you take it today because you could put that cash in a savings account and have $105 by next year. By waiting, you lose that potential growth (opportunity cost) and your money might buy fewer groceries later (inflation).\\n\\nTo a manager, time isn't just a clock; it's a cost. If you have $1 million sitting in a non-interest-bearing checking account, you are effectively losing money every day because that capital isn't out in the world working for you. \\n\\n## Present value and future value\\n\\n\`FV = PV × (1 + r)^n\`\\n\\n\`PV = FV / (1 + r)^n\`\\n\\nwhere *r* is the periodic discount rate and *n* is the number of periods. The discount rate represents the *opportunity cost* of capital: the return you could earn on an equivalent-risk alternative. Riskier cash flows are discounted at higher rates and therefore have lower present values.\\n\\nIn plain English, "discounting" is the process of stripping away the interest to see what a future payment is worth in today's terms (**Present Value**). If a manager ignores this, they might greenlight a project that returns $1 million in 20 years, not realizing that after accounting for the risk and the wait, that $1 million is only worth a fraction of that amount today.\\n\\nThink of "r" (the discount rate) as your hurdle. If you could easily get a 5% return by buying safe government bonds, you shouldn't accept a 5% return on a risky new taco truck startup. You would "discount" the taco truck's future earnings at a much higher rate (perhaps 15%) to account for the risk that the business might fail. The higher the risk, the less that future promise is worth to you right now.\\n\\n## Compounding and the rule of 72\\n\\nMoney compounds — last period's interest earns this period's interest. The **Rule of 72** is the back-of-envelope shortcut: at *r%* growth, money doubles in roughly *72/r* years. At 8% you double every nine years; at 12% every six. Compounding is also why credit-card debt is ruinous — interest charged monthly at 18% APR compounds to ~19.6% effective annual rate.\\n\\nCompounding is essentially "interest on interest." Imagine you save $1,000. In Year 1, you earn interest on that $1,000. In Year 2, you earn interest on the $1,000 *plus* the interest you earned in Year 1. This creates an exponential curve that can make small, consistent investments explode in value over decades.\\n\\nFor a business, compounding works on growth too. If a SaaS company grows its user base by 10% every month, it isn't just adding the same number of users; it's adding 10% of a larger and larger number each time. This is why "early-stage growth" is so highly prized in venture capital.\\n\\n## Annuities and perpetuities\\n\\nAn **annuity** is a stream of equal cash flows for a fixed number of periods (mortgages, bond coupons, lease payments). A **perpetuity** is one that lasts forever (preferred stock, the British consol bonds of the 19th century).\\n\\n\`PV of perpetuity = C / r\`\\n\\n\`PV of growing perpetuity (Gordon) = C / (r − g)\`\\n\\nThe growing perpetuity formula is the engine of the **terminal value** in every DCF — it captures the value of cash flows beyond the explicit forecast horizon. Tiny changes in *r − g* swing the answer enormously, which is why DCFs are sensitive to assumptions you can barely defend.\\n\\nIn a business context, an annuity is like your monthly office rent or a fixed gym membership. A growing perpetuity is how we value an entire company that we expect to keep growing at a steady rate (*g*) forever. If you underestimate the discount rate (*r*), you will massively overpay for the business.\\n\\nThink of "g" as the long-term growth rate. If you assume a company will grow its profits at 3% forever, but it actually only grows at 1%, the "r - g" denominator gets larger, making the calculated value of the company drop significantly. Managers who are too optimistic about "g" often end up making bad acquisitions.\\n\\n## Real vs nominal\\n\\nNominal rates include inflation; real rates strip it out. \`(1 + r_nominal) = (1 + r_real)(1 + inflation)\`. When forecasting in nominal dollars, discount at nominal rates; when forecasting in real dollars, discount at real rates. Mixing them is a common student error — and a common professional one.\\n\\nThink of "nominal" as the number printed on the bill, and "real" as the number of apples that bill can actually buy. If your bank pays 5% interest (nominal) but inflation is 5%, your "real" return is 0%. You have more paper, but no more purchasing power.\\n\\nIf you are a manager planning a 10-year factory expansion, you must decide: Are your revenue projections including the fact that you'll raise prices for inflation? If yes, you are using nominal dollars and must use a nominal discount rate. If you ignore inflation in your sales numbers but use a high interest rate from the bank to discount them, your project will look much worse than it actually is.\\n\\n## Worked example\\n\\nYou're offered $10,000 in ten years or some smaller sum today. At a 7% discount rate, the present value of the future $10,000 is \`10,000 / 1.07^10 ≈ $5,083\`. Anything above $5,083 today is the better deal — and the higher your opportunity cost of capital, the more you'd demand to defer.`,
+      body: `# Time value of money
+
+The single most important idea in finance: **a dollar today is worth more than a dollar tomorrow.** Today's dollar can be invested to earn a return; tomorrow's dollar is exposed to inflation, default, and opportunity cost. Every valuation technique in corporate finance — DCF, bond pricing, mortgage math, lease analysis, pension funding — is just an application of this one idea.
+
+Think of it this way: If I offer you $100 today or $100 next year, you take it today because you could put that cash in a savings account and have $105 by next year. By waiting, you lose that potential growth (opportunity cost) and your money might buy fewer groceries later (inflation).
+
+To a manager, time isn't just a clock; it's a cost. If you have $1 million sitting in a non-interest-bearing checking account, you are effectively losing money every day because that capital isn't out in the world working for you. 
+
+## Present value and future value
+
+\`FV = PV × (1 + r)^n\`
+
+\`PV = FV / (1 + r)^n\`
+
+where *r* is the periodic discount rate and *n* is the number of periods. The discount rate represents the *opportunity cost* of capital: the return you could earn on an equivalent-risk alternative. Riskier cash flows are discounted at higher rates and therefore have lower present values.
+
+In plain English, "discounting" is the process of stripping away the interest to see what a future payment is worth in today's terms (**Present Value**). If a manager ignores this, they might greenlight a project that returns $1 million in 20 years, not realizing that after accounting for the risk and the wait, that $1 million is only worth a fraction of that amount today.
+
+Think of "r" (the discount rate) as your hurdle. If you could easily get a 5% return by buying safe government bonds, you shouldn't accept a 5% return on a risky new taco truck startup. You would "discount" the taco truck's future earnings at a much higher rate (perhaps 15%) to account for the risk that the business might fail. The higher the risk, the less that future promise is worth to you right now.
+
+## Compounding and the rule of 72
+
+Money compounds — last period's interest earns this period's interest. The **Rule of 72** is the back-of-envelope shortcut: at *r%* growth, money doubles in roughly *72/r* years. At 8% you double every nine years; at 12% every six. Compounding is also why credit-card debt is ruinous — interest charged monthly at 18% APR compounds to ~19.6% effective annual rate.
+
+Compounding is essentially "interest on interest." Imagine you save $1,000. In Year 1, you earn interest on that $1,000. In Year 2, you earn interest on the $1,000 *plus* the interest you earned in Year 1. This creates an exponential curve that can make small, consistent investments explode in value over decades.
+
+For a business, compounding works on growth too. If a SaaS company grows its user base by 10% every month, it isn't just adding the same number of users; it's adding 10% of a larger and larger number each time. This is why "early-stage growth" is so highly prized in venture capital.
+
+## Annuities and perpetuities
+
+An **annuity** is a stream of equal cash flows for a fixed number of periods (mortgages, bond coupons, lease payments). A **perpetuity** is one that lasts forever (preferred stock, the British consol bonds of the 19th century).
+
+\`PV of perpetuity = C / r\`
+
+\`PV of growing perpetuity (Gordon) = C / (r − g)\`
+
+The growing perpetuity formula is the engine of the **terminal value** in every DCF — it captures the value of cash flows beyond the explicit forecast horizon. Tiny changes in *r − g* swing the answer enormously, which is why DCFs are sensitive to assumptions you can barely defend.
+
+In a business context, an annuity is like your monthly office rent or a fixed gym membership. A growing perpetuity is how we value an entire company that we expect to keep growing at a steady rate (*g*) forever. If you underestimate the discount rate (*r*), you will massively overpay for the business.
+
+Think of "g" as the long-term growth rate. If you assume a company will grow its profits at 3% forever, but it actually only grows at 1%, the "r - g" denominator gets larger, making the calculated value of the company drop significantly. Managers who are too optimistic about "g" often end up making bad acquisitions.
+
+## Real vs nominal
+
+Nominal rates include inflation; real rates strip it out. \`(1 + r_nominal) = (1 + r_real)(1 + inflation)\`. When forecasting in nominal dollars, discount at nominal rates; when forecasting in real dollars, discount at real rates. Mixing them is a common student error — and a common professional one.
+
+Think of "nominal" as the number printed on the bill, and "real" as the number of apples that bill can actually buy. If your bank pays 5% interest (nominal) but inflation is 5%, your "real" return is 0%. You have more paper, but no more purchasing power.
+
+If you are a manager planning a 10-year factory expansion, you must decide: Are your revenue projections including the fact that you'll raise prices for inflation? If yes, you are using nominal dollars and must use a nominal discount rate. If you ignore inflation in your sales numbers but use a high interest rate from the bank to discount them, your project will look much worse than it actually is.
+
+## Worked example
+
+You're offered $10,000 in ten years or some smaller sum today. At a 7% discount rate, the present value of the future $10,000 is \`10,000 / 1.07^10 ≈ $5,083\`. Anything above $5,083 today is the better deal — and the higher your opportunity cost of capital, the more you'd demand to defer.`,
       videos: [
         { title: "Time Value of Money \u2014 Full Tutorial", source: "YouTube \u2014 Khan Academy", url: "https://www.youtube.com/watch?v=733mgqrzNKs", fallbackSearchQuery: "time value of money Khan Academy" },
         { title: "Damodaran \u2014 Time Value of Money", source: "YouTube \u2014 NYU Stern", videoId: "kaYz15vwb9k", fallbackSearchQuery: "Damodaran time value of money" },
