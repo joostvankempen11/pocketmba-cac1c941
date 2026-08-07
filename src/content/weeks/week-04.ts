@@ -44,8 +44,6 @@ Managers who can sketch the four basic shifts (left/right on each curve) can rea
 
 The area between the demand curve and the price line is **consumer surplus** — the value buyers got above what they paid. If you were willing to pay $4 for a coffee but it only cost $3, you enjoyed $1 of surplus. The area between the price line and the supply curve is **producer surplus** — sellers' margin above marginal cost. Their sum is *total welfare*. Anything that prevents trade (tax, tariff, quota, price control) destroys some of this surplus, called **deadweight loss**. Deadweight loss represents 'lost' happiness or profit—trades that *should* have happened because the buyer valued the item more than it cost to make, but didn't occur because of market interference.`,
       videos: [
-        { title: "Supply and Demand \u2014 Crash Course Economics", source: "YouTube \u2014 Crash Course", url: "https://www.youtube.com/watch?v=g6lQl_EgIvw", fallbackSearchQuery: "supply demand crash course" },
-        { title: "How the Price System Works \u2014 Hayek", source: "YouTube \u2014 Marginal Revolution University", url: "https://www.youtube.com/watch?v=R5Wn5n5SBYI", fallbackSearchQuery: "Hayek price system" },
         { title: "Supply and Demand \u2014 Crash Course Economics", source: "YouTube", videoId: "g9aDizJpd_s", fallbackSearchQuery: "supply demand equilibrium explained" },
         { title: "The Price System", source: "YouTube", videoId: "mr2fexY-utY", fallbackSearchQuery: "price system market coordination" },
       ],
@@ -155,8 +153,6 @@ If you are a brilliant manager in a perfectly competitive industry, you are padd
 
 A grocery chain operates in monopolistic competition. Margins are 2-3%. The same chain's payments-processing subsidiary operates in an oligopoly with Visa, Mastercard, and a handful of acquirers — margins 25%+. The structure of the market explains most of the gap; operational excellence explains the rest. Even though the same leadership team runs both, the payments business is simply a "better" house to live in because there are fewer neighbors to compete with.`,
       videos: [
-        { title: "Market Structures \u2014 Crash Course", source: "YouTube \u2014 Crash Course Economics", url: "https://www.youtube.com/watch?v=u9_sckYM-Vk", fallbackSearchQuery: "market structures explained" },
-        { title: "Monopoly and Antitrust", source: "YouTube \u2014 Marginal Revolution University", url: "https://www.youtube.com/watch?v=tjHmRBoYsg8", fallbackSearchQuery: "monopoly antitrust MRU" },
         { title: "Market Structures", source: "YouTube", videoId: "eNxk5-EJFrY", fallbackSearchQuery: "perfect competition monopoly oligopoly" },
         { title: "Monopoly and Antitrust", source: "YouTube", videoId: "Sb_-wfmJnHA", startSeconds: 59, fallbackSearchQuery: "monopoly antitrust regulation" },
       ],

@@ -96,7 +96,6 @@ In *What Is Strategy?* (1996) Porter sharpened this: strategy is a *coherent set
 Doing the same activities better than rivals (operational effectiveness) is necessary but not sufficient — best practices diffuse. This means that if everyone starts using the same efficient software, no one has an advantage anymore; you've just raised the floor (the minimum standard) for everyone. *Strategy* is doing *different* activities, or the same ones in a different configuration. If you are just "running the race faster," you are being effective. If you are "choosing a different race entirely," you have a strategy. For example, if two car companies both adopt the same robot arm to weld doors faster, they are just keeping up. But if one car company decides to stop selling cars and starts an app-based car-sharing service, they have changed their strategy.`,
       videos: [
         { title: "Michael Porter's Generic Strategies Explained", source: "YouTube", videoId: "V14kuqYEsxE", fallbackSearchQuery: "Porter generic strategies" },
-        { title: "What Is Strategy? \u2014 Michael Porter", source: "YouTube \u2014 HBS", url: "https://www.youtube.com/watch?v=GsmDvkPzCBM", fallbackSearchQuery: "what is strategy Porter HBS" },
         { title: "What is Strategy", source: "YouTube", videoId: "06sk4JdN-Pw", fallbackSearchQuery: "what is strategy Michael Porter" },
       ],
       readings: [
@@ -145,8 +144,6 @@ Return on invested capital (ROIC) sustained above WACC for >10 years is the empi
 Managers' job: deepen the moat with every reinvested dollar. Investors' job: pay only for moats they can underwrite for a decade.`,
       videos: [
         { title: "Economic Moats Explained", source: "YouTube", videoId: "FkmWzdztCqE", startSeconds: 10, fallbackSearchQuery: "economic moat competitive advantage explained" },
-        { title: "Pat Dorsey \u2014 The Five Rules for Successful Stock Investing", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=tA0Ol1zlPgU", fallbackSearchQuery: "Pat Dorsey five rules investing" },
-        { title: "Hamilton Helmer \u2014 7 Powers", source: "YouTube \u2014 Acquired", url: "https://www.youtube.com/watch?v=lQQXxnAuPDc", fallbackSearchQuery: "Hamilton Helmer 7 Powers" },
         { title: "Five Rules for Successful Stock Investing", source: "YouTube", videoId: "NlrEW3kUu2Q", fallbackSearchQuery: "Pat Dorsey five rules investing moats" },
         { title: "Hamilton's 7 Powers", source: "YouTube", videoId: "2tiQrNtTzPA", fallbackSearchQuery: "Hamilton Helmer 7 Powers strategy" },
       ],

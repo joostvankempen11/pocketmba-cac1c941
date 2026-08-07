@@ -51,7 +51,6 @@ Positioning is *chosen* — you decide what to *not* be. Volvo chose "safety" an
 
 A new electric pickup truck startup could segment by income (luxury vs mass), by use case (worksite vs lifestyle), or by environmental attitude. Targeting the "affluent eco-conscious adventurer" segment (psychographic + behavioral) gives them a defensible position — premium pricing, dealer-free distribution, design-forward — that the legacy F-150 can't easily attack without alienating its core fleet buyers. By focusing on the 'adventurer' rather than the 'general worker,' the startup can charge more for specialized features like built-in camping gear, which a construction company would never pay for.`,
       videos: [
-        { title: "Marketing Strategy \u2014 STP", source: "YouTube \u2014 Two Teachers", url: "https://www.youtube.com/watch?v=ZBR1HJxn-X8", fallbackSearchQuery: "segmentation targeting positioning" },
         { title: "Jobs to Be Done \u2014 Clayton Christensen", source: "YouTube \u2014 HBS", url: "https://www.youtube.com/watch?v=Stc0beAxavY", fallbackSearchQuery: "jobs to be done Christensen" },
         { title: "Marketing Strategy \u2013 STP", source: "YouTube", videoId: "K400f3nvtrI", fallbackSearchQuery: "STP marketing strategy explained" },
       ],
@@ -104,8 +103,6 @@ Promotion isn't just about "shouting" at the market. It's about matching the mes
 
 The four Ps must reinforce each other. Premium product + low price = confused brand. Mass-market product + boutique distribution = under-scaled. The framework's value is *not* checking each box; it's noticing when a planned change in one P breaks another. If your manager decides to make your product's design more high-end (Product), you must also rethink if your cheap social media ads (Promotion) or discount store shelves (Place) still make sense.`,
       videos: [
-        { title: "The Marketing Mix Explained", source: "YouTube \u2014 2-minute Classroom", url: "https://www.youtube.com/watch?v=H3KTKVAdHTw", fallbackSearchQuery: "4Ps marketing mix" },
-        { title: "Pricing Strategy \u2014 McKinsey", source: "YouTube \u2014 McKinsey", url: "https://www.youtube.com/watch?v=BvE_2_NUWMA", fallbackSearchQuery: "McKinsey pricing strategy" },
         { title: "The Marketing Mix", source: "YouTube", videoId: "Mco8vBAwOmA", fallbackSearchQuery: "marketing mix 4Ps product price place promotion" },
         { title: "Pricing Strategy", source: "YouTube", videoId: "sF6AMj3H0jg", fallbackSearchQuery: "pricing strategy explained" },
       ],
@@ -172,8 +169,6 @@ If your blended customer acquisition cost (CAC) is $180, your LTV/CAC = 3.1×, w
 
 Use CLV as a *steering wheel*, not a verdict. The number is less important than the model behind it.`,
       videos: [
-        { title: "Customer Lifetime Value Explained", source: "YouTube \u2014 David Skok / Matrix", url: "https://www.youtube.com/watch?v=hpVT3OkUWfo", fallbackSearchQuery: "customer lifetime value" },
-        { title: "Unit Economics \u2014 Brian Balfour", source: "YouTube \u2014 Reforge", url: "https://www.youtube.com/watch?v=8YHTk6F0pgU", fallbackSearchQuery: "unit economics Brian Balfour" },
         { title: "Customer Lifetime Value Explained", source: "YouTube", videoId: "GPSysUOV240", fallbackSearchQuery: "CLV customer lifetime value calculation" },
         { title: "Unit Economics \u2014 Brian Balfour", source: "YouTube", videoId: "26tDd5rsjX4", fallbackSearchQuery: "unit economics SaaS startup" },
       ],

@@ -120,8 +120,6 @@ IRR of A = 50%. IRR of B = 35%. A has the higher rate; B creates 6× the value. 
 
 Classical NPV ignores managerial flexibility — the option to expand, contract, defer, or abandon mid-project. **Real options** valuation (an offshoot of Black-Scholes thinking) captures that flexibility and can rescue projects that look NPV-negative under a single fixed scenario. Especially relevant in R&D, natural resources, and platform investments. For example, a tech company might build a small, money-losing prototype (Negative NPV). However, this creates the "option" to launch a global product if the prototype works. That future possibility has value today that simple math might miss. If a manager ignores real options, they might get "analysis paralysis" and kill a project that could have become a massive future success just because the immediate numbers look tight.`,
       videos: [
-        { title: "NPV and IRR Explained", source: "YouTube \u2014 Ben Felix", url: "https://www.youtube.com/watch?v=GtSf-BPaUf4", fallbackSearchQuery: "NPV IRR explained" },
-        { title: "Capital Budgeting Conflicts", source: "YouTube \u2014 Edspira", url: "https://www.youtube.com/watch?v=lFu-MTH6_x4", fallbackSearchQuery: "capital budgeting NPV IRR conflict" },
         { title: "NPV and IRR Explained", source: "YouTube", videoId: "Fw5-wccViOM", fallbackSearchQuery: "NPV vs IRR project evaluation" },
         { title: "Capital Budgeting Conflicts", source: "YouTube", videoId: "9rqPpuIrFLA", fallbackSearchQuery: "capital budgeting decision conflicts" },
       ],
@@ -182,7 +180,6 @@ Every project the firm undertakes has to clear ~8.2% just to break even on value
       videos: [
         { title: "Corporate Finance Explained | Cost of Capital", source: "YouTube", videoId: "90e-EV1kL9I", fallbackSearchQuery: "WACC weighted average cost of capital explained" },
         { title: "WACC \u2014 A Comprehensive Walkthrough", source: "YouTube \u2014 The Finance Storyteller", url: "https://www.youtube.com/watch?v=0inqw9cCJnM", fallbackSearchQuery: "WACC walkthrough" },
-        { title: "Damodaran \u2014 Estimating Cost of Equity", source: "YouTube \u2014 NYU Stern", url: "https://www.youtube.com/watch?v=oTQukNB-CC4", fallbackSearchQuery: "Damodaran cost of equity" },
         { title: "Estimating Cost of Equity", source: "YouTube", videoId: "JyUBm9M7Wyw", fallbackSearchQuery: "estimating cost of equity CAPM" },
       ],
       readings: [
@@ -256,8 +253,6 @@ Returns of capital to shareholders. Mechanically similar in the textbook (both r
 
 A **Dividend** is a regular cash payment to shareholders, like a steady allowance. A **Buyback** is when the company uses its cash to buy its own stock off the market, which makes the remaining shares more valuable. While both return cash to investors, companies hate cutting dividends because it looks like a failure, whereas they can stop buybacks anytime without much drama. Think of dividends as a monthly rent payment you *must* make, while buybacks are like choosing to pay extra toward your mortgage—helpful, but optional if cash gets tight.`,
       videos: [
-        { title: "Modigliani-Miller and Capital Structure", source: "YouTube \u2014 Aswath Damodaran", url: "https://www.youtube.com/watch?v=ufHbFRtRyaQ", fallbackSearchQuery: "Modigliani Miller capital structure" },
-        { title: "How Much Debt Should a Company Have?", source: "YouTube \u2014 The Plain Bagel", url: "https://www.youtube.com/watch?v=ScKK57Mws6w", fallbackSearchQuery: "how much debt should a company have" },
         { title: "Modigliani-Miller and Capital Structure", source: "YouTube", videoId: "Zzsf4O1_02M", fallbackSearchQuery: "Modigliani Miller theorem" },
         { title: "How Much Debt Should a Company Have", source: "YouTube", videoId: "jsRuWaP2pnA", fallbackSearchQuery: "optimal capital structure debt equity" },
       ],

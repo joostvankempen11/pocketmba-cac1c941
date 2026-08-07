@@ -48,8 +48,6 @@ This is harder than it looks. Expect to revise each section at least once based 
 
 The point isn't to launch the business in your capstone. It's to have built the *mental model* of a complete business that you can re-apply to every situation you encounter for the rest of your career. Reading a 10-K (the massive annual report large public companies must file), evaluating a new initiative, considering a job offer at a startup, sitting on a board — the same integrated framework applies. You now have it.`,
       videos: [
-        { title: "How to Write a Business Plan (Y Combinator)", source: "YouTube \u2014 Y Combinator", url: "https://www.youtube.com/watch?v=PHHl6JKzC6w", fallbackSearchQuery: "how to write business plan YC" },
-        { title: "Aswath Damodaran \u2014 The Business of Storytelling", source: "YouTube \u2014 NYU Stern", url: "https://www.youtube.com/watch?v=zoaG93muvKs", fallbackSearchQuery: "Damodaran business of storytelling" },
         { title: "How to Write a Business Plan", source: "YouTube", videoId: "n6ecdYd8T6o", fallbackSearchQuery: "how to write business plan" },
         { title: "The Business of Storytelling", source: "YouTube", videoId: "WKIZ0bicfFw", fallbackSearchQuery: "business of storytelling numbers narrative" },
       ],

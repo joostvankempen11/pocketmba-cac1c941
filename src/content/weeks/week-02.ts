@@ -42,7 +42,6 @@ Then back-solve for the fixed component using either point. Crude but quick. Lin
 Every "fixed" cost is fixed only inside a range. Double the volume and you'll need a bigger warehouse, more managers, more IT. Treat fixed costs as fixed for the decision in front of you, not forever. In business, 'fixed' is just a temporary state of being until your success forces you to expand.`,
       videos: [
         { title: "Managerial Accounting Full Course Step by Step", source: "YouTube", videoId: "Axeecq5TByU", fallbackSearchQuery: "cost behavior managerial accounting explained" },
-        { title: "Operating Leverage Explained", source: "YouTube \u2014 The Finance Storyteller", url: "https://www.youtube.com/watch?v=99qj4mqAjbg", fallbackSearchQuery: "operating leverage explained" },
         { title: "Operating Leverage Explained", source: "YouTube", videoId: "Ea7sXAGTGXE", fallbackSearchQuery: "operating leverage fixed variable costs" },
       ],
       readings: [
@@ -101,7 +100,6 @@ How far revenue can fall before the business loses money. A 30% margin of safety
 When the mix is stable, use a weighted-average CM across products. When the mix shifts dramatically with volume (luxury cars vs economy cars), break-even shifts with it; one number won't cover both.`,
       videos: [
         { title: "Managerial Accounting Full Course Step by Step", source: "YouTube", videoId: "6lwZUrDK69c", fallbackSearchQuery: "contribution margin break-even analysis explained" },
-        { title: "Contribution Margin and Break-Even", source: "YouTube \u2014 Accounting Stuff", url: "https://www.youtube.com/watch?v=l5N-IfXwIu0", fallbackSearchQuery: "contribution margin break-even" },
         { title: "Break-even and CVP", source: "YouTube", videoId: "tuKLU6aQnJg", fallbackSearchQuery: "break-even and CVP analysis" },
         { title: "Contribution Margin", source: "YouTube", videoId: "pm6Eo9qiUIY", fallbackSearchQuery: "contribution margin explained" },
       ],
@@ -163,8 +161,6 @@ If overhead is 5% of cost and all products are similar, a simple driver is fine.
 A simplified successor. Estimate the practical capacity (in time) of each resource and the time each activity takes. Multiply. Avoids the interview-heavy surveys of classic ABC and updates cleanly as processes change. Used widely in services and healthcare. Instead of asking staff what percentage of their time they spend on a task (which is often guessed), managers simply measure how many minutes a task takes and multiply it by the cost-per-minute of the staff.`,
       videos: [
         { title: "Managerial Accounting Full Course Step by Step", source: "YouTube", videoId: "6lwZUrDK69c", fallbackSearchQuery: "activity based costing explained" },
-        { title: "Activity Based Costing \u2014 A Simple Explanation", source: "YouTube \u2014 Tony Bell", url: "https://www.youtube.com/watch?v=v-tjp7nhfPM", fallbackSearchQuery: "activity based costing simple explanation" },
-        { title: "Robert Kaplan on Time-Driven ABC", source: "YouTube \u2014 HBS", url: "https://www.youtube.com/watch?v=Z2bC0sQ4QHk", fallbackSearchQuery: "Robert Kaplan time-driven ABC" },
         { title: "Allocating Overhead", source: "YouTube", videoId: "vMdxzH5IUQ4", fallbackSearchQuery: "allocating overhead cost accounting" },
         { title: "Activity-Based Costing", source: "YouTube", videoId: "uIyydrCcWiM", fallbackSearchQuery: "activity-based costing explained" },
         { title: "Time-Driven ABC", source: "YouTube", videoId: "o2TQyrmGsd4", startSeconds: 240, fallbackSearchQuery: "time-driven activity based costing" },

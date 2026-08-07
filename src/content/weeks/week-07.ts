@@ -56,8 +56,6 @@ Queueing theory shows wait time explodes nonlinearly as utilization approaches 1
 - **Batch vs flow** — large batches (baking 100 cookies at once) amortize setup cost but create lumpy WIP; small batches (baking 5 at a time) smooth flow but require fast changeovers (cleaning the tray quickly). Changeover is the time spent switching from making one product to another; if this time is high, you are forced into large, inefficient batches.
 - **Centralized vs distributed** — one big plant vs many small ones; cost-of-scale (big is cheaper per unit) vs cost-of-distance (small is closer to the customer) trade-off. For example, Amazon has a few massive regional hubs (centralized) but also thousands of local delivery vans (distributed) to balance shipping costs with speed.`,
       videos: [
-        { title: "Little's Law \u2014 Operations Management", source: "YouTube \u2014 MIT OCW", url: "https://www.youtube.com/watch?v=NyKbVo0OkLA", fallbackSearchQuery: "Little's Law operations" },
-        { title: "Theory of Constraints \u2014 Goldratt", source: "YouTube \u2014 Goldratt Institute", url: "https://www.youtube.com/watch?v=K3Lt2L2eVbI", fallbackSearchQuery: "theory of constraints Goldratt" },
         { title: "Business Process Analysis", source: "YouTube", videoId: "1E6II2U1shY", fallbackSearchQuery: "business process analysis explained" },
         { title: "Performance Management", source: "YouTube", videoId: "BXD8VaO-Dss", fallbackSearchQuery: "performance management operations" },
       ],
@@ -119,8 +117,6 @@ Causes: demand forecasting based on orders rather than POS (Point of Sale) data,
 
 JIT minimizes inventory by tight coupling with suppliers and frequent small deliveries. This philosophy, pioneered by Toyota, aims to have parts arrive exactly when they are needed for production, rather than sitting in a warehouse. Hugely improved **capital efficiency**—which is how well a company turns its investments into profit—for decades — until COVID-19 and the chip shortage reminded everyone that lean supply chains are *fragile* supply chains. If a single supplier skips a delivery, the whole factory stops. The post-2020 shift to "just-in-case" buffers is a recalibration, not a rejection. It is moving from extreme efficiency to a balance of efficiency and resilience.`,
       videos: [
-        { title: "Inventory Management \u2014 EOQ", source: "YouTube \u2014 Operations Management 101", url: "https://www.youtube.com/watch?v=KMqlqVnYukM", fallbackSearchQuery: "EOQ inventory management" },
-        { title: "The Bullwhip Effect", source: "YouTube \u2014 MIT Sloan", url: "https://www.youtube.com/watch?v=AjUdZcRBhgw", fallbackSearchQuery: "bullwhip effect supply chain" },
         { title: "Inventory Management EOQ", source: "YouTube", videoId: "0NOER-Lle-0", fallbackSearchQuery: "EOQ economic order quantity" },
         { title: "The Bullwhip Effect", source: "YouTube", videoId: "sZnxWVKhObo", fallbackSearchQuery: "bullwhip effect supply chain explained" },
       ],
@@ -182,8 +178,6 @@ Philip Crosby's title and central claim: the cost of *preventing* defects is far
 
 The biggest lean transformations of the past 25 years have been in services — hospitals (Virginia Mason), software (DevOps, Kanban for engineering), startups (Eric Ries's *The Lean Startup* applies the build-measure-learn loop to product-market fit). The underlying ideas — pull, small batches, surface problems immediately, continuous improvement — generalize. In a hospital, for example, 'lean' might mean keeping all the supplies for a specific surgery in one kit so the surgeon doesn't have to 'wait' (waste) for a nurse to find a missing tool in a different room.`,
       videos: [
-        { title: "Lean Manufacturing \u2014 Toyota Production System", source: "YouTube \u2014 Toyota", url: "https://www.youtube.com/watch?v=v8KrL4uy4Mo", fallbackSearchQuery: "Toyota Production System" },
-        { title: "Six Sigma DMAIC Explained", source: "YouTube \u2014 GoLeanSixSigma", url: "https://www.youtube.com/watch?v=FRJzdUscqsw", fallbackSearchQuery: "Six Sigma DMAIC" },
         { title: "Lean Manufacturing \u2014 Toyota Production System", source: "YouTube", videoId: "F5vtCRFRAK0", fallbackSearchQuery: "lean manufacturing Toyota" },
         { title: "Six Sigma DMAIC", source: "YouTube", videoId: "s2HCrhNVfak", fallbackSearchQuery: "Six Sigma DMAIC methodology" },
         { title: "Total Quality Management", source: "YouTube", videoId: "OSz7MvkPhFI", startSeconds: 54, fallbackSearchQuery: "total quality management explained" },

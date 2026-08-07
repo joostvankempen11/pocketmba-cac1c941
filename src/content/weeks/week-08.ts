@@ -196,8 +196,6 @@ Large organizations don't have a single culture — they have many, often in ten
 
 For example, the Sales team might have a high-energy, competitive culture focused on new revenue, while the Engineering team has a quiet, meticulous culture focused on stability. Imagine a local coffee shop where the baristas are all about community and art, but the back-office bookkeeper is all about strict budgets and efficiency. Strong overall cultures don't eliminate subcultures; they ensure subcultures share enough core assumptions to operate as a system. If these subcultures fight rather than collaborate, the organization grinds to a halt.`,
       videos: [
-        { title: "Reed Hastings \u2014 Building the Netflix Culture", source: "YouTube \u2014 Stanford GSB", url: "https://www.youtube.com/watch?v=8x6tjeu_S5w", fallbackSearchQuery: "Reed Hastings Netflix culture" },
-        { title: "Simon Sinek \u2014 The Infinite Game / Trusting Teams", source: "YouTube \u2014 Simon Sinek", url: "https://www.youtube.com/watch?v=tye525dEpaQ", fallbackSearchQuery: "Simon Sinek infinite game" },
         { title: "Building the Netflix Culture", source: "YouTube", videoId: "IrGkeGExJfw", fallbackSearchQuery: "Netflix culture Reed Hastings" },
         { title: "Simon Sinek \u2014 The Infinite Game", source: "YouTube", videoId: "5BrpWXC5ua8", fallbackSearchQuery: "Simon Sinek infinite game leadership" },
       ],
@@ -284,7 +282,6 @@ The test: would you be comfortable if your tactics were public? If your boss, yo
 
 Long careers in functional cultures are built on durable trust. Short careers in dysfunctional ones can be built on manipulation. Choose the long career.`,
       videos: [
-        { title: "Jeffrey Pfeffer \u2014 Power: Why Some People Have It and Others Don't", source: "YouTube \u2014 Stanford GSB", url: "https://www.youtube.com/watch?v=PgGUKxbWE-Y", fallbackSearchQuery: "Jeffrey Pfeffer power" },
         { title: "Robert Cialdini \u2014 Science of Persuasion", source: "YouTube \u2014 Influence at Work", url: "https://www.youtube.com/watch?v=cFdCzN7RYbw", fallbackSearchQuery: "Cialdini science of persuasion" },
         { title: "Jeffrey Pfeffer \u2014 Power", source: "YouTube", videoId: "j-FOpdvuxFU", fallbackSearchQuery: "Jeffrey Pfeffer power organizations" },
         { title: "Simon Sinek \u2014 Influence Without Authority", source: "YouTube", videoId: "pkclW79ZoZU", fallbackSearchQuery: "influence without authority Simon Sinek" },

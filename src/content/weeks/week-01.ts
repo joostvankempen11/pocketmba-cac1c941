@@ -139,7 +139,6 @@ GAAP stands for Generally Accepted Accounting Principles—the official rulebook
       videos: [
         { title: "The Ultimate Guide to Financial Statements", source: "YouTube", videoId: "eorpdJUWfTA", startSeconds: 935, fallbackSearchQuery: "income statement explained" },
         { title: "How to Read a P&L Statement", source: "YouTube \u2014 The Finance Storyteller", url: "https://www.youtube.com/watch?v=uVHGgSXtQmE", fallbackSearchQuery: "how to read a P&L statement" },
-        { title: "Aswath Damodaran \u2014 Accounting 101", source: "YouTube \u2014 NYU Stern", url: "https://www.youtube.com/watch?v=Lhq6oMUUOMU", fallbackSearchQuery: "Aswath Damodaran accounting 101" },
       ],
       readings: [
         { title: "The Earnings Game: Everyone Plays, Nobody Wins", source: "Harvard Business Review", url: "https://hbr.org/2002/03/the-earnings-game-everyone-plays-nobody-wins" },
@@ -287,7 +286,6 @@ More cash than profit — the non-cash add-backs swamped the working capital bui
 - **Mature decliner**: Strong CFO, near-zero CFI (over-harvested asset base), huge CFF outflows. Buybacks funded by underinvestment — short-term beautiful, long-term fatal. This is like a landlord who stops repairing the roof to keep the rental income high—eventually, the building becomes uninhabitable.`,
       videos: [
         { title: "The Ultimate Guide to Financial Statements", source: "YouTube", videoId: "eorpdJUWfTA", startSeconds: 1196, fallbackSearchQuery: "cash flow statement explained" },
-        { title: "Warren Buffett on Owner Earnings vs EBITDA", source: "YouTube \u2014 Berkshire Hathaway annual meeting clip", url: "https://www.youtube.com/watch?v=afmRpRrqOEs", fallbackSearchQuery: "Warren Buffett owner earnings" },
         { title: "Warren Buffett on EBITDA", source: "YouTube", videoId: "l82kIjqBtqw", fallbackSearchQuery: "Warren Buffett EBITDA criticism" },
       ],
       readings: [
