@@ -33,7 +33,7 @@ The ratio of fixed to total cost determines *operating leverage*: how much a 1% 
 
 The **high-low method**: take the highest and lowest activity months. This helps you separate the 'static' part of a bill from the 'usage' part.
 
-\\`Variable rate = (cost_high − cost_low) / (units_high − units_low)\\`
+\`Variable rate = (cost_high − cost_low) / (units_high − units_low)\`
 
 Then back-solve for the fixed component using either point. Crude but quick. Linear regression on 12+ months of data is better when you have it, and a scatter plot will instantly show whether the relationship is even linear (it usually isn't — there are step jumps).
 
