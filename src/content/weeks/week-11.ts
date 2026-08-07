@@ -129,7 +129,6 @@ For these, the discipline transfers but the *methods* adapt — pilot programs, 
 Once you have signal — customers using, retaining, referring; revenue growing without you pushing — the game changes. Product-market fit is that magical moment where the market is finally pulling the product out of the startup, rather than the startup trying to push it onto the market. The new question is whether *the business model* scales: can you acquire customers at acceptable cost, deliver at acceptable margins, and build the operational capacity for 10x? Many startups achieve product-market fit and then die in the scaling phase because they assumed scale would be easy. Growing too fast without the right processes is like putting a Ferrari engine in a bicycle—eventually, the frame will snap under the pressure.`,
       videos: [
         { title: "Eric Ries \u2014 The Lean Startup", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=fEvKo90qBns", fallbackSearchQuery: "Eric Ries lean startup" },
-        { title: "Steve Blank \u2014 Customer Development", source: "YouTube \u2014 Stanford", url: "https://www.youtube.com/watch?v=xOOEvKBJfTU", fallbackSearchQuery: "Steve Blank customer development" },
         { title: "Steve Blank \u2014 Customer Development", source: "YouTube", videoId: "xr2zFXblSRM", fallbackSearchQuery: "Steve Blank customer development" },
       ],
       readings: [
@@ -206,7 +205,6 @@ Day-one moats are rare. But the business model should have a credible path to on
 A great product without a path to defensibility gets copied and competed to zero margin. Defensibility doesn't come from the technology alone — it comes from the *system* of choices that compound over time. It is the "moat" that keeps competitors from swimming across and stealing your castle.`,
       videos: [
         { title: "Alex Osterwalder \u2014 Business Model Canvas Explained", source: "YouTube \u2014 Strategyzer", url: "https://www.youtube.com/watch?v=QoAOzMTLP5s", fallbackSearchQuery: "business model canvas" },
-        { title: "Andrew Chen \u2014 The Cold Start Problem (Network Effects)", source: "YouTube \u2014 a16z", url: "https://www.youtube.com/watch?v=qBKvgYDGZjI", fallbackSearchQuery: "Andrew Chen cold start problem" },
         { title: "Andrew Chen \u2014 The Cold Start Problem", source: "YouTube", videoId: "-ILjMq1T13g", fallbackSearchQuery: "Andrew Chen cold start network effects" },
       ],
       readings: [
@@ -278,7 +276,6 @@ If the answer to all three is no, the program is theater. If yes to all three, i
 Even if you never start a company, learning startup methods is now a leadership skill. The pace of change in most industries means that every senior leader will be responsible for some H2 or H3 venture inside their organization. The discipline of validated learning, MVPs (Minimum Viable Products, or the simplest version of a product you can build to start learning), business model design, and protecting innovation from antibodies is general-purpose — not just startup folklore.`,
       videos: [
         { title: "Clayton Christensen \u2014 The Innovator's Dilemma", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=qDrMAzCHFUU", fallbackSearchQuery: "Christensen innovator's dilemma" },
-        { title: "Rita McGrath \u2014 The End of Competitive Advantage", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=Si9DphPEXJM", fallbackSearchQuery: "Rita McGrath end competitive advantage" },
         { title: "Rita McGrath \u2014 The End of Competitive Advantage", source: "YouTube", videoId: "wqmVsECbG8E", fallbackSearchQuery: "Rita McGrath transient advantage" },
       ],
       readings: [

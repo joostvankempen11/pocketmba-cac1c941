@@ -70,7 +70,6 @@ None of these are mysterious. All can be learned. The hardest part is doing them
       videos: [
         { title: "Simon Sinek \u2014 How Great Leaders Inspire Action (TED)", source: "YouTube", videoId: "qp0HIF3SfI4", fallbackSearchQuery: "what is leadership explained" },
         { title: "Simon Sinek \u2014 Why Good Leaders Make You Feel Safe (TED)", source: "YouTube \u2014 TED", url: "https://www.youtube.com/watch?v=lmyZMtPVodo", fallbackSearchQuery: "Simon Sinek leaders feel safe" },
-        { title: "John Kotter \u2014 The Difference Between Leadership and Management", source: "YouTube \u2014 Kotter Inc.", url: "https://www.youtube.com/watch?v=2sjQ1zxd6IY", fallbackSearchQuery: "Kotter leadership vs management" },
         { title: "John Kotter \u2014 The Difference Between Leadership and Management", source: "YouTube", videoId: "Dz8AiOQEQmk", fallbackSearchQuery: "Kotter leadership management difference" },
       ],
       readings: [
@@ -133,8 +132,6 @@ Companies that produce many leaders (GE in its prime, IBM, Procter & Gamble, McK
 
 The "growth at all costs" startup pattern — promote anyone you can't lose, fire anyone who can't keep up — produces volatile leadership and high turnover. The pattern that scales: hire deliberately for trajectory (people who have the capacity to grow), develop systematically, and have the courage to make leadership changes when the role outgrows the person. Sometimes a manager who was great for a team of 5 is the wrong person to lead a team of 500, and recognizing that is vital for the health of the organization.`,
       videos: [
-        { title: "Situational Leadership Explained \u2014 Ken Blanchard", source: "YouTube \u2014 The Ken Blanchard Companies", url: "https://www.youtube.com/watch?v=9Q4Z32iCC0o", fallbackSearchQuery: "Ken Blanchard situational leadership" },
-        { title: "The 70-20-10 Model for Development", source: "YouTube \u2014 Center for Creative Leadership", url: "https://www.youtube.com/watch?v=YJ-MVCJxBN8", fallbackSearchQuery: "70-20-10 model development" },
         { title: "Situational Leadership", source: "YouTube", videoId: "bAuwgjmF5xc", fallbackSearchQuery: "situational leadership styles" },
         { title: "The 70-20-10 Model for Development", source: "YouTube", videoId: "lV4wq9LUAJs", fallbackSearchQuery: "70-20-10 model leadership development" },
       ],
@@ -203,7 +200,6 @@ Gary Klein's tool: before making a decision, imagine it has failed catastrophica
 
 Even excellent decision processes produce bad outcomes some of the time. Mature leaders separate process from outcome, own results without abandoning process, learn from what they could have known and accept what they couldn't, and resist the seduction of fast pattern-matching from a single salient failure. If a manager ignores this, they become paralyzed by fear and stop making the calculated risks necessary for growth.`,
       videos: [
-        { title: "Annie Duke \u2014 Thinking in Bets", source: "YouTube \u2014 Google Talks", url: "https://www.youtube.com/watch?v=Lk3iEHM4i7s", fallbackSearchQuery: "Annie Duke thinking in bets" },
         { title: "Daniel Kahneman \u2014 Thinking, Fast and Slow", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=CjVQJdIrDJ0", fallbackSearchQuery: "Kahneman thinking fast slow" },
         { title: "Thinking in Bets", source: "YouTube", videoId: "uYNsSeYjkp4", fallbackSearchQuery: "Annie Duke thinking in bets" },
       ],
@@ -281,9 +277,6 @@ Even the hardest conversation has a humane shape: be direct (don't make the pers
 
 The complement is being *coachable*: thanking people for feedback even when it's wrong, sitting with discomfort before responding, separating the message from the messenger, and acting visibly on the parts that land. Senior leaders who can't take feedback poison their teams' truth-telling. Those who can multiply it.`,
       videos: [
-        { title: "Feedback & difficult conversations (search)", source: "YouTube search", url: "https://www.youtube.com/results?search_query=how+to+give+feedback+difficult+conversations+explained", fallbackSearchQuery: "how to give feedback difficult conversations explained" },
-        { title: "Kim Scott \u2014 Radical Candor (Google Talks)", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=MYRfTwOG8a4", fallbackSearchQuery: "Kim Scott Radical Candor" },
-        { title: "Patrick Lencioni on Crucial Conversations", source: "YouTube \u2014 VitalSmarts", url: "https://www.youtube.com/watch?v=22KkRPLm5dQ", fallbackSearchQuery: "Lencioni crucial conversations" },
       ],
       readings: [
         { title: "The Feedback Fallacy", source: "Harvard Business Review", url: "https://hbr.org/2019/03/the-feedback-fallacy" },

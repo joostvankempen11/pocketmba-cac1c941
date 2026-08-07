@@ -60,7 +60,6 @@ A frequent failure mode: optimizing a single metric until the system breaks else
 Most decisions in most organizations are made at levels 1-3. Moving the median decision up a rung is one of the highest-leverage investments a leadership team can make. It moves the company away from 'guessing based on feelings' toward 'investing based on evidence.'`,
       videos: [
         { title: "Hans Rosling \u2014 The Best Stats You've Ever Seen (TED)", source: "YouTube \u2014 TED", url: "https://www.youtube.com/watch?v=hVimVzgtD6w", fallbackSearchQuery: "Hans Rosling best stats" },
-        { title: "Cassie Kozyrkov \u2014 What is Decision Intelligence?", source: "YouTube \u2014 Google Cloud Tech", url: "https://www.youtube.com/watch?v=u47B5dPjJYM", fallbackSearchQuery: "Cassie Kozyrkov decision intelligence" },
         { title: "What is Decision Intelligence", source: "YouTube", videoId: "iLu9XyZ55oI", fallbackSearchQuery: "decision intelligence explained" },
       ],
       readings: [
@@ -136,8 +135,6 @@ The "Base Rate" is the starting probability before you see new evidence. If you'
 The Bayesian update: posterior ∝ likelihood × prior. Always ask "what was the base rate?" before treating a positive signal as evidence.`,
       videos: [
         { title: "StatQuest \u2014 Hypothesis Testing and the Null Hypothesis", source: "YouTube", videoId: "vemZtEM63GY", fallbackSearchQuery: "hypothesis testing explained statistics" },
-        { title: "Statistics Explained \u2014 Khan Academy", source: "YouTube \u2014 Khan Academy (intro statistics playlist)", url: "https://www.youtube.com/playlist?list=PL1328115D3D8A2566", fallbackSearchQuery: "Khan Academy statistics" },
-        { title: "Why Most Published Research Findings Are False \u2014 Ioannidis", source: "YouTube \u2014 TEDMED", url: "https://www.youtube.com/watch?v=4HQGzQVlS8w", fallbackSearchQuery: "Ioannidis published research false" },
         { title: "Why Most Published Research Findings Are False", source: "YouTube", videoId: "vY9mGJQFdyE", fallbackSearchQuery: "Ioannidis research findings false" },
       ],
       readings: [
@@ -202,8 +199,6 @@ The hard part is organizational, not technical. The patterns that work:
 
 Booking.com, Microsoft, Airbnb, and Netflix have published extensively about their experimentation programs — running tens of thousands of experiments per year and finding that ~10-30% of changes actually improve the metric the team confidently expected to improve. The base rate of confident-but-wrong is humbling.`,
       videos: [
-        { title: "A/B Testing \u2014 Trustworthy Online Controlled Experiments (Ron Kohavi)", source: "YouTube \u2014 Stanford MS&E", url: "https://www.youtube.com/watch?v=qYE6e2u8tME", fallbackSearchQuery: "Kohavi trustworthy online controlled experiments" },
-        { title: "Experimentation at Scale \u2014 Airbnb", source: "YouTube \u2014 InfoQ", url: "https://www.youtube.com/watch?v=Xh4Cn1bsm6c", fallbackSearchQuery: "Airbnb experimentation scale" },
         { title: "A/B Testing \u2014 Trustworthy Online Controlled Experiments", source: "YouTube", videoId: "VuKIN9S8Ivs", fallbackSearchQuery: "A/B testing controlled experiments" },
         { title: "Experimentation at Scale \u2014 Airbnb", source: "YouTube", videoId: "8F3k9nNVf5Q", fallbackSearchQuery: "Airbnb experimentation scale" },
       ],
