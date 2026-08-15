@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          beta_user_number: number | null
+          created_at: string
+          email: string | null
+          id: string
+          stripe_customer_id: string | null
+          stripe_subscription_id: string | null
+          subscription_plan:
+            | Database["public"]["Enums"]["subscription_plan"]
+            | null
+          subscription_status: Database["public"]["Enums"]["subscription_status"]
+          trial_ends_at: string | null
+          updated_at: string
+        }
+        Insert: {
+          beta_user_number?: number | null
+          created_at?: string
+          email?: string | null
+          id: string
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          subscription_plan?:
+            | Database["public"]["Enums"]["subscription_plan"]
+            | null
+          subscription_status?: Database["public"]["Enums"]["subscription_status"]
+          trial_ends_at?: string | null
+          updated_at?: string
+        }
+        Update: {
+          beta_user_number?: number | null
+          created_at?: string
+          email?: string | null
+          id?: string
+          stripe_customer_id?: string | null
+          stripe_subscription_id?: string | null
+          subscription_plan?:
+            | Database["public"]["Enums"]["subscription_plan"]
+            | null
+          subscription_status?: Database["public"]["Enums"]["subscription_status"]
+          trial_ends_at?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +67,13 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      subscription_plan: "monthly" | "yearly" | "beta_free"
+      subscription_status:
+        | "trialing"
+        | "active"
+        | "free_beta"
+        | "canceled"
+        | "expired"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +200,15 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      subscription_plan: ["monthly", "yearly", "beta_free"],
+      subscription_status: [
+        "trialing",
+        "active",
+        "free_beta",
+        "canceled",
+        "expired",
+      ],
+    },
   },
 } as const
