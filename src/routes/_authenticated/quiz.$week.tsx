@@ -6,7 +6,7 @@ import { useProgress } from "@/lib/progress-store";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export const Route = createFileRoute("/_authenticated/_authenticated/quiz/$week")({
+export const Route = createFileRoute("/_authenticated/quiz/$week")({
   head: ({ params }) => ({ meta: [{ title: `Quiz — Week ${params.week}` }] }),
   component: QuizPage,
 });

@@ -8,7 +8,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useProgress } from "@/lib/progress-store";
 import { Loader2, Trophy } from "lucide-react";
 
-export const Route = createFileRoute("/_authenticated/_authenticated/capstone")({
+export const Route = createFileRoute("/_authenticated/capstone")({
   head: () => ({ meta: [{ title: "Capstone — 12-Week MBA" }] }),
   component: CapstonePage,
 });

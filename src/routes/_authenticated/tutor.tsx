@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { AppShell } from "@/components/AppShell";
 import { TutorChat } from "@/components/TutorChat";
 
-export const Route = createFileRoute("/_authenticated/_authenticated/tutor")({
+export const Route = createFileRoute("/_authenticated/tutor")({
   head: () => ({ meta: [{ title: "AI Tutor — 12-Week MBA" }] }),
   component: TutorPage,
 });

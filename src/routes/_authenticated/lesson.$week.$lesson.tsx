@@ -8,7 +8,7 @@ import { getWeek } from "@/content/curriculum";
 import { useProgress } from "@/lib/progress-store";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
-export const Route = createFileRoute("/_authenticated/_authenticated/lesson/$week/$lesson")({
+export const Route = createFileRoute("/_authenticated/lesson/$week/$lesson")({
   head: ({ params }) => ({
     meta: [{ title: `Lesson — Week ${params.week}` }],
   }),
