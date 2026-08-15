@@ -139,7 +139,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                   if (typeof window !== "undefined" && window.history.length > 1) {
                     router.history.back();
                   } else {
-                    router.navigate({ to: "/" });
+                    router.navigate({ to: "/dashboard" });
                   }
                 }}
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm"
