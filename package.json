@@ -11,6 +11,7 @@
   "dependencies": {
     "@ai-sdk/openai-compatible": "^2.0.50",
     "@ai-sdk/react": "^3.0.207",
+    "@lovable.dev/cloud-auth-js": "^1.0.0",
     "@supabase/supabase-js": "^2.112.3",
     "@tanstack/react-query": "^5.0.0",
     "@tanstack/react-router": "^1.168.25",
