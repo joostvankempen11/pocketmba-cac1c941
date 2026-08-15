@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AccessEndedRouteImport } from './routes/access-ended'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
@@ -18,11 +19,17 @@ import { Route as AuthenticatedTutorRouteImport } from './routes/_authenticated/
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as AuthenticatedCurriculumRouteImport } from './routes/_authenticated/curriculum'
 import { Route as AuthenticatedCapstoneRouteImport } from './routes/_authenticated/capstone'
+import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
 import { Route as AuthenticatedWeekWeekRouteImport } from './routes/_authenticated/week.$week'
 import { Route as AuthenticatedQuizWeekRouteImport } from './routes/_authenticated/quiz.$week'
 import { Route as AuthenticatedLessonWeekLessonRouteImport } from './routes/_authenticated/lesson.$week.$lesson'
 import { Route as AuthenticatedAssignmentWeekIdRouteImport } from './routes/_authenticated/assignment.$week.$id'
 
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
@@ -67,6 +74,11 @@ const AuthenticatedCapstoneRoute = AuthenticatedCapstoneRouteImport.update({
   path: '/capstone',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedAccountRoute = AuthenticatedAccountRouteImport.update({
+  id: '/account',
+  path: '/account',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedWeekWeekRoute = AuthenticatedWeekWeekRouteImport.update({
   id: '/week/$week',
   path: '/week/$week',
@@ -94,6 +106,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
+  '/pricing': typeof PricingRoute
+  '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
   '/curriculum': typeof AuthenticatedCurriculumRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
@@ -108,6 +122,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
+  '/pricing': typeof PricingRoute
+  '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
   '/curriculum': typeof AuthenticatedCurriculumRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
@@ -124,6 +140,8 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
+  '/pricing': typeof PricingRoute
+  '/_authenticated/account': typeof AuthenticatedAccountRoute
   '/_authenticated/capstone': typeof AuthenticatedCapstoneRoute
   '/_authenticated/curriculum': typeof AuthenticatedCurriculumRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
@@ -140,6 +158,8 @@ export interface FileRouteTypes {
     | '/'
     | '/access-ended'
     | '/auth'
+    | '/pricing'
+    | '/account'
     | '/capstone'
     | '/curriculum'
     | '/dashboard'
@@ -154,6 +174,8 @@ export interface FileRouteTypes {
     | '/'
     | '/access-ended'
     | '/auth'
+    | '/pricing'
+    | '/account'
     | '/capstone'
     | '/curriculum'
     | '/dashboard'
@@ -169,6 +191,8 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/access-ended'
     | '/auth'
+    | '/pricing'
+    | '/_authenticated/account'
     | '/_authenticated/capstone'
     | '/_authenticated/curriculum'
     | '/_authenticated/dashboard'
@@ -185,11 +209,19 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AccessEndedRoute: typeof AccessEndedRoute
   AuthRoute: typeof AuthRoute
+  PricingRoute: typeof PricingRoute
   ApiChatRoute: typeof ApiChatRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/auth': {
       id: '/auth'
       path: '/auth'
@@ -253,6 +285,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedCapstoneRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/account': {
+      id: '/_authenticated/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AuthenticatedAccountRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/week/$week': {
       id: '/_authenticated/week/$week'
       path: '/week/$week'
@@ -285,6 +324,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAccountRoute: typeof AuthenticatedAccountRoute
   AuthenticatedCapstoneRoute: typeof AuthenticatedCapstoneRoute
   AuthenticatedCurriculumRoute: typeof AuthenticatedCurriculumRoute
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
@@ -296,6 +336,7 @@ interface AuthenticatedRouteRouteChildren {
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAccountRoute: AuthenticatedAccountRoute,
   AuthenticatedCapstoneRoute: AuthenticatedCapstoneRoute,
   AuthenticatedCurriculumRoute: AuthenticatedCurriculumRoute,
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
@@ -314,6 +355,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AccessEndedRoute: AccessEndedRoute,
   AuthRoute: AuthRoute,
+  PricingRoute: PricingRoute,
   ApiChatRoute: ApiChatRoute,
 }
 export const routeTree = rootRouteImport
