@@ -1,7 +1,10 @@
-import { Link, useRouterState, useRouter } from "@tanstack/react-router";
+import { Link, useRouterState, useRouter, useNavigate } from "@tanstack/react-router";
+import { useQueryClient } from "@tanstack/react-query";
 import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
-import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, MessagesSquare, Trophy } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { daysLeft, useProfile } from "@/lib/profile";
+import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, LogOut, MessagesSquare, Trophy, UserRound } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
@@ -45,8 +48,39 @@ function WeekItem({ week }: { week: number }) {
   );
 }
 
+function TrialBanner() {
+  const { data: profile } = useProfile();
+  if (!profile) return null;
+  if (profile.subscription_status === "trialing" && profile.trial_ends_at) {
+    const d = daysLeft(profile.trial_ends_at);
+    return (
+      <div className="border-b border-border bg-primary/10 px-4 py-2 text-center text-sm">
+        Trial ends in {d} {d === 1 ? "day" : "days"} — you'll switch to the monthly plan afterwards.{" "}
+        <Link to="/account" className="font-medium underline underline-offset-2">Manage plan</Link>
+      </div>
+    );
+  }
+  if (profile.beta_user_number) {
+    return (
+      <div className="border-b border-border bg-primary/10 px-4 py-2 text-center text-sm">
+        Beta member #{profile.beta_user_number} — free access, forever.
+      </div>
+    );
+  }
+  return null;
+}
+
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
+
+  async function signOut() {
+    await queryClient.cancelQueries();
+    queryClient.clear();
+    await supabase.auth.signOut();
+    navigate({ to: "/auth", replace: true });
+  }
   const navItem = (to: string, icon: ReactNode, label: string) => (
     <Link
       to={to}
@@ -74,10 +108,18 @@ export function AppShell({ children }: { children: ReactNode }) {
           </div>
         </div>
         <nav className="space-y-1 px-3 pb-2">
-          {navItem("/", <LayoutDashboard className="h-4 w-4" />, "Dashboard")}
+          {navItem("/dashboard", <LayoutDashboard className="h-4 w-4" />, "Dashboard")}
           {navItem("/curriculum", <BookOpen className="h-4 w-4" />, "Curriculum")}
           {navItem("/tutor", <MessagesSquare className="h-4 w-4" />, "AI Tutor")}
           {navItem("/capstone", <Trophy className="h-4 w-4" />, "Capstone")}
+          {navItem("/account", <UserRound className="h-4 w-4" />, "Account")}
+          <button
+            onClick={signOut}
+            className="flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm text-sidebar-foreground/80 hover:bg-sidebar-accent/50"
+          >
+            <LogOut className="h-4 w-4" />
+            <span>Sign out</span>
+          </button>
         </nav>
         <div className="mt-2 px-3 pb-2 text-[10px] font-semibold uppercase tracking-wider text-sidebar-foreground/50">
           Weeks
@@ -106,12 +148,16 @@ export function AppShell({ children }: { children: ReactNode }) {
                 <ArrowLeft className="h-5 w-5" />
               </button>
             )}
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/dashboard" className="flex items-center gap-2">
               <GraduationCap className="h-5 w-5 text-primary" />
               <span className="text-sm font-semibold">12-Week MBA</span>
             </Link>
           </div>
+          <Link to="/account" className="rounded-full p-2 hover:bg-accent" aria-label="Account">
+            <UserRound className="h-5 w-5" />
+          </Link>
         </div>
+        <TrialBanner />
         {children}
       </main>
     </div>
