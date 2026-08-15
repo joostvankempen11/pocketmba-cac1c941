@@ -4,7 +4,7 @@ import { weeks } from "@/content/curriculum";
 import { useProgress } from "@/lib/progress-store";
 import { ArrowRight, GraduationCap } from "lucide-react";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/_authenticated/_authenticated/dashboard")({
   head: () => ({
     meta: [
       { title: "12-Week MBA — Dashboard" },

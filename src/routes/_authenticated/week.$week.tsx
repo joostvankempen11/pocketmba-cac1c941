@@ -4,7 +4,7 @@ import { getWeek } from "@/content/curriculum";
 import { useProgress } from "@/lib/progress-store";
 import { BookOpen, CheckCircle2, ClipboardList, FileQuestion } from "lucide-react";
 
-export const Route = createFileRoute("/week/$week")({
+export const Route = createFileRoute("/_authenticated/_authenticated/week/$week")({
   head: ({ params }) => ({
     meta: [{ title: `Week ${params.week} — 12-Week MBA` }],
   }),

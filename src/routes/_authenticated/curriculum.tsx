@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "@/components/AppShell";
 import { weeks } from "@/content/curriculum";
 
-export const Route = createFileRoute("/curriculum")({
+export const Route = createFileRoute("/_authenticated/_authenticated/curriculum")({
   head: () => ({
     meta: [
       { title: "Curriculum — 12-Week MBA" },

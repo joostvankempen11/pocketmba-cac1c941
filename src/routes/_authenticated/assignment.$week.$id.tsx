@@ -8,7 +8,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useProgress } from "@/lib/progress-store";
 import { Loader2 } from "lucide-react";
 
-export const Route = createFileRoute("/assignment/$week/$id")({
+export const Route = createFileRoute("/_authenticated/_authenticated/assignment/$week/$id")({
   head: ({ params }) => ({ meta: [{ title: `Assignment — Week ${params.week}` }] }),
   component: AssignmentPage,
 });
