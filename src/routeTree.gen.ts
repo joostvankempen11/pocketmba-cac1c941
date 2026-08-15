@@ -9,29 +9,39 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TutorRouteImport } from './routes/tutor'
-import { Route as CurriculumRouteImport } from './routes/curriculum'
-import { Route as CapstoneRouteImport } from './routes/capstone'
+import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as AccessEndedRouteImport } from './routes/access-ended'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as WeekWeekRouteImport } from './routes/week.$week'
-import { Route as QuizWeekRouteImport } from './routes/quiz.$week'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
-import { Route as LessonWeekLessonRouteImport } from './routes/lesson.$week.$lesson'
-import { Route as AssignmentWeekIdRouteImport } from './routes/assignment.$week.$id'
+import { Route as AuthenticatedTutorRouteImport } from './routes/_authenticated/tutor'
+import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as AuthenticatedCurriculumRouteImport } from './routes/_authenticated/curriculum'
+import { Route as AuthenticatedCapstoneRouteImport } from './routes/_authenticated/capstone'
+import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
+import { Route as AuthenticatedWeekWeekRouteImport } from './routes/_authenticated/week.$week'
+import { Route as AuthenticatedQuizWeekRouteImport } from './routes/_authenticated/quiz.$week'
+import { Route as AuthenticatedLessonWeekLessonRouteImport } from './routes/_authenticated/lesson.$week.$lesson'
+import { Route as AuthenticatedAssignmentWeekIdRouteImport } from './routes/_authenticated/assignment.$week.$id'
 
-const TutorRoute = TutorRouteImport.update({
-  id: '/tutor',
-  path: '/tutor',
+const PricingRoute = PricingRouteImport.update({
+  id: '/pricing',
+  path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CurriculumRoute = CurriculumRouteImport.update({
-  id: '/curriculum',
-  path: '/curriculum',
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CapstoneRoute = CapstoneRouteImport.update({
-  id: '/capstone',
-  path: '/capstone',
+const AccessEndedRoute = AccessEndedRouteImport.update({
+  id: '/access-ended',
+  path: '/access-ended',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -39,72 +49,120 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WeekWeekRoute = WeekWeekRouteImport.update({
-  id: '/week/$week',
-  path: '/week/$week',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const QuizWeekRoute = QuizWeekRouteImport.update({
-  id: '/quiz/$week',
-  path: '/quiz/$week',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ApiChatRoute = ApiChatRouteImport.update({
   id: '/api/chat',
   path: '/api/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LessonWeekLessonRoute = LessonWeekLessonRouteImport.update({
-  id: '/lesson/$week/$lesson',
-  path: '/lesson/$week/$lesson',
-  getParentRoute: () => rootRouteImport,
+const AuthenticatedTutorRoute = AuthenticatedTutorRouteImport.update({
+  id: '/tutor',
+  path: '/tutor',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
-const AssignmentWeekIdRoute = AssignmentWeekIdRouteImport.update({
-  id: '/assignment/$week/$id',
-  path: '/assignment/$week/$id',
-  getParentRoute: () => rootRouteImport,
+const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedCurriculumRoute = AuthenticatedCurriculumRouteImport.update({
+  id: '/curriculum',
+  path: '/curriculum',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedCapstoneRoute = AuthenticatedCapstoneRouteImport.update({
+  id: '/capstone',
+  path: '/capstone',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedAccountRoute = AuthenticatedAccountRouteImport.update({
+  id: '/account',
+  path: '/account',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedWeekWeekRoute = AuthenticatedWeekWeekRouteImport.update({
+  id: '/week/$week',
+  path: '/week/$week',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedQuizWeekRoute = AuthenticatedQuizWeekRouteImport.update({
+  id: '/quiz/$week',
+  path: '/quiz/$week',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedLessonWeekLessonRoute =
+  AuthenticatedLessonWeekLessonRouteImport.update({
+    id: '/lesson/$week/$lesson',
+    path: '/lesson/$week/$lesson',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedAssignmentWeekIdRoute =
+  AuthenticatedAssignmentWeekIdRouteImport.update({
+    id: '/assignment/$week/$id',
+    path: '/assignment/$week/$id',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/capstone': typeof CapstoneRoute
-  '/curriculum': typeof CurriculumRoute
-  '/tutor': typeof TutorRoute
+  '/access-ended': typeof AccessEndedRoute
+  '/auth': typeof AuthRoute
+  '/pricing': typeof PricingRoute
+  '/account': typeof AuthenticatedAccountRoute
+  '/capstone': typeof AuthenticatedCapstoneRoute
+  '/curriculum': typeof AuthenticatedCurriculumRoute
+  '/dashboard': typeof AuthenticatedDashboardRoute
+  '/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
-  '/quiz/$week': typeof QuizWeekRoute
-  '/week/$week': typeof WeekWeekRoute
-  '/assignment/$week/$id': typeof AssignmentWeekIdRoute
-  '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
+  '/quiz/$week': typeof AuthenticatedQuizWeekRoute
+  '/week/$week': typeof AuthenticatedWeekWeekRoute
+  '/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
+  '/lesson/$week/$lesson': typeof AuthenticatedLessonWeekLessonRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/capstone': typeof CapstoneRoute
-  '/curriculum': typeof CurriculumRoute
-  '/tutor': typeof TutorRoute
+  '/access-ended': typeof AccessEndedRoute
+  '/auth': typeof AuthRoute
+  '/pricing': typeof PricingRoute
+  '/account': typeof AuthenticatedAccountRoute
+  '/capstone': typeof AuthenticatedCapstoneRoute
+  '/curriculum': typeof AuthenticatedCurriculumRoute
+  '/dashboard': typeof AuthenticatedDashboardRoute
+  '/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
-  '/quiz/$week': typeof QuizWeekRoute
-  '/week/$week': typeof WeekWeekRoute
-  '/assignment/$week/$id': typeof AssignmentWeekIdRoute
-  '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
+  '/quiz/$week': typeof AuthenticatedQuizWeekRoute
+  '/week/$week': typeof AuthenticatedWeekWeekRoute
+  '/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
+  '/lesson/$week/$lesson': typeof AuthenticatedLessonWeekLessonRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/capstone': typeof CapstoneRoute
-  '/curriculum': typeof CurriculumRoute
-  '/tutor': typeof TutorRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/access-ended': typeof AccessEndedRoute
+  '/auth': typeof AuthRoute
+  '/pricing': typeof PricingRoute
+  '/_authenticated/account': typeof AuthenticatedAccountRoute
+  '/_authenticated/capstone': typeof AuthenticatedCapstoneRoute
+  '/_authenticated/curriculum': typeof AuthenticatedCurriculumRoute
+  '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
+  '/_authenticated/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
-  '/quiz/$week': typeof QuizWeekRoute
-  '/week/$week': typeof WeekWeekRoute
-  '/assignment/$week/$id': typeof AssignmentWeekIdRoute
-  '/lesson/$week/$lesson': typeof LessonWeekLessonRoute
+  '/_authenticated/quiz/$week': typeof AuthenticatedQuizWeekRoute
+  '/_authenticated/week/$week': typeof AuthenticatedWeekWeekRoute
+  '/_authenticated/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
+  '/_authenticated/lesson/$week/$lesson': typeof AuthenticatedLessonWeekLessonRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/access-ended'
+    | '/auth'
+    | '/pricing'
+    | '/account'
     | '/capstone'
     | '/curriculum'
+    | '/dashboard'
     | '/tutor'
     | '/api/chat'
     | '/quiz/$week'
@@ -114,8 +172,13 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/access-ended'
+    | '/auth'
+    | '/pricing'
+    | '/account'
     | '/capstone'
     | '/curriculum'
+    | '/dashboard'
     | '/tutor'
     | '/api/chat'
     | '/quiz/$week'
@@ -125,49 +188,59 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/capstone'
-    | '/curriculum'
-    | '/tutor'
+    | '/_authenticated'
+    | '/access-ended'
+    | '/auth'
+    | '/pricing'
+    | '/_authenticated/account'
+    | '/_authenticated/capstone'
+    | '/_authenticated/curriculum'
+    | '/_authenticated/dashboard'
+    | '/_authenticated/tutor'
     | '/api/chat'
-    | '/quiz/$week'
-    | '/week/$week'
-    | '/assignment/$week/$id'
-    | '/lesson/$week/$lesson'
+    | '/_authenticated/quiz/$week'
+    | '/_authenticated/week/$week'
+    | '/_authenticated/assignment/$week/$id'
+    | '/_authenticated/lesson/$week/$lesson'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CapstoneRoute: typeof CapstoneRoute
-  CurriculumRoute: typeof CurriculumRoute
-  TutorRoute: typeof TutorRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AccessEndedRoute: typeof AccessEndedRoute
+  AuthRoute: typeof AuthRoute
+  PricingRoute: typeof PricingRoute
   ApiChatRoute: typeof ApiChatRoute
-  QuizWeekRoute: typeof QuizWeekRoute
-  WeekWeekRoute: typeof WeekWeekRoute
-  AssignmentWeekIdRoute: typeof AssignmentWeekIdRoute
-  LessonWeekLessonRoute: typeof LessonWeekLessonRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/tutor': {
-      id: '/tutor'
-      path: '/tutor'
-      fullPath: '/tutor'
-      preLoaderRoute: typeof TutorRouteImport
+    '/pricing': {
+      id: '/pricing'
+      path: '/pricing'
+      fullPath: '/pricing'
+      preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/curriculum': {
-      id: '/curriculum'
-      path: '/curriculum'
-      fullPath: '/curriculum'
-      preLoaderRoute: typeof CurriculumRouteImport
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/capstone': {
-      id: '/capstone'
-      path: '/capstone'
-      fullPath: '/capstone'
-      preLoaderRoute: typeof CapstoneRouteImport
+    '/access-ended': {
+      id: '/access-ended'
+      path: '/access-ended'
+      fullPath: '/access-ended'
+      preLoaderRoute: typeof AccessEndedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -177,20 +250,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/week/$week': {
-      id: '/week/$week'
-      path: '/week/$week'
-      fullPath: '/week/$week'
-      preLoaderRoute: typeof WeekWeekRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/quiz/$week': {
-      id: '/quiz/$week'
-      path: '/quiz/$week'
-      fullPath: '/quiz/$week'
-      preLoaderRoute: typeof QuizWeekRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/api/chat': {
       id: '/api/chat'
       path: '/api/chat'
@@ -198,33 +257,106 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiChatRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/lesson/$week/$lesson': {
-      id: '/lesson/$week/$lesson'
+    '/_authenticated/tutor': {
+      id: '/_authenticated/tutor'
+      path: '/tutor'
+      fullPath: '/tutor'
+      preLoaderRoute: typeof AuthenticatedTutorRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/dashboard': {
+      id: '/_authenticated/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AuthenticatedDashboardRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/curriculum': {
+      id: '/_authenticated/curriculum'
+      path: '/curriculum'
+      fullPath: '/curriculum'
+      preLoaderRoute: typeof AuthenticatedCurriculumRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/capstone': {
+      id: '/_authenticated/capstone'
+      path: '/capstone'
+      fullPath: '/capstone'
+      preLoaderRoute: typeof AuthenticatedCapstoneRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/account': {
+      id: '/_authenticated/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AuthenticatedAccountRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/week/$week': {
+      id: '/_authenticated/week/$week'
+      path: '/week/$week'
+      fullPath: '/week/$week'
+      preLoaderRoute: typeof AuthenticatedWeekWeekRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/quiz/$week': {
+      id: '/_authenticated/quiz/$week'
+      path: '/quiz/$week'
+      fullPath: '/quiz/$week'
+      preLoaderRoute: typeof AuthenticatedQuizWeekRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/lesson/$week/$lesson': {
+      id: '/_authenticated/lesson/$week/$lesson'
       path: '/lesson/$week/$lesson'
       fullPath: '/lesson/$week/$lesson'
-      preLoaderRoute: typeof LessonWeekLessonRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof AuthenticatedLessonWeekLessonRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
-    '/assignment/$week/$id': {
-      id: '/assignment/$week/$id'
+    '/_authenticated/assignment/$week/$id': {
+      id: '/_authenticated/assignment/$week/$id'
       path: '/assignment/$week/$id'
       fullPath: '/assignment/$week/$id'
-      preLoaderRoute: typeof AssignmentWeekIdRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof AuthenticatedAssignmentWeekIdRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
     }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAccountRoute: typeof AuthenticatedAccountRoute
+  AuthenticatedCapstoneRoute: typeof AuthenticatedCapstoneRoute
+  AuthenticatedCurriculumRoute: typeof AuthenticatedCurriculumRoute
+  AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
+  AuthenticatedTutorRoute: typeof AuthenticatedTutorRoute
+  AuthenticatedQuizWeekRoute: typeof AuthenticatedQuizWeekRoute
+  AuthenticatedWeekWeekRoute: typeof AuthenticatedWeekWeekRoute
+  AuthenticatedAssignmentWeekIdRoute: typeof AuthenticatedAssignmentWeekIdRoute
+  AuthenticatedLessonWeekLessonRoute: typeof AuthenticatedLessonWeekLessonRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAccountRoute: AuthenticatedAccountRoute,
+  AuthenticatedCapstoneRoute: AuthenticatedCapstoneRoute,
+  AuthenticatedCurriculumRoute: AuthenticatedCurriculumRoute,
+  AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
+  AuthenticatedTutorRoute: AuthenticatedTutorRoute,
+  AuthenticatedQuizWeekRoute: AuthenticatedQuizWeekRoute,
+  AuthenticatedWeekWeekRoute: AuthenticatedWeekWeekRoute,
+  AuthenticatedAssignmentWeekIdRoute: AuthenticatedAssignmentWeekIdRoute,
+  AuthenticatedLessonWeekLessonRoute: AuthenticatedLessonWeekLessonRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CapstoneRoute: CapstoneRoute,
-  CurriculumRoute: CurriculumRoute,
-  TutorRoute: TutorRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AccessEndedRoute: AccessEndedRoute,
+  AuthRoute: AuthRoute,
+  PricingRoute: PricingRoute,
   ApiChatRoute: ApiChatRoute,
-  QuizWeekRoute: QuizWeekRoute,
-  WeekWeekRoute: WeekWeekRoute,
-  AssignmentWeekIdRoute: AssignmentWeekIdRoute,
-  LessonWeekLessonRoute: LessonWeekLessonRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
