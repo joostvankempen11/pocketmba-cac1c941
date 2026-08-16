@@ -3,6 +3,8 @@ import { useQueryClient } from "@tanstack/react-query";
 import { AppShell } from "@/components/AppShell";
 import { supabase } from "@/integrations/supabase/client";
 import { daysLeft, planLabel, useProfile } from "@/lib/profile";
+import { useBillingStatus, openBillingPortal, startCheckout } from "@/lib/billing";
+import { useState } from "react";
 import { Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/account")({
@@ -31,6 +33,17 @@ function AccountPage() {
   const { data: profile, isLoading } = useProfile();
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const { data: billing } = useBillingStatus();
+  const [billingError, setBillingError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  async function run(fn: () => Promise<string | null>) {
+    setBillingError(null);
+    setBusy(true);
+    const msg = await fn();
+    if (msg) setBillingError(msg);
+    setBusy(false);
+  }
 
   async function signOut() {
     await queryClient.cancelQueries();
@@ -74,16 +87,45 @@ function AccountPage() {
             {profile.subscription_status !== "free_beta" && (
               <div className="mt-6 rounded-xl border border-border bg-card p-6">
                 <h2 className="text-lg font-semibold">Billing</h2>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Card payments are not switched on for this app yet, so there is nothing to manage here
-                  right now. You keep full access during your trial.
-                </p>
-                <Link
-                  to="/pricing"
-                  className="mt-4 inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent"
-                >
-                  View plans
-                </Link>
+                {billing?.configured ? (
+                  <>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Manage your card, invoices or switch to the yearly plan.
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <button
+                        onClick={() => run(openBillingPortal)}
+                        disabled={busy}
+                        className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60"
+                      >
+                        Manage billing
+                      </button>
+                      {profile.subscription_plan !== "yearly" && (
+                        <button
+                          onClick={() => run(() => startCheckout("yearly"))}
+                          disabled={busy}
+                          className="inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent disabled:opacity-60"
+                        >
+                          Switch to yearly — €119
+                        </button>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Payments aren't set up yet — check back soon. You keep full access in the
+                      meantime.
+                    </p>
+                    <Link
+                      to="/pricing"
+                      className="mt-4 inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent"
+                    >
+                      View plans
+                    </Link>
+                  </>
+                )}
+                {billingError && <p className="mt-3 text-sm text-destructive">{billingError}</p>}
               </div>
             )}
 

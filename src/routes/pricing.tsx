@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, GraduationCap } from "lucide-react";
+import { useState } from "react";
+import { useBillingStatus, startCheckout } from "@/lib/billing";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -24,6 +26,19 @@ const features = [
 ];
 
 function Pricing() {
+  const { data: billing } = useBillingStatus();
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState<string | null>(null);
+  const configured = billing?.configured ?? false;
+
+  async function choose(plan: "monthly" | "yearly") {
+    setError(null);
+    setBusy(plan);
+    const msg = await startCheckout(plan);
+    if (msg) setError(msg);
+    setBusy(null);
+  }
+
   return (
     <div className="min-h-screen bg-background px-6 py-16">
       <div className="mx-auto max-w-4xl">
@@ -42,6 +57,9 @@ function Pricing() {
             price="€29,99"
             period="per month"
             note="7-day free trial, then billed monthly."
+            configured={configured}
+            busy={busy === "monthly"}
+            onChoose={() => choose("monthly")}
           />
           <PlanCard
             name="Yearly"
@@ -49,8 +67,13 @@ function Pricing() {
             period="per year"
             note="Billed once a year — roughly two-thirds off the monthly price."
             highlight
+            configured={configured}
+            busy={busy === "yearly"}
+            onChoose={() => choose("yearly")}
           />
         </div>
+
+        {error && <p className="mt-4 text-sm text-destructive">{error}</p>}
 
         <ul className="mt-10 grid gap-2 sm:grid-cols-2">
           {features.map((f) => (
@@ -61,10 +84,12 @@ function Pricing() {
           ))}
         </ul>
 
-        <p className="mt-10 rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
-          Card payments are not switched on yet for this app. Accounts, the free-beta places and the
-          7-day trial all work today; checkout will be connected once billing is activated.
-        </p>
+        {!configured && (
+          <p className="mt-10 rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
+            Payments aren't set up yet — check back soon. Accounts and the free-beta places work
+            today; the first 10 members get full access without any payment.
+          </p>
+        )}
       </div>
     </div>
   );
@@ -76,12 +101,18 @@ function PlanCard({
   period,
   note,
   highlight,
+  configured,
+  busy,
+  onChoose,
 }: {
   name: string;
   price: string;
   period: string;
   note: string;
   highlight?: boolean;
+  configured: boolean;
+  busy: boolean;
+  onChoose: () => void;
 }) {
   return (
     <div
@@ -95,12 +126,22 @@ function PlanCard({
         <span className="text-sm text-muted-foreground">{period}</span>
       </div>
       <p className="mt-3 text-sm text-muted-foreground">{note}</p>
-      <Link
-        to="/auth"
-        className="mt-5 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-      >
-        Get started
-      </Link>
+      {configured ? (
+        <button
+          onClick={onChoose}
+          disabled={busy}
+          className="mt-5 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60"
+        >
+          {busy ? "Opening checkout…" : "Get started"}
+        </button>
+      ) : (
+        <Link
+          to="/auth"
+          className="mt-5 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+        >
+          Create your account
+        </Link>
+      )}
     </div>
   );
 }
