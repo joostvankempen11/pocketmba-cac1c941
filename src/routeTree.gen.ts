@@ -18,6 +18,7 @@ import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedTutorRouteImport } from './routes/_authenticated/tutor'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
 import { Route as AuthenticatedCurriculumRouteImport } from './routes/_authenticated/curriculum'
+import { Route as AuthenticatedCommunityRouteImport } from './routes/_authenticated/community'
 import { Route as AuthenticatedCapstoneRouteImport } from './routes/_authenticated/capstone'
 import { Route as AuthenticatedAccountRouteImport } from './routes/_authenticated/account'
 import { Route as AuthenticatedWeekWeekRouteImport } from './routes/_authenticated/week.$week'
@@ -70,6 +71,11 @@ const AuthenticatedCurriculumRoute = AuthenticatedCurriculumRouteImport.update({
   path: '/curriculum',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedCommunityRoute = AuthenticatedCommunityRouteImport.update({
+  id: '/community',
+  path: '/community',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
 const AuthenticatedCapstoneRoute = AuthenticatedCapstoneRouteImport.update({
   id: '/capstone',
   path: '/capstone',
@@ -115,6 +121,7 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
+  '/community': typeof AuthenticatedCommunityRoute
   '/curriculum': typeof AuthenticatedCurriculumRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/tutor': typeof AuthenticatedTutorRoute
@@ -132,6 +139,7 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
+  '/community': typeof AuthenticatedCommunityRoute
   '/curriculum': typeof AuthenticatedCurriculumRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/tutor': typeof AuthenticatedTutorRoute
@@ -151,6 +159,7 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/_authenticated/account': typeof AuthenticatedAccountRoute
   '/_authenticated/capstone': typeof AuthenticatedCapstoneRoute
+  '/_authenticated/community': typeof AuthenticatedCommunityRoute
   '/_authenticated/curriculum': typeof AuthenticatedCurriculumRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
   '/_authenticated/tutor': typeof AuthenticatedTutorRoute
@@ -170,6 +179,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/account'
     | '/capstone'
+    | '/community'
     | '/curriculum'
     | '/dashboard'
     | '/tutor'
@@ -187,6 +197,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/account'
     | '/capstone'
+    | '/community'
     | '/curriculum'
     | '/dashboard'
     | '/tutor'
@@ -205,6 +216,7 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/_authenticated/account'
     | '/_authenticated/capstone'
+    | '/_authenticated/community'
     | '/_authenticated/curriculum'
     | '/_authenticated/dashboard'
     | '/_authenticated/tutor'
@@ -291,6 +303,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedCurriculumRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/community': {
+      id: '/_authenticated/community'
+      path: '/community'
+      fullPath: '/community'
+      preLoaderRoute: typeof AuthenticatedCommunityRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/capstone': {
       id: '/_authenticated/capstone'
       path: '/capstone'
@@ -346,6 +365,7 @@ declare module '@tanstack/react-router' {
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedAccountRoute: typeof AuthenticatedAccountRoute
   AuthenticatedCapstoneRoute: typeof AuthenticatedCapstoneRoute
+  AuthenticatedCommunityRoute: typeof AuthenticatedCommunityRoute
   AuthenticatedCurriculumRoute: typeof AuthenticatedCurriculumRoute
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
   AuthenticatedTutorRoute: typeof AuthenticatedTutorRoute
@@ -358,6 +378,7 @@ interface AuthenticatedRouteRouteChildren {
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedAccountRoute: AuthenticatedAccountRoute,
   AuthenticatedCapstoneRoute: AuthenticatedCapstoneRoute,
+  AuthenticatedCommunityRoute: AuthenticatedCommunityRoute,
   AuthenticatedCurriculumRoute: AuthenticatedCurriculumRoute,
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
   AuthenticatedTutorRoute: AuthenticatedTutorRoute,
