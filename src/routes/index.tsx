@@ -37,10 +37,10 @@ function Landing() {
 
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">
-          An MBA education you can actually finish
+          An MBA for the rest of us
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-          Twelve weeks. Ten core disciplines. Lessons you can read, a tutor you can ask anything,
+          Twelve weeks. Ten core disciplines. Real rigor — lessons you can read, a tutor you can ask anything,
           assignments graded against a rubric by AI, and a capstone that pulls it all together.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">

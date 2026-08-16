@@ -106,7 +106,7 @@ function AccountPage() {
                           disabled={busy}
                           className="inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent disabled:opacity-60"
                         >
-                          Switch to yearly — €119
+                          Switch to yearly — €119,99
                         </button>
                       )}
                     </div>

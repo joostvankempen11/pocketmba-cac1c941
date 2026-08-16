@@ -417,7 +417,7 @@ function Feed() {
           <button
             disabled={!body.trim() || createPost.isPending}
             onClick={async () => {
-              await createPost.mutateAsync();
+              await createPost.mutateAsync(undefined as never);
               setBody("");
               setTitle("");
             }}

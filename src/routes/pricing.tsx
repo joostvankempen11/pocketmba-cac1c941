@@ -7,9 +7,9 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Pricing — 12-Week MBA" },
-      { name: "description", content: "€29,99 per month or €119 per year for the full 12-week MBA program, with a 7-day free trial." },
+      { name: "description", content: "€29,99 per month or €119,99 per year for the full 12-week MBA program, with a 7-day free trial." },
       { property: "og:title", content: "Pricing — 12-Week MBA" },
-      { property: "og:description", content: "€29,99 monthly or €119 yearly. 7-day free trial. Cancel anytime." },
+      { property: "og:description", content: "€29,99 monthly or €119,99 yearly. 7-day free trial. Cancel anytime." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -63,7 +63,7 @@ function Pricing() {
           />
           <PlanCard
             name="Yearly"
-            price="€119"
+            price="€119,99"
             period="per year"
             note="Billed once a year — roughly two-thirds off the monthly price."
             highlight
