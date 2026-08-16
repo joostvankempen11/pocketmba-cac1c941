@@ -4,7 +4,7 @@ import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
 import { supabase } from "@/integrations/supabase/client";
 import { daysLeft, useProfile } from "@/lib/profile";
-import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, LogOut, MessagesSquare, Trophy, UserRound } from "lucide-react";
+import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, LogOut, MessagesSquare, Trophy, UserRound, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
 
@@ -111,6 +111,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           {navItem("/dashboard", <LayoutDashboard className="h-4 w-4" />, "Dashboard")}
           {navItem("/curriculum", <BookOpen className="h-4 w-4" />, "Curriculum")}
           {navItem("/tutor", <MessagesSquare className="h-4 w-4" />, "AI Tutor")}
+          {navItem("/community", <Users className="h-4 w-4" />, "Community")}
           {navItem("/capstone", <Trophy className="h-4 w-4" />, "Capstone")}
           {navItem("/account", <UserRound className="h-4 w-4" />, "Account")}
           <button
