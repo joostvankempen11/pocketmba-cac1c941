@@ -48,7 +48,7 @@ export function daysLeft(iso: string | null) {
 
 export function planLabel(p: Profile["subscription_plan"]) {
   if (p === "monthly") return "Monthly — €29,99 / month";
-  if (p === "yearly") return "Yearly — €119 / year";
+  if (p === "yearly") return "Yearly — €119,99 / year";
   if (p === "beta_free") return "Beta — free forever";
   return "No plan yet";
 }

@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.set_founding_number() FROM public, anon, authenticated;
