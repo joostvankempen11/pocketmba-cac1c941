@@ -4,7 +4,7 @@ import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
 import { supabase } from "@/integrations/supabase/client";
 import { daysLeft, useProfile } from "@/lib/profile";
-import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, LogOut, Menu, MessagesSquare, Trophy, Trophy as TrophyIcon, UserRound, Users, X } from "lucide-react";
+import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, LogOut, Menu, MessagesSquare, Trophy, UserRound, Users, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEffect, useState, type ReactNode } from "react";
 
