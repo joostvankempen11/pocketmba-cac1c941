@@ -74,6 +74,11 @@ export function AppShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const navigate = useNavigate();
   const queryClient = useQueryClient();
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
 
   async function signOut() {
     await queryClient.cancelQueries();
@@ -97,10 +102,9 @@ export function AppShell({ children }: { children: ReactNode }) {
   const router = useRouter();
   const canGoBack = pathname !== "/";
 
-  return (
-    <div className="flex min-h-screen bg-background text-foreground">
-      <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-sidebar-border bg-sidebar md:flex">
-        <div className="flex items-center gap-2 px-5 py-5">
+  const sidebarInner = (
+    <>
+      <div className="flex items-center gap-2 px-5 py-5">
           <GraduationCap className="h-6 w-6 text-sidebar-primary" />
           <div>
             <div className="text-sm font-semibold text-sidebar-foreground">12-Week MBA</div>
@@ -130,10 +134,45 @@ export function AppShell({ children }: { children: ReactNode }) {
             <WeekItem key={w.week} week={w.week} />
           ))}
         </div>
+    </>
+  );
+
+  return (
+    <div className="flex min-h-screen bg-background text-foreground">
+      <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-sidebar-border bg-sidebar md:flex">
+        {sidebarInner}
       </aside>
+
+      {mobileOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          <button
+            aria-label="Close menu"
+            onClick={() => setMobileOpen(false)}
+            className="absolute inset-0 bg-black/50"
+          />
+          <aside className="absolute inset-y-0 left-0 flex w-72 max-w-[85vw] flex-col border-r border-sidebar-border bg-sidebar shadow-xl">
+            <button
+              onClick={() => setMobileOpen(false)}
+              aria-label="Close menu"
+              className="absolute right-2 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full text-sidebar-foreground/70 hover:bg-sidebar-accent/50"
+            >
+              <X className="h-5 w-5" />
+            </button>
+            {sidebarInner}
+          </aside>
+        </div>
+      )}
+
       <main className="min-w-0 flex-1">
         <div className="flex items-center justify-between border-b border-border bg-background/80 px-4 py-3 md:hidden">
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => setMobileOpen(true)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-sm"
+              aria-label="Open menu"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
             {canGoBack && (
               <button
                 onClick={() => {
