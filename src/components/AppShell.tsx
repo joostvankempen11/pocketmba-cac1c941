@@ -4,7 +4,8 @@ import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
 import { supabase } from "@/integrations/supabase/client";
 import { daysLeft, useProfile } from "@/lib/profile";
-import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, LogOut, Menu, MessagesSquare, Trophy, UserRound, Users, X } from "lucide-react";
+import { ArrowLeft, BookOpen, LayoutDashboard, LogOut, Menu, MessagesSquare, Trophy, UserRound, Users, X } from "lucide-react";
+import logoSymbol from "@/assets/umba-symbol.png.asset.json";
 import { cn } from "@/lib/utils";
 import { useEffect, useState, type ReactNode } from "react";
 
@@ -104,15 +105,13 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   const sidebarInner = (
     <>
-      <div className="flex items-center gap-3 px-5 py-5">
-        <div className="flex h-8 w-8 items-center justify-center rounded-md bg-sidebar-primary text-sidebar-primary-foreground">
-          <GraduationCap className="h-5 w-5" />
+      <div className="flex items-center gap-2 px-5 py-5">
+          <img src={logoSymbol.url} alt="The Unofficial MBA" className="h-7 w-auto" />
+          <div>
+            <div className="text-sm font-semibold text-sidebar-foreground">12-Week MBA</div>
+            <div className="text-xs text-sidebar-foreground/60">Self-paced program</div>
+          </div>
         </div>
-        <div>
-          <div className="text-sm font-semibold text-sidebar-foreground">12-Week MBA</div>
-          <div className="text-xs text-sidebar-foreground/60">Self-paced program</div>
-        </div>
-      </div>
         <nav className="space-y-1 px-3 pb-2">
           {navItem("/dashboard", <LayoutDashboard className="h-4 w-4" />, "Dashboard")}
           {navItem("/curriculum", <BookOpen className="h-4 w-4" />, "Curriculum")}
@@ -191,9 +190,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               </button>
             )}
             <Link to="/dashboard" className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
-                <GraduationCap className="h-4 w-4" />
-              </div>
+              <img src={logoSymbol.url} alt="The Unofficial MBA" className="h-6 w-auto" />
               <span className="text-sm font-semibold">12-Week MBA</span>
             </Link>
           </div>
