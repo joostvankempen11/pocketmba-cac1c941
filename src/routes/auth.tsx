@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
-import { GraduationCap } from "lucide-react";
+import logoFull from "@/assets/umba-logo-full.png.asset.json";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
@@ -76,9 +76,12 @@ function AuthPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4 py-12">
       <div className="w-full max-w-md">
-        <Link to="/" className="mb-8 flex items-center justify-center gap-2">
-          <GraduationCap className="h-7 w-7 text-primary" />
-          <span className="text-lg font-semibold">12-Week MBA</span>
+        <Link to="/" className="mb-8 flex items-center justify-center">
+          <img
+            src={logoFull.url}
+            alt="The Unofficial MBA — Learning Beyond Credentials"
+            className="h-auto w-64 max-w-full"
+          />
         </Link>
         <div className="rounded-xl border border-border bg-card p-6">
           <h1 className="text-2xl font-semibold tracking-tight">
