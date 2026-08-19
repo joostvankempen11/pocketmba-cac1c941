@@ -4,7 +4,8 @@ import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
 import { supabase } from "@/integrations/supabase/client";
 import { daysLeft, useProfile } from "@/lib/profile";
-import { ArrowLeft, BookOpen, GraduationCap, LayoutDashboard, LogOut, Menu, MessagesSquare, Trophy, UserRound, Users, X } from "lucide-react";
+import { ArrowLeft, BookOpen, LayoutDashboard, LogOut, Menu, MessagesSquare, Trophy, UserRound, Users, X } from "lucide-react";
+import logoSymbol from "@/assets/umba-symbol.png.asset.json";
 import { cn } from "@/lib/utils";
 import { useEffect, useState, type ReactNode } from "react";
 
@@ -105,7 +106,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const sidebarInner = (
     <>
       <div className="flex items-center gap-2 px-5 py-5">
-          <GraduationCap className="h-6 w-6 text-sidebar-primary" />
+          <img src={logoSymbol.url} alt="The Unofficial MBA" className="h-7 w-auto" />
           <div>
             <div className="text-sm font-semibold text-sidebar-foreground">12-Week MBA</div>
             <div className="text-xs text-sidebar-foreground/60">Self-paced program</div>
@@ -189,7 +190,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               </button>
             )}
             <Link to="/dashboard" className="flex items-center gap-2">
-              <GraduationCap className="h-5 w-5 text-primary" />
+              <img src={logoSymbol.url} alt="The Unofficial MBA" className="h-6 w-auto" />
               <span className="text-sm font-semibold">12-Week MBA</span>
             </Link>
           </div>
