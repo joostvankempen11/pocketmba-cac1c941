@@ -187,7 +187,7 @@ function VideoCard({ v, lessonTitle }: { v: Resource; lessonTitle?: string }) {
   const startParam = v.startSeconds && v.startSeconds > 0 ? `?start=${v.startSeconds}` : "";
 
   return (
-    <div className="overflow-hidden rounded-md border border-border bg-card/40">
+    <div className="overflow-hidden rounded-xl border border-border bg-card shadow-sm">
       <div className="relative aspect-video w-full bg-black">
         {status === "checking" ? (
           <div className="absolute inset-0 flex items-center justify-center text-xs text-muted-foreground">
