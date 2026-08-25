@@ -61,7 +61,7 @@ function LessonPage() {
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <div className="min-w-0">
           <article className="mx-auto w-full max-w-[45rem]">
-            <LessonMarkdown body={l.body} />
+            <LessonMarkdown body={l.body} title={l.title} />
 
             <KeyTakeaways summary={l.summary} sections={extractSections(l.body)} />
 

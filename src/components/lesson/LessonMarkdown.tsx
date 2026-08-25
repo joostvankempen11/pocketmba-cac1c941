@@ -93,6 +93,15 @@ const components: Components = {
   ),
 };
 
-export function LessonMarkdown({ body }: { body: string }) {
-  return <ReactMarkdown components={components}>{body}</ReactMarkdown>;
+function stripLeadingTitle(body: string, title: string) {
+  const trimmed = body.trimStart();
+  const match = trimmed.match(/^#\s+(.*)\n?/);
+  if (!match) return trimmed;
+  const heading = match[1].replace(/[*_`]/g, "").trim().toLowerCase();
+  if (heading !== title.trim().toLowerCase()) return trimmed;
+  return trimmed.slice(match[0].length).trimStart();
+}
+
+export function LessonMarkdown({ body, title }: { body: string; title: string }) {
+  return <ReactMarkdown components={components}>{stripLeadingTitle(body, title)}</ReactMarkdown>;
 }
