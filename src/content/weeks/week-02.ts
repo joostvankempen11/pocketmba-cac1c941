@@ -44,10 +44,6 @@ Every "fixed" cost is fixed only inside a range. Double the volume and you'll ne
         { title: "Managerial Accounting Full Course Step by Step", source: "YouTube", videoId: "Axeecq5TByU", fallbackSearchQuery: "cost behavior managerial accounting explained" },
         { title: "Operating Leverage Explained", source: "YouTube", videoId: "Ea7sXAGTGXE", fallbackSearchQuery: "operating leverage fixed variable costs" },
       ],
-      readings: [
-        { title: "How to Avoid the Cost-Allocation Trap", source: "Harvard Business Review", url: "https://hbr.org/2007/11/the-hidden-traps-of-cost-allocation" },
-        { title: "Tap Your Subsidiaries for Global Reach", source: "Harvard Business Review", url: "https://hbr.org/1986/07/tap-your-subsidiaries-for-global-reach" },
-      ],
       exercise: { id: "ex1", scenario: "You run a boutique fitness studio. Your monthly rent is $5,000, and you pay your yoga instructors $40 per hour-long class they teach. Last month (July), you held 100 classes and had total costs of $9,000. In August, you expect to grow to 150 classes and are considering hiring a full-time receptionist for $3,000/month to handle the extra foot traffic.", task: "Identify which costs in this scenario are fixed vs. variable, and calculate what the total cost for August will be if you decide to hire the receptionist." }
     },
     {
@@ -102,10 +98,6 @@ When the mix is stable, use a weighted-average CM across products. When the mix 
         { title: "Managerial Accounting Full Course Step by Step", source: "YouTube", videoId: "6lwZUrDK69c", fallbackSearchQuery: "contribution margin break-even analysis explained" },
         { title: "Break-even and CVP", source: "YouTube", videoId: "tuKLU6aQnJg", fallbackSearchQuery: "break-even and CVP analysis" },
         { title: "Contribution Margin", source: "YouTube", videoId: "pm6Eo9qiUIY", fallbackSearchQuery: "contribution margin explained" },
-      ],
-      readings: [
-        { title: "The Contribution Approach to Pricing", source: "Harvard Business Review", url: "https://hbr.org/1964/11/the-contribution-approach-to-pricing" },
-        { title: "How Strategists Really Think: Tapping the Power of Analogy", source: "Harvard Business Review", url: "https://hbr.org/2005/04/how-strategists-really-think-tapping-the-power-of-analogy" },
       ],
       exercise: { id: "ex1", scenario: "You manage a boutique gym with $10,000 in monthly fixed costs (rent, utilities, equipment leases). Memberships are $100/month, and each member costs you $20/month in variable expenses like cleaning supplies and credit card fees. Currently, you have 150 members.", task: "Calculate your current monthly profit and your margin of safety percentage, then determine if you should accept a local corporate deal offering 30 new memberships at heavily discounted rate of $40/month (assume no change to fixed costs)." }
     },
@@ -164,10 +156,6 @@ A simplified successor. Estimate the practical capacity (in time) of each resour
         { title: "Allocating Overhead", source: "YouTube", videoId: "vMdxzH5IUQ4", fallbackSearchQuery: "allocating overhead cost accounting" },
         { title: "Activity-Based Costing", source: "YouTube", videoId: "uIyydrCcWiM", fallbackSearchQuery: "activity-based costing explained" },
         { title: "Time-Driven ABC", source: "YouTube", videoId: "o2TQyrmGsd4", startSeconds: 240, fallbackSearchQuery: "time-driven activity based costing" },
-      ],
-      readings: [
-        { title: "Measure Costs Right: Make the Right Decisions", source: "Harvard Business Review", url: "https://hbr.org/1988/09/measure-costs-right-make-the-right-decisions" },
-        { title: "Time-Driven Activity-Based Costing", source: "Harvard Business Review", url: "https://hbr.org/2004/11/time-driven-activity-based-costing" },
       ],
       exercise: { id: "ex1", scenario: "You manage a regional printing company. Your 'Standard Flyer' (high volume, automated) and 'Custom Wedding Invite' (low volume, requires heavy graphic design and manual ink mixing) are both allocated overhead based on total machine hours. Currently, your accounting shows the flyers are barely breaking even, so you are considering a 20% price hike that might drive customers to competitors.", task: "Identify two specific activity cost pools (besides machine hours) that likely distinguish these two products, and explain how switching to ABC might change your decision regarding the flyer price hike." }
     },

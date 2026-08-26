@@ -59,10 +59,6 @@ Solo founders are rarer and harder than co-founder teams in early stage; the dat
         { title: "Peter Thiel \u2014 Competition is for Losers", source: "YouTube \u2014 Stanford eCorner / How to Start a Startup", url: "https://www.youtube.com/watch?v=3Fx5Q8xGU8k", fallbackSearchQuery: "Peter Thiel competition losers" },
         { title: "Y Combinator \u2014 How to Get Startup Ideas (Paul Graham)", source: "YouTube \u2014 Y Combinator", url: "https://www.youtube.com/watch?v=Th8JoIan4dg", fallbackSearchQuery: "Paul Graham startup ideas" },
       ],
-      readings: [
-        { title: "Why Startups Fail: A New Postmortem", source: "Harvard Business Review", url: "https://hbr.org/2021/05/why-start-ups-fail" },
-        { title: "The Discipline of Innovation", source: "Harvard Business Review (Drucker)", url: "https://hbr.org/2002/08/the-discipline-of-innovation" },
-      ],
       exercise: { id: "ex1", scenario: "You are a former logistics manager who noticed that small independent bakeries struggle to coordinate flour deliveries, often running out of stock because big suppliers prioritize large supermarket chains. You want to launch a digital platform that bundles orders from 50 local bakeries to give them the same buying power as a giant corporation. You estimate there are 10,000 such bakeries in your country, but your initial software can only handle 100 users in your home city.", task: "Perform a 'bottom-up' market analysis by identifying the SAM and SOM for this venture, and explain whether this business is a 'vitamin' or a 'painkiller' based on the specific problem being solved." }
     },
     {
@@ -130,10 +126,6 @@ Once you have signal — customers using, retaining, referring; revenue growing 
       videos: [
         { title: "Eric Ries \u2014 The Lean Startup", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=fEvKo90qBns", fallbackSearchQuery: "Eric Ries lean startup" },
         { title: "Steve Blank \u2014 Customer Development", source: "YouTube", videoId: "xr2zFXblSRM", fallbackSearchQuery: "Steve Blank customer development" },
-      ],
-      readings: [
-        { title: "Why the Lean Start-Up Changes Everything", source: "Harvard Business Review (Eric Ries / Steve Blank)", url: "https://hbr.org/2013/05/why-the-lean-start-up-changes-everything" },
-        { title: "The Founder's Dilemma", source: "Harvard Business Review", url: "https://hbr.org/2008/02/the-founders-dilemma" },
       ],
       exercise: { id: "ex1", scenario: "You are launching 'Chef-on-Call,' a premium service that connects busy families with professional chefs who cook weekly meals in the customer's home. You believe the biggest risk is whether families will feel comfortable letting a stranger into their kitchen while they aren't home.", task: "Design a specific MVP experiment that tests this 'trust' assumption in under 48 hours with a budget of less than $100—explain exactly what you will 'Build,' how you will 'Measure' interest, and what result would qualify as 'Learning.'" }
     },
@@ -207,10 +199,6 @@ A great product without a path to defensibility gets copied and competed to zero
         { title: "Alex Osterwalder \u2014 Business Model Canvas Explained", source: "YouTube \u2014 Strategyzer", url: "https://www.youtube.com/watch?v=QoAOzMTLP5s", fallbackSearchQuery: "business model canvas" },
         { title: "Andrew Chen \u2014 The Cold Start Problem", source: "YouTube", videoId: "-ILjMq1T13g", fallbackSearchQuery: "Andrew Chen cold start network effects" },
       ],
-      readings: [
-        { title: "Reinventing Your Business Model", source: "Harvard Business Review (Johnson, Christensen, Kagermann)", url: "https://hbr.org/2008/12/reinventing-your-business-model" },
-        { title: "Pipelines, Platforms, and the New Rules of Strategy", source: "Harvard Business Review", url: "https://hbr.org/2016/04/pipelines-platforms-and-the-new-rules-of-strategy" },
-      ],
       exercise: { id: "ex1", scenario: "You are launching a high-end mobile pet grooming service. You have high fixed costs for the specialized van and equipment, and high variable costs for the groomer's hourly wage and organic shampoos. You are debating between a 'Direct Sale' model (one-off appointments) or a 'Subscription' model (monthly grooming at a discount).", task: "Perform a 'sanity check' on the Subscription model: identify which three boxes of the Business Model Canvas would change most significantly compared to the Direct Sale model, and explain how these changes impact your CAC (Customer Acquisition Cost) strategy." }
     },
     {
@@ -277,10 +265,6 @@ Even if you never start a company, learning startup methods is now a leadership 
       videos: [
         { title: "Clayton Christensen \u2014 The Innovator's Dilemma", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=qDrMAzCHFUU", fallbackSearchQuery: "Christensen innovator's dilemma" },
         { title: "Rita McGrath \u2014 The End of Competitive Advantage", source: "YouTube", videoId: "wqmVsECbG8E", fallbackSearchQuery: "Rita McGrath transient advantage" },
-      ],
-      readings: [
-        { title: "The Innovator's DNA", source: "Harvard Business Review (Christensen, Dyer, Gregersen)", url: "https://hbr.org/2009/12/the-innovators-dna" },
-        { title: "Building an Innovation Factory", source: "Harvard Business Review", url: "https://hbr.org/2000/05/building-an-innovation-factory-2" },
       ],
       exercise: { id: "ex1", scenario: "You are a VP at a major hotel chain with 500 locations. A small internal team has developed a 'peer-to-peer' rental platform (similar to Airbnb) that allows homeowners to list guest rooms under your hotel's brand for a small fee. Your CFO wants to shut it down because the profit per booking is 80% lower than a standard hotel room stay.", task: "Write a 3-sentence rebuttal to the CFO explaining why this project should be evaluated as a 'Horizon 3' venture rather than a 'Horizon 1' core business, specifically addressing the danger of using standard profit metrics too early." }
     },

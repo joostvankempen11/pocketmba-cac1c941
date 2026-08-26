@@ -59,10 +59,6 @@ Three robust findings managers ignore at their peril:
         { title: "Dan Pink \u2014 The Puzzle of Motivation (TED)", source: "YouTube", videoId: "rrkrvAUbU9Y", fallbackSearchQuery: "what motivates people at work explained" },
         { title: "RSA Animate \u2014 Drive: The Surprising Truth About What Motivates Us", source: "YouTube \u2014 RSA", url: "https://www.youtube.com/watch?v=u6XAPnuFjJc", fallbackSearchQuery: "RSA Animate Drive Dan Pink" },
       ],
-      readings: [
-        { title: "One More Time: How Do You Motivate Employees?", source: "Harvard Business Review (Herzberg, classic)", url: "https://hbr.org/2003/01/one-more-time-how-do-you-motivate-employees" },
-        { title: "Why Incentive Plans Cannot Work", source: "Harvard Business Review (Kohn)", url: "https://hbr.org/1993/09/why-incentive-plans-cannot-work" },
-      ],
       exercise: { id: "ex1", scenario: "You manage a team of graphic designers who have recently become disengaged and are producing uninspired work. To fix this, your CEO suggests a new policy: a $200 cash bonus for every design project completed ahead of the deadline. While this might speed up the work, you worry it might harm the creative quality or team morale based on the principle of 'crowding out.'", task: "Draft a one-paragraph counter-proposal to the CEO that replaces the cash-per-deadline bonus with a plan centered on Autonomy, Mastery, or Purpose, explaining how your alternative will drive quality rather than just speed." }
     },
     {
@@ -130,7 +126,6 @@ A manager’s job isn’t just to hire "the best" but to build the "best system.
         { title: "Cognitive Diversity", source: "YouTube", videoId: "E5UHfcwal0M", fallbackSearchQuery: "cognitive diversity teams performance" },
       ],
       readings: [
-        { title: "The High-Performance Team", source: "Harvard Business Review", url: "https://hbr.org/2005/07/the-discipline-of-teams" },
         { title: "What Google Learned From Its Quest to Build the Perfect Team", source: "NYT Magazine — summarizing Project Aristotle", url: "https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html" },
       ],
       exercise: { id: "ex1", scenario: "You are leading a 12-person regional sales team that has grown stagnant. During your weekly meetings, you notice that whenever you suggest a new strategy, everyone nods in agreement immediately, yet the strategy consistently fails in the field because of localized issues the team members already knew about but didn't mention.", task: "Identify which specific group pathology is occurring here (Groupthink or Information Cascades) and propose three distinct structural changes you will implement in the next meeting to ensure these localized issues are surfaced before a decision is made." }
@@ -198,10 +193,6 @@ For example, the Sales team might have a high-energy, competitive culture focuse
       videos: [
         { title: "Building the Netflix Culture", source: "YouTube", videoId: "IrGkeGExJfw", fallbackSearchQuery: "Netflix culture Reed Hastings" },
         { title: "Simon Sinek \u2014 The Infinite Game", source: "YouTube", videoId: "5BrpWXC5ua8", fallbackSearchQuery: "Simon Sinek infinite game leadership" },
-      ],
-      readings: [
-        { title: "Culture Is Not the Culprit", source: "Harvard Business Review", url: "https://hbr.org/2016/04/culture-is-not-the-culprit" },
-        { title: "The Leader's Guide to Corporate Culture", source: "Harvard Business Review", url: "https://hbr.org/2018/01/the-leaders-guide-to-corporate-culture" },
       ],
       exercise: { id: "ex1", scenario: "You are the newly appointed VP of Operations for a national retail chain that publicly prides itself on 'Integrity' and 'Customer First.' However, you discover that the regional managers are secretly pressuring store staff to hide damaged inventory from quality audits to protect their quarterly bonuses. Employees are frustrated, and customer complaints about faulty products are rising, yet your top-performing regional manager—who produces the most revenue—is the one most guilty of this behavior.", task: "Identify the conflict between the 'espoused values' and 'underlying assumptions' in this scenario, then propose one specific change to the company's 'selection and consequences' (hiring, promotion, or termination) that would reconcile this gap." }
     },
@@ -285,10 +276,6 @@ Long careers in functional cultures are built on durable trust. Short careers in
         { title: "Robert Cialdini \u2014 Science of Persuasion", source: "YouTube \u2014 Influence at Work", url: "https://www.youtube.com/watch?v=cFdCzN7RYbw", fallbackSearchQuery: "Cialdini science of persuasion" },
         { title: "Jeffrey Pfeffer \u2014 Power", source: "YouTube", videoId: "j-FOpdvuxFU", fallbackSearchQuery: "Jeffrey Pfeffer power organizations" },
         { title: "Simon Sinek \u2014 Influence Without Authority", source: "YouTube", videoId: "pkclW79ZoZU", fallbackSearchQuery: "influence without authority Simon Sinek" },
-      ],
-      readings: [
-        { title: "Managing Up", source: "Harvard Business Review", url: "https://hbr.org/2015/01/managing-up" },
-        { title: "Influence Without Authority", source: "Harvard Business Review", url: "https://hbr.org/2015/01/the-network-secrets-of-great-change-agents" },
       ],
       exercise: { id: "ex1", scenario: "You are a mid-level manager trying to implement a new four-day workweek pilot in your department. The CEO (High Power/Low Interest) is skeptical but open if it doesn't hurt profits; the Finance Director (High Power/High Interest) hates the idea due to payroll complexity; and your 10-person team (Low Power/High Interest) is extremely enthusiastic.", task: "Create a brief stakeholder engagement plan that identifies which source of power you will use with each of these three stakeholders and which specific Cialdini principle you will apply to move the Finance Director from 'opposed' to 'neutral'." }
     },

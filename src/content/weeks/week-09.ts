@@ -72,10 +72,6 @@ None of these are mysterious. All can be learned. The hardest part is doing them
         { title: "Simon Sinek \u2014 Why Good Leaders Make You Feel Safe (TED)", source: "YouTube \u2014 TED", url: "https://www.youtube.com/watch?v=lmyZMtPVodo", fallbackSearchQuery: "Simon Sinek leaders feel safe" },
         { title: "John Kotter \u2014 The Difference Between Leadership and Management", source: "YouTube", videoId: "Dz8AiOQEQmk", fallbackSearchQuery: "Kotter leadership management difference" },
       ],
-      readings: [
-        { title: "What Leaders Really Do", source: "Harvard Business Review (Kotter)", url: "https://hbr.org/2001/12/what-leaders-really-do" },
-        { title: "Level 5 Leadership: The Triumph of Humility and Fierce Resolve", source: "Harvard Business Review (Collins)", url: "https://hbr.org/2001/01/level-5-leadership-the-triumph-of-humility-and-fierce-resolve" },
-      ],
       exercise: { id: "ex1", scenario: "You are a mid-level manager at a logistics firm. Your team is currently divided: half are high-performing 'veterans' who feel micromanaged, while the other half are new hires who are struggling with basic tasks and feel ignored. Output is slipping because the two groups aren't communicating.", task: "Explain how you would apply 'Direction, Alignment, and Commitment' (DAC) to resolve this specific conflict, detailing one concrete action you would take for each of the three components." }
     },
     {
@@ -134,10 +130,6 @@ The "growth at all costs" startup pattern — promote anyone you can't lose, fir
       videos: [
         { title: "Situational Leadership", source: "YouTube", videoId: "bAuwgjmF5xc", fallbackSearchQuery: "situational leadership styles" },
         { title: "The 70-20-10 Model for Development", source: "YouTube", videoId: "lV4wq9LUAJs", fallbackSearchQuery: "70-20-10 model leadership development" },
-      ],
-      readings: [
-        { title: "Why You Should Have (at Least) Two Careers", source: "Harvard Business Review", url: "https://hbr.org/2017/04/why-you-should-have-at-least-two-careers" },
-        { title: "Are You a Mentor or a Sponsor?", source: "Harvard Business Review", url: "https://hbr.org/2010/10/the-real-benefit-of-finding-a-sponsor" },
       ],
       exercise: { id: "ex1", scenario: "Your star marketing lead, Maya, is a 'Self-Reliant Achiever' (D4) who consistently hits her KPIs. However, you have just asked her to lead the company's first-ever transition to a new AI-driven CRM software—a technical area where she has zero experience and expressed significant anxiety about breaking the existing database.", task: "Identify Maya's new developmental level for this specific CRM task and describe two specific actions you will take as her leader to support her, ensuring you don't default to the 'Delegating' style she usually receives." }
     },
@@ -202,10 +194,6 @@ Even excellent decision processes produce bad outcomes some of the time. Mature 
       videos: [
         { title: "Daniel Kahneman \u2014 Thinking, Fast and Slow", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=CjVQJdIrDJ0", fallbackSearchQuery: "Kahneman thinking fast slow" },
         { title: "Thinking in Bets", source: "YouTube", videoId: "uYNsSeYjkp4", fallbackSearchQuery: "Annie Duke thinking in bets" },
-      ],
-      readings: [
-        { title: "Before You Make That Big Decision...", source: "Harvard Business Review (Kahneman et al.)", url: "https://hbr.org/2011/06/the-big-idea-before-you-make-that-big-decision" },
-        { title: "Performing a Project Premortem", source: "Harvard Business Review", url: "https://hbr.org/2007/09/performing-a-project-premortem" },
       ],
       exercise: { id: "ex1", scenario: "Your software company is considering a $2 million expansion into a new international market. The team is highly optimistic, but you notice they are only presenting data on successful competitors and ignoring the high failure rate for startups in this specific region. You are about to hold the final approval meeting.", task: "Design a 'Pre-Mortem' prompt for this meeting and identify one specific 'Base Rate' statistic you would require the team to find before the final vote is cast." }
     },
@@ -277,10 +265,6 @@ Even the hardest conversation has a humane shape: be direct (don't make the pers
 
 The complement is being *coachable*: thanking people for feedback even when it's wrong, sitting with discomfort before responding, separating the message from the messenger, and acting visibly on the parts that land. Senior leaders who can't take feedback poison their teams' truth-telling. Those who can multiply it.`,
       videos: [
-      ],
-      readings: [
-        { title: "The Feedback Fallacy", source: "Harvard Business Review", url: "https://hbr.org/2019/03/the-feedback-fallacy" },
-        { title: "Find Your Feedback Style", source: "Harvard Business Review", url: "https://hbr.org/2014/05/how-to-give-feedback-that-helps-people-grow" },
       ],
       exercise: { id: "ex1", scenario: "You manage a graphic designer, Alex, who is talented but consistently delivers work 2 days late. This forces the rest of the team to work through the weekend to meet client deadlines. Alex is well-liked, and you've avoided saying anything because you don't want to kill the 'creative vibe' or seem like a micromanager.", task: "Write a script for a brief feedback session with Alex using the SBI (Situation, Behavior, Impact) model, then identify which of the four Radical Candor quadrants your current avoidance (staying silent) falls into and why." }
     },

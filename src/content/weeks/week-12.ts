@@ -51,10 +51,6 @@ The point isn't to launch the business in your capstone. It's to have built the 
         { title: "How to Write a Business Plan", source: "YouTube", videoId: "n6ecdYd8T6o", fallbackSearchQuery: "how to write business plan" },
         { title: "The Business of Storytelling", source: "YouTube", videoId: "WKIZ0bicfFw", fallbackSearchQuery: "business of storytelling numbers narrative" },
       ],
-      readings: [
-        { title: "How to Write a Great Business Plan", source: "Harvard Business Review (Sahlman)", url: "https://hbr.org/1997/07/how-to-write-a-great-business-plan" },
-        { title: "The Strategist's Eye", source: "Harvard Business Review", url: "https://hbr.org/2016/01/strategy-needs-creativity" },
-      ],
       exercise: { id: "ex1", scenario: "You are preparing your capstone for a boutique cat-sitting subscription service. In your marketing section, you claim your competitive advantage is 'unmatched personalized care,' but your financial plan shows you are hiring unskilled gig workers at minimum wage to keep costs low.", task: "Identify the internal inconsistency in this plan and explain how you would adjust either the marketing strategy or the operating model to ensure the story 'adds up' for an investor." }
     },
   ],

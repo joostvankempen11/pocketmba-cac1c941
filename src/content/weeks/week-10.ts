@@ -62,10 +62,6 @@ Most decisions in most organizations are made at levels 1-3. Moving the median d
         { title: "Hans Rosling \u2014 The Best Stats You've Ever Seen (TED)", source: "YouTube \u2014 TED", url: "https://www.youtube.com/watch?v=hVimVzgtD6w", fallbackSearchQuery: "Hans Rosling best stats" },
         { title: "What is Decision Intelligence", source: "YouTube", videoId: "iLu9XyZ55oI", fallbackSearchQuery: "decision intelligence explained" },
       ],
-      readings: [
-        { title: "Why Data-Driven Customers Demand More from Suppliers", source: "Harvard Business Review", url: "https://hbr.org/2018/01/data-can-do-for-change-management-what-it-did-for-marketing" },
-        { title: "Keep Up With Your Quants", source: "Harvard Business Review", url: "https://hbr.org/2013/07/keep-up-with-your-quants" },
-      ],
       exercise: { id: "ex1", scenario: "You are the operations manager for a regional gym chain. Your North Star metric is 'Total Monthly Check-ins,' but recently you noticed that while check-ins are steady, your membership cancellations (churn) are spiking. You need to present a plan to the CEO that addresses this problem without hurting the North Star metric.", task: "Identify one specific Input Metric you would change to reduce cancellations, and define one Guardrail Metric you will monitor to ensure your changes don't negatively impact the gym's profitability or overall atmosphere." }
     },
     {
@@ -137,10 +133,6 @@ The Bayesian update: posterior ∝ likelihood × prior. Always ask "what was the
         { title: "StatQuest \u2014 Hypothesis Testing and the Null Hypothesis", source: "YouTube", videoId: "vemZtEM63GY", fallbackSearchQuery: "hypothesis testing explained statistics" },
         { title: "Why Most Published Research Findings Are False", source: "YouTube", videoId: "vY9mGJQFdyE", fallbackSearchQuery: "Ioannidis research findings false" },
       ],
-      readings: [
-        { title: "How to Lie with Statistics, Six Decades Later", source: "Harvard Business Review", url: "https://hbr.org/2014/11/the-explanation-of-the-bayesian-method" },
-        { title: "A Refresher on Statistical Significance", source: "Harvard Business Review", url: "https://hbr.org/2016/02/a-refresher-on-statistical-significance" },
-      ],
       exercise: { id: "ex1", scenario: "You are the Operations Manager for a high-end delivery startup. Your CEO notices that the 'Average Delivery Time' last month was 28 minutes, which meets the company goal of under 30 minutes, and wants to issue a press release. However, you notice the Standard Deviation (σ) is 25 minutes, and the distribution is heavily right-skewed (Bimodal), with local deliveries taking 15 minutes and suburban deliveries often taking 75 minutes.", task: "Draft a 3-sentence internal memo to the CEO explaining why the '28-minute average' is a dangerous metric to use for marketing and suggest a specific alternative way to report this data that wouldn't mislead customers." }
     },
     {
@@ -201,10 +193,6 @@ Booking.com, Microsoft, Airbnb, and Netflix have published extensively about the
       videos: [
         { title: "A/B Testing \u2014 Trustworthy Online Controlled Experiments", source: "YouTube", videoId: "VuKIN9S8Ivs", fallbackSearchQuery: "A/B testing controlled experiments" },
         { title: "Experimentation at Scale \u2014 Airbnb", source: "YouTube", videoId: "8F3k9nNVf5Q", fallbackSearchQuery: "Airbnb experimentation scale" },
-      ],
-      readings: [
-        { title: "The Surprising Power of Online Experiments", source: "Harvard Business Review", url: "https://hbr.org/2017/09/the-surprising-power-of-online-experiments" },
-        { title: "Building a Culture of Experimentation", source: "Harvard Business Review", url: "https://hbr.org/2020/03/building-a-culture-of-experimentation" },
       ],
       exercise: { id: "ex1", scenario: "You are the Product Manager for a food delivery app. Your team wants to change the 'Checkout' button color from green to orange, believing it will stand out more and increase completed orders. You run a test for 2 days mid-week and see a 4% increase with a p-value of 0.04 (just under the 0.05 threshold), but your developers note that the app crashed for 2% of users during the test due to an unrelated bug.", task: "Identify two specific 'traps' or errors mentioned in the lesson that make this specific test result unreliable, and explain how you would fix the experimental design before presenting the results to leadership." }
     },
@@ -271,10 +259,6 @@ Most analytical disasters in business are not from wrong models — they're from
       videos: [
         { title: "StatQuest \u2014 R-squared explained", source: "YouTube", videoId: "2AQKmw14mHM", fallbackSearchQuery: "correlation vs causation explained" },
         { title: "Judea Pearl \u2014 The Causal Revolution", source: "YouTube \u2014 Talks at Google", url: "https://www.youtube.com/watch?v=zHjdd--W6o4", fallbackSearchQuery: "Judea Pearl causal revolution" },
-      ],
-      readings: [
-        { title: "How To Be More Bayesian in Strategy", source: "Harvard Business Review", url: "https://hbr.org/2017/05/a-better-way-to-set-strategic-priorities" },
-        { title: "Data Science and the Art of Persuasion", source: "Harvard Business Review", url: "https://hbr.org/2021/01/data-science-and-the-art-of-persuasion" },
       ],
       exercise: { id: "ex1", scenario: "Your software company recently launched a 15-minute 'Live Concierge' onboarding call for all new premium subscribers. Three months later, data shows that users who attended the call have 40% higher retention rates than those who skipped it. Your CEO wants to make this call mandatory for every single user, assuming it's the 'magic bullet' for churn.", task: "Identify at least two potential confounders or sources of selection bias that could explain this 40% difference without the call actually causing the retention, and propose an alternative way to measure the call's true causal impact." }
     },
