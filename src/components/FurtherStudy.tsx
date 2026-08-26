@@ -87,7 +87,7 @@ function yearFromUrl(url: string) {
 }
 
 /** Reference: Source (Year) 'Title'. Available at: URL (Accessed: ...). */
-function HarvardRef({ r }: { r: Resource }) {
+function CitationRef({ r }: { r: Resource }) {
   const url = r.url ?? "";
   const year = yearFromUrl(url);
   let pathname = "";
@@ -251,7 +251,7 @@ export function FurtherStudy({
           </h3>
           <ol className="refs rounded-md border border-border bg-card/40 p-4 pl-6 list-none">
             {readings.map((r) => (
-              <HarvardRef key={r.url} r={r} />
+              <CitationRef key={r.url} r={r} />
             ))}
           </ol>
         </div>

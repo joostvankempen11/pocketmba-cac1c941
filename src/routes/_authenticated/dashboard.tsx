@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { AppShell } from "@/components/AppShell";
 import { weeks } from "@/content/curriculum";
 import { useProgress } from "@/lib/progress-store";
-import { ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight, Award, GraduationCap } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
@@ -79,6 +79,22 @@ function Dashboard() {
             <Stat label="Capstone" value={`${doneCapstone}/5`} />
           </div>
         </div>
+
+        <Link
+          to="/certificate"
+          className="mt-6 flex items-center gap-4 rounded-xl border border-border bg-card p-5 hover:border-primary/50"
+        >
+          <Award className="h-6 w-6 shrink-0 text-primary" />
+          <div className="min-w-0 flex-1">
+            <div className="font-medium">Completion certificate</div>
+            <div className="mt-0.5 text-sm text-muted-foreground">
+              {pct === 100
+                ? "Earned — view, download or add it to your LinkedIn profile."
+                : `Unlocks at 100% — you're ${pct}% of the way there.`}
+            </div>
+          </div>
+          <ArrowRight className="h-4 w-4 text-muted-foreground" />
+        </Link>
 
         <div className="mt-10">
           <h2 className="text-lg font-semibold">12-week curriculum</h2>

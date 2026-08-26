@@ -4,7 +4,7 @@ import { useProgress } from "@/lib/progress-store";
 import { weeks } from "@/content/curriculum";
 import { supabase } from "@/integrations/supabase/client";
 import { daysLeft, useProfile } from "@/lib/profile";
-import { ArrowLeft, BookOpen, LayoutDashboard, LogOut, Menu, MessagesSquare, Trophy, UserRound, Users, X } from "lucide-react";
+import { Award, ArrowLeft, BookOpen, LayoutDashboard, LogOut, Menu, MessagesSquare, Trophy, UserRound, Users, X } from "lucide-react";
 import logoSymbol from "@/assets/umba-symbol.png.asset.json";
 import { cn } from "@/lib/utils";
 import { useEffect, useState, type ReactNode } from "react";
@@ -118,6 +118,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           {navItem("/tutor", <MessagesSquare className="h-4 w-4" />, "AI Tutor")}
           {navItem("/community", <Users className="h-4 w-4" />, "Community")}
           {navItem("/capstone", <Trophy className="h-4 w-4" />, "Capstone")}
+          {navItem("/certificate", <Award className="h-4 w-4" />, "Certificate")}
           {navItem("/account", <UserRound className="h-4 w-4" />, "Account")}
           <button
             onClick={signOut}
