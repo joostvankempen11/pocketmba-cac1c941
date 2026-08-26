@@ -67,10 +67,6 @@ You're offered $10,000 in ten years or some smaller sum today. At a 7% discount 
         { title: "Time Value of Money \u2014 Full Tutorial", source: "YouTube \u2014 Khan Academy", url: "https://www.youtube.com/watch?v=733mgqrzNKs", fallbackSearchQuery: "time value of money Khan Academy" },
         { title: "Damodaran \u2014 Time Value of Money", source: "YouTube \u2014 NYU Stern", videoId: "kaYz15vwb9k", fallbackSearchQuery: "Damodaran time value of money" },
       ],
-      readings: [
-        { title: "A Refresher on Net Present Value", source: "Harvard Business Review", url: "https://hbr.org/2014/11/a-refresher-on-net-present-value" },
-        { title: "How Finance Works", source: "Harvard Business Review", url: "https://hbr.org/podcast/2019/03/how-finance-works" },
-      ],
       exercise: { id: "ex1", scenario: "You are a manager at an industrial firm looking to upgrade a piece of machinery. The new machine costs $45,000 today, but it is guaranteed to save the company exactly $12,000 per year in labor costs for the next 5 years (a $60,000 total nominal saving). Your company's discount rate for equipment projects is 10%.", task: "Calculate the Present Value (PV) of the five years of savings and determine whether the company should purchase the machine today." }
     },
     {
@@ -122,10 +118,6 @@ Classical NPV ignores managerial flexibility — the option to expand, contract,
       videos: [
         { title: "NPV and IRR Explained", source: "YouTube", videoId: "Fw5-wccViOM", fallbackSearchQuery: "NPV vs IRR project evaluation" },
         { title: "Capital Budgeting Conflicts", source: "YouTube", videoId: "9rqPpuIrFLA", fallbackSearchQuery: "capital budgeting decision conflicts" },
-      ],
-      readings: [
-        { title: "Do You Know Your Cost of Capital?", source: "Harvard Business Review", url: "https://hbr.org/2014/07/do-you-know-your-cost-of-capital" },
-        { title: "Investment Opportunities as Real Options", source: "Harvard Business Review", url: "https://hbr.org/1998/07/investment-opportunities-as-real-options-getting-started-on-the-numbers" },
       ],
       exercise: { id: "ex1", scenario: "Your logistics company is choosing between two software upgrades. Upgrade X costs $50,000 and has an IRR of 45% because it saves labor costs immediately. Upgrade Y costs $500,000 and has an IRR of 18% because it renovates the entire warehouse tracking system, leading to massive long-term savings. Your firm's cost of capital is 10%.", task: "Explain which project you would recommend to the Board of Directors and justify your choice by explaining why the higher IRR might be a 'value trap' in this specific comparison." }
     },
@@ -181,10 +173,6 @@ Every project the firm undertakes has to clear ~8.2% just to break even on value
         { title: "Corporate Finance Explained | Cost of Capital", source: "YouTube", videoId: "90e-EV1kL9I", fallbackSearchQuery: "WACC weighted average cost of capital explained" },
         { title: "WACC \u2014 A Comprehensive Walkthrough", source: "YouTube \u2014 The Finance Storyteller", url: "https://www.youtube.com/watch?v=0inqw9cCJnM", fallbackSearchQuery: "WACC walkthrough" },
         { title: "Estimating Cost of Equity", source: "YouTube", videoId: "JyUBm9M7Wyw", fallbackSearchQuery: "estimating cost of equity CAPM" },
-      ],
-      readings: [
-        { title: "Best Practice — Estimating Cost of Capital", source: "Harvard Business Review", url: "https://hbr.org/2014/07/do-you-know-your-cost-of-capital" },
-        { title: "The Real Reason Companies Are So Focused on the Short Term", source: "Harvard Business Review", url: "https://hbr.org/2017/12/the-real-reason-companies-are-so-focused-on-the-short-term" },
       ],
       exercise: { id: "ex1", scenario: "You are the CFO of 'SteadyStream,' a utility company with a low WACC of 5% due to its extremely stable, low-risk power grid business. The CEO wants to diversify by launching 'SteadyGaming,' a competitive esports platform—a high-risk industry where pure-play competitors typically have a WACC of 14%. The CEO argues that because the parent company has cheap access to capital, the esports project only needs to return 6% to be profitable.", task: "Write a brief memo (3-4 sentences) explaining to the CEO why using the 5% WACC for the esports project is a mistake, and specify which rate the company should actually use to evaluate the project's success." }
     },
@@ -255,10 +243,6 @@ A **Dividend** is a regular cash payment to shareholders, like a steady allowanc
       videos: [
         { title: "Modigliani-Miller and Capital Structure", source: "YouTube", videoId: "Zzsf4O1_02M", fallbackSearchQuery: "Modigliani Miller theorem" },
         { title: "How Much Debt Should a Company Have", source: "YouTube", videoId: "jsRuWaP2pnA", fallbackSearchQuery: "optimal capital structure debt equity" },
-      ],
-      readings: [
-        { title: "The Capital Structure Puzzle", source: "Harvard Business Review", url: "https://hbr.org/1996/01/the-capital-structure-puzzle-another-look-at-the-evidence" },
-        { title: "Are Buybacks Really Shortchanging Investment?", source: "Harvard Business Review", url: "https://hbr.org/2017/03/are-buybacks-really-shortchanging-investment" },
       ],
       exercise: { id: "ex1", scenario: "You are the CFO of 'CloudStream,' a software-as-a-service company with highly unpredictable monthly subscription growth. Your engineering team just requested $50 million to develop a new AI feature, but your company currently has no debt and $10 million in cash. Your CEO suggests taking out a massive high-interest bank loan to fund it, arguing that the tax shield will make the company more valuable.", task: "Identify two specific risks from the 'Distress Costs' or 'Trade-off Theory' sections that make the CEO's plan dangerous for a software firm, and propose which source of funding from the 'Pecking Order' the company should prioritize instead." }
     },

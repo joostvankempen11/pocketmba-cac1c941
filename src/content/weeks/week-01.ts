@@ -70,10 +70,6 @@ A company can be wildly profitable on paper and bankrupt in cash, or wildly cash
         { title: "Aswath Damodaran \u2014 Income Statement", source: "YouTube \u2014 NYU Stern", videoId: "Q8wKr1QDSwg", fallbackSearchQuery: "why accounting exists explained" },
         { title: "How The Economic Machine Works", source: "YouTube \u2014 Ray Dalio (30 min)", url: "https://www.youtube.com/watch?v=PHe0bXAIuk0", fallbackSearchQuery: "Ray Dalio how the economic machine works" },
       ],
-      readings: [
-        { title: "How to Read a Financial Report", source: "Harvard Business Review", url: "https://hbr.org/1980/03/how-to-read-a-financial-report" },
-        { title: "What Top Executives Don't Know About Their Finance Function", source: "Harvard Business Review", url: "https://hbr.org/2018/07/the-finance-function-needs-to-be-rebooted" },
-      ],
       exercise: { id: "ex1", scenario: "You are the manager of a new landscaping business called 'GreenGrowth.' In June, you complete $5,000 worth of work for a corporate office, but the office won't actually send you the check until August. Meanwhile, you spent $1,000 on fuel and labor in June to get the job done.", task: "Explain how this scenario would appear differently on your June Income Statement versus your June Cash Flow Statement, and identify which specific balance sheet account represents the $5,000 owed to you." }
     },
     {
@@ -139,10 +135,6 @@ GAAP stands for Generally Accepted Accounting Principles—the official rulebook
       videos: [
         { title: "The Ultimate Guide to Financial Statements", source: "YouTube", videoId: "eorpdJUWfTA", startSeconds: 935, fallbackSearchQuery: "income statement explained" },
         { title: "How to Read a P&L Statement", source: "YouTube \u2014 The Finance Storyteller", url: "https://www.youtube.com/watch?v=uVHGgSXtQmE", fallbackSearchQuery: "how to read a P&L statement" },
-      ],
-      readings: [
-        { title: "The Earnings Game: Everyone Plays, Nobody Wins", source: "Harvard Business Review", url: "https://hbr.org/2002/03/the-earnings-game-everyone-plays-nobody-wins" },
-        { title: "Profits Without Prosperity", source: "Harvard Business Review", url: "https://hbr.org/2014/09/profits-without-prosperity" },
       ],
       exercise: { id: "ex1", scenario: "You are the manager of 'PureStream,' a subscription-based water filtration company. This year, your revenue grew by 20%, but your Net Income stayed flat, and your Gross Margin dropped from 60% to 52% because the cost of filter components rose significantly. To keep investors happy, your CEO wants to report a 'Non-GAAP Adjusted Profit' that ignores the increased cost of components, labeling it a 'temporary supply chain anomaly.'", task: "Analyze the relationship between the dropping Gross Margin and the CEO's suggested 'Adjusted Profit'—explain why this adjustment might mislead investors about the company's long-term unit economics and identify one legitimate fixed cost you could potentially optimize instead to improve the bottom line." }
     },
@@ -223,10 +215,6 @@ Fast-growing businesses with long receivable cycles or heavy inventory consume c
         { title: "The Ultimate Guide to Financial Statements", source: "YouTube", videoId: "eorpdJUWfTA", startSeconds: 540, fallbackSearchQuery: "balance sheet explained" },
         { title: "Aswath Damodaran \u2014 Balance Sheet", source: "YouTube \u2014 NYU Stern", videoId: "cSuc2HHQpxc", fallbackSearchQuery: "Damodaran balance sheet explained" },
       ],
-      readings: [
-        { title: "Why Discounted Cash Flow Doesn't Work for Banks", source: "Harvard Business Review", url: "https://hbr.org/2009/05/why-discounted-cash-flow-doesnt-work-for-banks" },
-        { title: "A Refresher on Return on Assets and Return on Equity", source: "Harvard Business Review", url: "https://hbr.org/2016/04/a-refresher-on-return-on-assets-and-return-on-equity" },
-      ],
       exercise: { id: "ex1", scenario: "You are the manager of 'GadgetFlow,' a wholesale electronics distributor that is growing revenue by 50% year-over-year. Despite reporting high profits on your income statement, your bank account is nearly empty, and you are struggling to pay your warehouse rent this month because your customers (retail stores) take 60 days to pay you, while your suppliers demand payment in 15 days.", task: "Identify the specific 'Efficiency' ratio you should prioritize improving to solve your cash shortage, and propose one operational change to GadgetFlow's business model to move toward a more favorable cash conversion cycle." }
     },
     {
@@ -287,10 +275,6 @@ More cash than profit — the non-cash add-backs swamped the working capital bui
       videos: [
         { title: "The Ultimate Guide to Financial Statements", source: "YouTube", videoId: "eorpdJUWfTA", startSeconds: 1196, fallbackSearchQuery: "cash flow statement explained" },
         { title: "Warren Buffett on EBITDA", source: "YouTube", videoId: "l82kIjqBtqw", fallbackSearchQuery: "Warren Buffett EBITDA criticism" },
-      ],
-      readings: [
-        { title: "Cash Is King: Lessons from the 2008 Storm", source: "Harvard Business Review", url: "https://hbr.org/2009/09/leadership-in-a-crisis-2" },
-        { title: "Stop Making Plans; Start Making Decisions", source: "Harvard Business Review", url: "https://hbr.org/2006/01/stop-making-plans-start-making-decisions" },
       ],
       exercise: { id: "ex1", scenario: "You are analyzing a high-growth SaaS company that reports a Net Income of $5M but an Operating Cash Flow (CFO) of negative $2M. You notice that their Accounts Receivable increased by $8M over the year because they allowed large enterprise clients to wait 120 days to pay their invoices.", task: "Explain why this company has a cash shortage despite being profitable, and advise the CEO on one specific change to their credit terms that would improve their Free Cash Flow." }
     },

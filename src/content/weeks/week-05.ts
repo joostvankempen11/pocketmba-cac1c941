@@ -51,12 +51,8 @@ Positioning is *chosen* — you decide what to *not* be. Volvo chose "safety" an
 
 A new electric pickup truck startup could segment by income (luxury vs mass), by use case (worksite vs lifestyle), or by environmental attitude. Targeting the "affluent eco-conscious adventurer" segment (psychographic + behavioral) gives them a defensible position — premium pricing, dealer-free distribution, design-forward — that the legacy F-150 can't easily attack without alienating its core fleet buyers. By focusing on the 'adventurer' rather than the 'general worker,' the startup can charge more for specialized features like built-in camping gear, which a construction company would never pay for.`,
       videos: [
-        { title: "Jobs to Be Done \u2014 Clayton Christensen", source: "YouTube \u2014 HBS", url: "https://www.youtube.com/watch?v=Stc0beAxavY", fallbackSearchQuery: "jobs to be done Christensen" },
+        { title: "Jobs to Be Done \u2014 Clayton Christensen", source: "YouTube", url: "https://www.youtube.com/watch?v=Stc0beAxavY", fallbackSearchQuery: "jobs to be done Christensen" },
         { title: "Marketing Strategy \u2013 STP", source: "YouTube", videoId: "K400f3nvtrI", fallbackSearchQuery: "STP marketing strategy explained" },
-      ],
-      readings: [
-        { title: "Marketing Myopia", source: "Harvard Business Review", url: "https://hbr.org/2004/07/marketing-myopia" },
-        { title: "Know Your Customers' Jobs to Be Done", source: "Harvard Business Review", url: "https://hbr.org/2016/09/know-your-customers-jobs-to-be-done" },
       ],
       exercise: { id: "ex1", scenario: "You are the Marketing Manager for an upscale dog food startup that uses human-grade ingredients and a customized subscription model. While your product is clearly higher quality than grocery store brands, it costs three times as much, and legacy pet food giants are beginning to launch their own 'natural' lines to compete with you.", task: "Using the Geoffrey Moore positioning template, write a single positioning statement for this startup that differentiates it from a legacy competitor (like Purina) by focusing on a specific behavioral or psychographic segment rather than just 'dog owners.'" }
     },
@@ -105,10 +101,6 @@ The four Ps must reinforce each other. Premium product + low price = confused br
       videos: [
         { title: "The Marketing Mix", source: "YouTube", videoId: "Mco8vBAwOmA", fallbackSearchQuery: "marketing mix 4Ps product price place promotion" },
         { title: "Pricing Strategy", source: "YouTube", videoId: "sF6AMj3H0jg", fallbackSearchQuery: "pricing strategy explained" },
-      ],
-      readings: [
-        { title: "The Power of Pricing", source: "Harvard Business Review", url: "https://hbr.org/2003/09/the-power-of-pricing" },
-        { title: "Pricing to Create Shared Value", source: "Harvard Business Review", url: "https://hbr.org/2018/03/pricing-to-create-shared-value" },
       ],
       exercise: { id: "ex1", scenario: "You are the founder of 'GreenSprout,' a startup that has developed a revolutionary organic fertilizer that is 100% odorless and safe for indoor plants. You have spent all your budget on high-end minimalist packaging and a premium 'artisan' brand identity. However, your initial plan is to sell large 20lb bags through discount hardware warehouses at a low introductory price to beat the chemical competition.", task: "Identify two 'Ps' in this scenario that are currently in conflict with your brand identity and explain how you would adjust them to create a coherent marketing mix." }
     },
@@ -171,10 +163,6 @@ Use CLV as a *steering wheel*, not a verdict. The number is less important than 
       videos: [
         { title: "Customer Lifetime Value Explained", source: "YouTube", videoId: "GPSysUOV240", fallbackSearchQuery: "CLV customer lifetime value calculation" },
         { title: "Unit Economics \u2014 Brian Balfour", source: "YouTube", videoId: "26tDd5rsjX4", fallbackSearchQuery: "unit economics SaaS startup" },
-      ],
-      readings: [
-        { title: "E-Loyalty: Your Secret Weapon on the Web", source: "Harvard Business Review", url: "https://hbr.org/2000/07/e-loyalty-your-secret-weapon-on-the-web" },
-        { title: "The Right Way to Use Customer Lifetime Value", source: "Harvard Business Review", url: "https://hbr.org/2019/01/the-mistake-companies-make-when-they-use-data-to-plan-discounts" },
       ],
       exercise: { id: "ex1", scenario: "You are the growth manager for 'FreshBox', a meal-kit delivery service with a $60 ARPU, 50% gross margin, and a 10% monthly churn rate. Your current CAC (acquisition cost) is $150 per customer, and your CFO is worried that you are spending too much on Facebook ads because the business isn't profitable yet.", task: "Calculate the current CLV and LTV/CAC ratio, then write a one-sentence recommendation to the CFO explaining whether you should increase, decrease, or maintain marketing spend based on the '3x Rule of Thumb'." }
     },

@@ -86,8 +86,8 @@ function yearFromUrl(url: string) {
   return m ? m[0].slice(1, 5) : `${CURRENT_YEAR}`;
 }
 
-/** Harvard-style reference: Source (Year) 'Title'. Available at: URL (Accessed: ...). */
-function HarvardRef({ r }: { r: Resource }) {
+/** Reference: Source (Year) 'Title'. Available at: URL (Accessed: ...). */
+function CitationRef({ r }: { r: Resource }) {
   const url = r.url ?? "";
   const year = yearFromUrl(url);
   let pathname = "";
@@ -228,10 +228,6 @@ export function FurtherStudy({
   return (
     <section className="mt-10 border-t border-border pt-8">
       <h2 className="text-xl font-semibold tracking-tight text-primary">Further study</h2>
-      <p className="mt-1 text-sm text-muted-foreground">
-        Curated YouTube videos and Harvard Business Review readings, formatted in Harvard
-        referencing style. Unavailable videos automatically fall back to a YouTube search.
-      </p>
 
       {videos && videos.length > 0 && (
         <div className="mt-5">
@@ -251,11 +247,11 @@ export function FurtherStudy({
       {readings && readings.length > 0 && (
         <div className="mt-6">
           <h3 className="mb-2 flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-            <BookOpen className="h-3.5 w-3.5" /> References (Harvard style)
+            <BookOpen className="h-3.5 w-3.5" /> References
           </h3>
-          <ol className="harvard-refs rounded-md border border-border bg-card/40 p-4 pl-6 list-none">
+          <ol className="refs rounded-md border border-border bg-card/40 p-4 pl-6 list-none">
             {readings.map((r) => (
-              <HarvardRef key={r.url} r={r} />
+              <CitationRef key={r.url} r={r} />
             ))}
           </ol>
         </div>

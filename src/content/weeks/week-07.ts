@@ -59,10 +59,6 @@ Queueing theory shows wait time explodes nonlinearly as utilization approaches 1
         { title: "Business Process Analysis", source: "YouTube", videoId: "1E6II2U1shY", fallbackSearchQuery: "business process analysis explained" },
         { title: "Performance Management", source: "YouTube", videoId: "BXD8VaO-Dss", fallbackSearchQuery: "performance management operations" },
       ],
-      readings: [
-        { title: "The Power of Process", source: "Harvard Business Review", url: "https://hbr.org/2011/02/the-power-of-process" },
-        { title: "Decoding the DNA of the Toyota Production System", source: "Harvard Business Review", url: "https://hbr.org/1999/09/decoding-the-dna-of-the-toyota-production-system" },
-      ],
       exercise: { id: "ex1", scenario: "You run a boutique passport-processing office with three sequential steps: Document Review (capacity: 10/hr), Background Check (capacity: 5/hr), and Final Printing (capacity: 15/hr). Applications arrive at a steady rate of 8 per hour, but the office is currently facing a 2-week backlog of unprocessed applications.", task: "Identify the current throughput of the entire system and determine which specific step should receive a budget increase for additional staff to reduce the backlog most effectively." }
     },
     {
@@ -119,10 +115,6 @@ JIT minimizes inventory by tight coupling with suppliers and frequent small deli
       videos: [
         { title: "Inventory Management EOQ", source: "YouTube", videoId: "0NOER-Lle-0", fallbackSearchQuery: "EOQ economic order quantity" },
         { title: "The Bullwhip Effect", source: "YouTube", videoId: "sZnxWVKhObo", fallbackSearchQuery: "bullwhip effect supply chain explained" },
-      ],
-      readings: [
-        { title: "The Bullwhip Effect in Supply Chains", source: "Harvard Business Review", url: "https://hbr.org/1997/04/the-bullwhip-effect-in-supply-chains" },
-        { title: "From Superstorms to Factory Fires: Managing Disruptions", source: "Harvard Business Review", url: "https://hbr.org/2014/01/from-superstorms-to-factory-fires-managing-unpredictable-supply-chain-disruptions" },
       ],
       exercise: { id: "ex1", scenario: "You manage a luxury watch boutique where each watch costs $5,000 to hold in stock annually due to high insurance and security costs. However, your ordering costs are low because you use an automated digital procurement system. Recently, interest rates have risen, further increasing your holding costs (capital expense).", task: "Explain whether you should increase or decrease your order frequency and batch size based on the EOQ logic, and identify which specific type of stock (e.g., Cycle, Safety, or Speculative) you would prioritize reducing first to protect your cash flow." }
     },
@@ -181,10 +173,6 @@ The biggest lean transformations of the past 25 years have been in services — 
         { title: "Lean Manufacturing \u2014 Toyota Production System", source: "YouTube", videoId: "F5vtCRFRAK0", fallbackSearchQuery: "lean manufacturing Toyota" },
         { title: "Six Sigma DMAIC", source: "YouTube", videoId: "s2HCrhNVfak", fallbackSearchQuery: "Six Sigma DMAIC methodology" },
         { title: "Total Quality Management", source: "YouTube", videoId: "OSz7MvkPhFI", startSeconds: 54, fallbackSearchQuery: "total quality management explained" },
-      ],
-      readings: [
-        { title: "Decoding the DNA of the Toyota Production System", source: "Harvard Business Review", url: "https://hbr.org/1999/09/decoding-the-dna-of-the-toyota-production-system" },
-        { title: "The Contradictions That Drive Toyota's Success", source: "Harvard Business Review", url: "https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success" },
       ],
       exercise: { id: "ex1", scenario: "You manage a busy regional claim-processing center for an insurance company. Currently, employees process claims in huge batches of 500 at a time, but it takes 10 days for a customer to get an answer, and 15% of the claims are sent back because of simple data-entry errors found at the very end of the process.", task: "Identify two specific 'wastes' (muda) in this scenario and propose one change based on the 'Jidoka' (autonomation) principle to reduce the error rate." }
     },

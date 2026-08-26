@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { weeks } from "@/content/curriculum";
-import { ArrowRight, GraduationCap } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import paperBg from "@/assets/paper-bg.jpg.asset.json";
+import logoSymbol from "@/assets/umba-symbol.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,10 +20,13 @@ export const Route = createFileRoute("/")({
 
 function Landing() {
   return (
-    <div className="min-h-screen bg-background">
+    <div
+      className="min-h-screen bg-background bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${paperBg.url})` }}
+    >
       <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
         <div className="flex items-center gap-2">
-          <GraduationCap className="h-6 w-6 text-primary" />
+          <img src={logoSymbol.url} alt="The Unofficial MBA" className="h-7 w-auto" />
           <span className="font-semibold">12-Week MBA</span>
         </div>
         <nav className="flex items-center gap-2 text-sm">

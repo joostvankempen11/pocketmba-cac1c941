@@ -47,10 +47,6 @@ The area between the demand curve and the price line is **consumer surplus** —
         { title: "Supply and Demand \u2014 Crash Course Economics", source: "YouTube", videoId: "g9aDizJpd_s", fallbackSearchQuery: "supply demand equilibrium explained" },
         { title: "The Price System", source: "YouTube", videoId: "mr2fexY-utY", fallbackSearchQuery: "price system market coordination" },
       ],
-      readings: [
-        { title: "How Markets Fail", source: "Harvard Business Review", url: "https://hbr.org/2010/01/the-failure-of-free-market-economics" },
-        { title: "The Hidden Wealth of Customers", source: "Harvard Business Review", url: "https://hbr.org/2012/05/the-hidden-wealth-of-customers" },
-      ],
       exercise: { id: "ex1", scenario: "You manage a mid-sized regional airline. A massive new study is published globally proving that short-haul flights are significantly more harmful to the environment than previously thought, leading to a sudden 'shame' trend among your primary customer base. Simultaneously, a global oil crisis causes the price of jet fuel to double in a single month.", task: "Identify which way the demand curve and the supply curve for your flights will shift, and predict the resulting impact on the equilibrium price and quantity of your tickets." }
     },
     {
@@ -98,10 +94,6 @@ Nobody hands you E. You estimate it from controlled experiments (A/B price tests
 A SaaS firm cuts price 10% and sees signups jump 25%. Elasticity = 2.5 — clearly elastic. Revenue effect: 1.10 × 1.25 / 1.0 = 1.375 — a 37% revenue lift even after the price cut. But variable cost rose 25% in line with units, and acquisition cost may also scale. The pricing decision needs gross-profit elasticity, not just revenue elasticity. Managers must remember that selling more units isn't always good if the cost to serve those extra customers consumes all the new revenue.`,
       videos: [
         { title: "Price Elasticity of Demand", source: "YouTube \u2014 Khan Academy", url: "https://www.youtube.com/watch?v=HHcblIxiAAk", fallbackSearchQuery: "price elasticity of demand" },
-      ],
-      readings: [
-        { title: "The Power of Pricing", source: "Harvard Business Review", url: "https://hbr.org/2003/09/the-power-of-pricing" },
-        { title: "Pricing to Create Shared Value", source: "Harvard Business Review", url: "https://hbr.org/2018/03/pricing-to-create-shared-value" },
       ],
       exercise: { id: "ex1", scenario: "You manage a regional coffee chain. Currently, a large latte costs $5.00, and you sell 1,000 units per day. Internal data suggests that your latte demand elasticity is 0.5 because you are the only high-end coffee shop in the downtown business district.", task: "Predict what will happen to your total daily revenue if you increase the price of a latte by 20%, and explain whether this move is likely to increase or decrease your total profit based on the elasticity provided." }
     },
@@ -155,10 +147,6 @@ A grocery chain operates in monopolistic competition. Margins are 2-3%. The same
       videos: [
         { title: "Market Structures", source: "YouTube", videoId: "eNxk5-EJFrY", fallbackSearchQuery: "perfect competition monopoly oligopoly" },
         { title: "Monopoly and Antitrust", source: "YouTube", videoId: "Sb_-wfmJnHA", startSeconds: 59, fallbackSearchQuery: "monopoly antitrust regulation" },
-      ],
-      readings: [
-        { title: "The Five Competitive Forces That Shape Strategy", source: "Harvard Business Review", url: "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy" },
-        { title: "Why Strategy Execution Unravels — and What to Do About It", source: "Harvard Business Review", url: "https://hbr.org/2015/03/why-strategy-execution-unravelsand-what-to-do-about-it" },
       ],
       exercise: { id: "ex1", scenario: "You are the CEO of a small startup that has developed a new type of organic, ultra-durable yoga mat. Currently, the yoga mat market is saturated with hundreds of brands selling products that look almost identical, and your competitors are constantly undercutting each other on price to survive.", task: "Identify which of the four market structures this yoga mat market currently represents, and propose two specific strategic actions you could take to move your product toward 'monopolistic competition' to avoid a race to the bottom on price." }
     },

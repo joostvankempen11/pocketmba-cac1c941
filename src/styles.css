@@ -176,8 +176,8 @@
 .markdown a { color: var(--color-primary); text-decoration: underline; }
 
 /* Harvard-style reference list */
-.harvard-refs { font-family: var(--font-serif); font-size: 0.95rem; line-height: 1.55; }
-.harvard-refs li { padding-left: 1.5rem; text-indent: -1.5rem; margin: 0.55rem 0; }
-.harvard-refs em { font-style: italic; }
-.harvard-refs a { color: var(--color-primary); text-decoration: none; word-break: break-word; }
-.harvard-refs a:hover { text-decoration: underline; }
+.refs { font-family: var(--font-serif); font-size: 0.95rem; line-height: 1.55; }
+.refs li { padding-left: 1.5rem; text-indent: -1.5rem; margin: 0.55rem 0; }
+.refs em { font-style: italic; }
+.refs a { color: var(--color-primary); text-decoration: none; word-break: break-word; }
+.refs a:hover { text-decoration: underline; }

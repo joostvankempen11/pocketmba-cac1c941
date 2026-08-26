@@ -45,11 +45,7 @@ High when substitutes offer comparable value at lower price or higher quality. L
 Porter's framework misses *complementors* (Brandenburger-Nalebuff added them as a sixth force in *Co-opetition*) and arguably understates *demand-side network effects* — both critical to modern platform businesses. Complementors are products that make yours more valuable (like apps making a smartphone more useful). Network effects occur when a service becomes more valuable as more people use it, like how eBay is only useful because there are millions of buyers and sellers already there. Use Five Forces as the structural skeleton, then layer on platform and ecosystem thinking to see the full picture of modern competition.`,
       videos: [
         { title: "Michael Porter's 5 Forces Model Explained", source: "YouTube", videoId: "XCWHSeDU-zk", fallbackSearchQuery: "Porter's Five Forces explained" },
-        { title: "The Explainer \u2014 Porter's Five Forces", source: "YouTube \u2014 HBR", url: "https://www.youtube.com/watch?v=mYF2_FBCvXw", fallbackSearchQuery: "HBR explainer five forces" },
-      ],
-      readings: [
-        { title: "The Five Competitive Forces That Shape Strategy", source: "Harvard Business Review", url: "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy" },
-        { title: "What Is Strategy?", source: "Harvard Business Review", url: "https://hbr.org/1996/11/what-is-strategy" },
+        { title: "The Explainer \u2014 Porter's Five Forces", source: "YouTube", url: "https://www.youtube.com/watch?v=mYF2_FBCvXw", fallbackSearchQuery: "HBR explainer five forces" },
       ],
       exercise: { id: "ex1", scenario: "You are a consultant for 'QuickClean,' a franchise of ultra-convenience dry cleaners located in a city with hundreds of independent laundry shops. A new government regulation is about to be passed that requires all dry cleaners to purchase a $100,000 specialized air-filtration system, and a major chemical supplier has just acquired its two biggest rivals, becoming the sole provider of cleaning fluid in the region.", task: "Analyze how these two specific changes (the regulation and the supplier merger) alter two of Porter's Five Forces for QuickClean, and explain whether the industry's overall 'attractiveness' for a current owner has increased or decreased based on those shifts." }
     },
@@ -98,10 +94,6 @@ Doing the same activities better than rivals (operational effectiveness) is nece
         { title: "Michael Porter's Generic Strategies Explained", source: "YouTube", videoId: "V14kuqYEsxE", fallbackSearchQuery: "Porter generic strategies" },
         { title: "What is Strategy", source: "YouTube", videoId: "06sk4JdN-Pw", fallbackSearchQuery: "what is strategy Michael Porter" },
       ],
-      readings: [
-        { title: "What Is Strategy?", source: "Harvard Business Review", url: "https://hbr.org/1996/11/what-is-strategy" },
-        { title: "Reinventing Your Business Model", source: "Harvard Business Review", url: "https://hbr.org/2008/12/reinventing-your-business-model" },
-      ],
       exercise: { id: "ex1", scenario: "You are the manager of 'Urban Grind,' a high-end independent coffee shop known for its rare beans and expert baristas. A massive international chain just opened across the street offering basic coffee at half your price, and a new 'automated' kiosk opened nearby that serves decent lattes with zero staff. Your investors are panicked and suggesting you should start offering 'budget' coffee combos to compete with the chain while also buying even more expensive roasting equipment to stay ahead of the kiosk.", task: "Identify which of the three generic strategies Urban Grind is currently using, then write a one-paragraph response to your investors explaining why attempting to compete on both price and premium quality simultaneously risks leaving the business 'stuck in the middle' and what specific trade-off you must protect." }
     },
     {
@@ -146,10 +138,6 @@ Managers' job: deepen the moat with every reinvested dollar. Investors' job: pay
         { title: "Economic Moats Explained", source: "YouTube", videoId: "FkmWzdztCqE", startSeconds: 10, fallbackSearchQuery: "economic moat competitive advantage explained" },
         { title: "Five Rules for Successful Stock Investing", source: "YouTube", videoId: "NlrEW3kUu2Q", fallbackSearchQuery: "Pat Dorsey five rules investing moats" },
         { title: "Hamilton's 7 Powers", source: "YouTube", videoId: "2tiQrNtTzPA", fallbackSearchQuery: "Hamilton Helmer 7 Powers strategy" },
-      ],
-      readings: [
-        { title: "How Strategy Shapes Structure", source: "Harvard Business Review", url: "https://hbr.org/2009/09/how-strategy-shapes-structure" },
-        { title: "The Quest for Resilience", source: "Harvard Business Review", url: "https://hbr.org/2003/09/the-quest-for-resilience" },
       ],
       exercise: { id: "ex1", scenario: "You are the CEO of 'FreshFit,' a premium meal-kit delivery service that has grown rapidly because your recipes are unique and your packaging is biodegradable. However, three new competitors have just launched similar services, offering 50% discounts to your current customers to get them to switch.", task: "Identify which specific moat category (from the eight listed) would be most effective for FreshFit to build right now to prevent customer churn, and explain one concrete action you would take to implement it." }
     },
