@@ -54,7 +54,56 @@ Three robust findings managers ignore at their peril:
 - Get base compensation to a fair, competitive level — then stop counting on more money to drive engagement. If an employee feels underpaid, they will be distracted by the unfairness. Once they feel treated fairly, money drops off their list of daily concerns.
 - Invest in autonomy (small, empowered teams), mastery (training, growth paths), and purpose (clear mission, customer connection).
 - Be cautious with narrow incentives on cognitive work. Use *teams* and *outcomes* rather than individual KPIs (Key Performance Indicators) where possible.
-- Recognize publicly and specifically. Recognition is one of the most under-used and highest-ROI (Return on Investment) levers in management. A sincere "Thank you for staying late to help the marketing team meet their deadline" is often more powerful than a $50 gift card handed out without comment.`,
+- Recognize publicly and specifically. Recognition is one of the most under-used and highest-ROI (Return on Investment) levers in management. A sincere "Thank you for staying late to help the marketing team meet their deadline" is often more powerful than a $50 gift card handed out without comment.
+
+## Expectancy theory — the math behind effort
+
+Victor Vroom's **expectancy theory** gives us a formula for why someone chooses to exert effort at all: Motivation = Expectancy × Instrumentality × Valence. Each term is a probability or value judgment happening (often unconsciously) inside an employee's head before they decide how hard to push.
+
+- **Expectancy** — "If I try hard, will I actually succeed?" (a number between 0 and 1). A salesperson given an impossible quota of $2M when the realistic market ceiling is $800K will have near-zero expectancy — no amount of coaching fixes a target that feels unreachable.
+- **Instrumentality** — "If I succeed, will the reward actually follow?" A company that promises a bonus for hitting a target, then quietly caps payouts or changes the rules at the last minute, teaches employees that performance and reward are disconnected. Once that link is broken, no future promise is believed.
+- **Valence** — "Do I actually want the reward?" A senior engineer who is offered a plaque and a pizza party for a project that saved the company $3M has a valence near zero; the reward doesn't match the value they placed on the effort.
+
+Because the three terms multiply rather than add, a zero in any one of them collapses the whole equation. A generous bonus (high valence) tied to a goal nobody believes is achievable (low expectancy) produces the same motivational result as no bonus at all: none. This is why so many well-funded incentive programs quietly fail — leadership fixes the reward size without checking whether employees believe the "if-then" chain will actually hold.
+
+**Worked example.** Imagine a call-center rep is told: "Hit 50 resolved tickets a day and you get a $100 gift card." If the rep's honest average is 35 tickets on a good day (low expectancy — the number feels impossible), the promise of $100 (a decent valence for that job) does nothing, because 0.1 (expectancy) × 1 (instrumentality) × 0.8 (valence) is still close to zero. Lower the bar to 40 tickets, something the rep believes is a stretch but reachable, and the same reward now moves behavior, because expectancy jumps to something like 0.6.
+
+## Equity theory — fairness is relative, not absolute
+
+Adams's **equity theory** argues that people don't evaluate their pay and treatment in isolation; they compare their own ratio of *outcomes* (pay, recognition, perks) to *inputs* (effort, skill, tenure) against a reference person's ratio. It is not "am I paid enough?" but "am I paid fairly *relative to Sam*?"
+
+This explains a counterintuitive but consistent finding in compensation research: a $5,000 raise can *decrease* morale if the employee discovers a peer with the same title and less tenure got $8,000. The absolute gain is positive; the relative comparison feels like a demotion. Conversely, someone earning below market rate can remain highly engaged for years if they believe everyone around them is in the same boat and the ratio feels fair.
+
+Three behavioral responses to perceived inequity, from mildest to most damaging:
+1. **Cognitive distortion** — the employee quietly convinces themselves the comparison person actually works harder or has scarcer skills, restoring the sense of fairness without any change in pay.
+2. **Reducing inputs** — the employee doesn't quit, but stops volunteering for stretch projects, stops mentoring juniors, and does exactly what the job description requires and no more. This is the single most common and hardest-to-detect response, because output looks fine on paper while discretionary effort quietly disappears.
+3. **Exit** — the employee leaves, often for a role that pays the same or even less, simply because the new employer's fairness ratio feels more defensible.
+
+The management implication is blunt: pay transparency and consistent, defensible promotion criteria matter more than the absolute size of the pay packet. A manager who cannot explain *why* two similar employees are paid differently should expect the lower-paid one to disengage within months, regardless of how "generous" that salary looks on a national average chart.
+
+## Goal-setting theory — specificity beats inspiration
+
+Locke and Latham's five decades of research on **goal-setting theory** converge on one deceptively simple finding: specific, difficult goals produce higher performance than vague "do your best" goals or easy goals, provided the person has the ability and accepts the goal. "Increase quarterly revenue by 12% by launching two new regional accounts before March 31" beats "try to grow the business" almost every time it has been tested, across manufacturing, sales, and even weight-loss studies.
+
+The mechanism is attentional: a specific number gives the brain something concrete to measure progress against, which sustains effort and self-correction. "Do your best" gives no feedback signal — an employee cannot tell whether they are on track, so effort drifts toward whatever feels comfortable rather than whatever is optimal.
+
+Four conditions must hold or specific goals backfire:
+- **Feedback** — the person needs regular, visible signals of progress against the goal, or the goal becomes an abstract number nobody tracks.
+- **Commitment** — the goal must be accepted, not merely imposed; goals handed down without any input from the people executing them are far more likely to be quietly ignored or gamed.
+- **Task complexity** — for highly novel, creative work, a rigid numeric target can narrow focus in unhelpful ways (echoing the crowding-out and creativity findings above); "learning goals" ("find three viable approaches to this technical problem") often outperform "performance goals" ("ship this by Friday") in the early, exploratory phase of hard problems.
+- **Resourcing** — a difficult goal without the time, budget, or authority to pursue it just produces stress and cynicism rather than performance.
+
+## Bringing it together on Monday morning
+
+A manager walking into a real one-on-one with this material should ask, in order: Does this person believe the goal is achievable (expectancy)? Do they trust that hitting it will actually produce the promised outcome (instrumentality)? Do they actually want that outcome (valence)? Do they feel their treatment is fair relative to peers (equity)? And is the goal itself specific enough to give them a concrete target with visible feedback (goal-setting)? Motivation problems that look mysterious from a distance are almost always a broken link in one of these five questions, and each one has a distinct, practical fix rather than a generic "more recognition" or "more money" response.`,
+      takeaways: [
+        "Motivation is not a single lever: expectancy, instrumentality, and valence multiply together, so a failure in any one of them collapses the whole incentive to zero.",
+        "Fairness is judged relative to a comparison person's outcome-to-input ratio, not in absolute terms, so a raise can still lower morale if a peer got more.",
+        "The most damaging response to perceived unfairness is invisible: employees quietly stop volunteering discretionary effort long before they quit.",
+        "Specific, difficult, feedback-backed goals reliably outperform vague 'do your best' targets, but only when the person accepts the goal and has the resources to pursue it.",
+        "Financial incentives reliably improve mechanical, well-defined tasks and just as reliably degrade performance on creative, judgment-heavy work.",
+        "Autonomy, mastery, and purpose sustain effort long after a bonus is spent, which is why they belong in the design of the job itself, not just the pay package.",
+      ],
       videos: [
         { title: "Dan Pink \u2014 The Puzzle of Motivation (TED)", source: "YouTube", videoId: "rrkrvAUbU9Y", fallbackSearchQuery: "what motivates people at work explained" },
         { title: "RSA Animate \u2014 Drive: The Surprising Truth About What Motivates Us", source: "YouTube \u2014 RSA", url: "https://www.youtube.com/watch?v=u6XAPnuFjJc", fallbackSearchQuery: "RSA Animate Drive Dan Pink" },
@@ -120,7 +169,45 @@ Counter-measures: explicit dissent (red team, devil's advocate), private predict
 
 Hackman's research on teams: the strongest predictor of team performance is not the talent of individual members but the team's *design* — clear and challenging goals, the right people, enabling structure, supportive context, expert coaching. Top performers in poorly designed teams underperform mediocre performers in well-designed teams. 
 
-A manager’s job isn’t just to hire "the best" but to build the "best system." If you put an All-Star point guard in a system where nobody knows the plays, they will still lose to a disciplined high school team.`,
+A manager’s job isn’t just to hire "the best" but to build the "best system." If you put an All-Star point guard in a system where nobody knows the plays, they will still lose to a disciplined high school team.
+
+## Roles and role clarity
+
+Even in a well-designed team, performance stalls if people don't know exactly what they own. **Role ambiguity** — uncertainty about what is expected of you — is one of the most consistently cited sources of workplace stress and underperformance in organizational research, often outranking workload itself. A related failure is **role conflict**, where two people both believe they own the same decision (or, worse, neither does).
+
+A practical fix used by many high-functioning teams is the **RACI framework**: for any decision or deliverable, name who is *Responsible* (does the work), *Accountable* (owns the outcome and answers for it — ideally one person only), *Consulted* (gives input before the decision), and *Informed* (told after the decision is made). Most team dysfunction traces back to a fuzzy Accountable column: when a launch fails and three people each believed someone else owned the final sign-off, the failure wasn't a talent problem, it was a RACI problem.
+
+**Worked example.** A product team ships a feature with a bug that reaches customers. In the post-mortem, the designer says "I assumed engineering would catch that in QA," engineering says "we assumed the product manager signed off on the spec," and the product manager says "I thought design had already validated it with users." Nobody was lazy or incompetent — the team simply never named who was Accountable for final sign-off. The fix is not a lecture about ownership; it's a five-minute exercise mapping RACI for the next three releases.
+
+## Social loafing and free-riding
+
+**Social loafing** is the well-replicated finding (dating back to Ringelmann's 1913 rope-pulling experiments) that individual effort tends to decrease as group size increases, because individual contribution becomes harder to observe and credit or blame becomes diffuse. In a group of 8 pulling a rope, each person pulls with noticeably less than one-eighth of the effort they'd exert alone — not out of malice, but because the *visibility* of any one person's effort drops.
+
+This matters enormously for team design because it means larger teams don't just have higher coordination costs (Brooks's Law, above) — they also silently erode individual effort unless structure counteracts it. Three countermeasures that consistently reduce loafing in practice: make individual contributions visible (a shared task board where everyone can see who owns what, not just team-level metrics), keep sub-groups small enough that free-riding is obvious to peers, and build in peer accountability (regular check-ins where teammates, not just the manager, ask "what did you ship this week?").
+
+## Conflict: task versus relationship
+
+Not all team conflict is equally damaging. Researchers distinguish **task conflict** (disagreement about the work itself — which approach is better, which data is right) from **relationship conflict** (personal friction, distrust, irritation with someone's style). Moderate task conflict, especially early in a project, is associated with *better* decisions, because it forces the team to pressure-test assumptions before committing. Relationship conflict is almost never helpful; it consumes emotional energy, reduces information sharing, and tends to escalate.
+
+The danger is that task conflict, poorly managed, curdles into relationship conflict. A blunt "I think your numbers are wrong" delivered without care about tone can be heard as "you are incompetent." Teams with high psychological safety keep task conflict productive by separating the *idea* from the *person*: "Here's a gap I see in the model" instead of "you missed this," and by having a shared norm that surfacing a flaw is a contribution, not an attack.
+
+## Virtual and hybrid teams
+
+Remote and hybrid work adds a layer most classic team research (conducted mostly on co-located teams) didn't anticipate. Coordination costs described by Brooks's Law get worse without the low-friction hallway conversations that resolve small misunderstandings before they become expensive ones. Trust — a prerequisite for psychological safety — takes measurably longer to build over video calls and chat threads than in person, because people have fewer informal cues (body language, spontaneous small talk) to calibrate on.
+
+Practices that reliably help distributed teams: over-communicate context in writing rather than assuming shared understanding (what feels obvious in a hallway conversation is often lost in a two-line Slack message), protect a few synchronous touchpoints purely for relationship-building rather than status updates, and be explicit about norms that used to be implicit — response-time expectations, which channel is for what, and how decisions get documented so people in different time zones aren't left out of the reasoning.
+
+## Applying this on Monday morning
+
+A manager inheriting an underperforming team should not start by evaluating individual talent. The diagnostic order that the research supports is: is the team's *design* sound (clear goals, right size, right people, enabling structure)? Is there psychological safety to surface problems? Are roles and accountability clear enough that nobody is quietly assuming someone else owns the ball? Is conflict, when it happens, about the task or about the people? Only after those structural questions are answered does it make sense to look at whether any individual needs coaching or reassignment — because a talented person dropped into a badly designed system will underperform no matter how good they are.`,
+      takeaways: [
+        "Most team failures that look like a talent or effort problem are actually a role-clarity problem, best diagnosed by asking who is Accountable, not just who is Responsible.",
+        "Individual effort predictably drops as group size grows unless contributions stay visible, which is why coordination costs and social loafing compound each other in large teams.",
+        "Moderate task conflict early in a project improves decisions, but it must be kept separate from relationship conflict, which almost always makes the team worse.",
+        "Psychological safety is the strongest predictor of team effectiveness because it lets every other advantage — structure, talent, diversity — actually surface and get used.",
+        "Team performance is driven far more by design (goals, composition, structure, coaching) than by the individual talent of its members.",
+        "Distributed teams need norms that used to be implicit made explicit in writing, because informal hallway cues that once resolved small misunderstandings no longer exist.",
+      ],
       videos: [
         { title: "Amy Edmondson \u2014 Building a Psychologically Safe Workplace (TEDx)", source: "YouTube \u2014 TEDx", url: "https://www.youtube.com/watch?v=LhoLuui9gX8", fallbackSearchQuery: "Amy Edmondson psychological safety" },
         { title: "Cognitive Diversity", source: "YouTube", videoId: "E5UHfcwal0M", fallbackSearchQuery: "cognitive diversity teams performance" },
