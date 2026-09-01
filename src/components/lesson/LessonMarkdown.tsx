@@ -9,12 +9,12 @@ import { Quote } from "lucide-react";
  */
 const components: Components = {
   h1: ({ children }) => (
-    <h2 className="mt-14 scroll-mt-24 border-b border-border pb-3 font-serif text-[1.75rem] font-semibold leading-tight tracking-tight text-foreground first:mt-0">
+    <h2 className="mt-14 scroll-mt-24 border-b border-border pb-3 font-serif text-[1.5rem] font-semibold sm:text-[1.75rem] leading-tight tracking-tight text-foreground first:mt-0">
       {children}
     </h2>
   ),
   h2: ({ children }) => (
-    <h3 className="mt-12 scroll-mt-24 font-serif text-2xl font-semibold leading-snug tracking-tight text-primary first:mt-0">
+    <h3 className="mt-12 scroll-mt-24 font-serif text-xl font-semibold sm:text-2xl leading-snug tracking-tight text-primary first:mt-0">
       {children}
     </h3>
   ),
@@ -29,15 +29,15 @@ const components: Components = {
     </h5>
   ),
   p: ({ children }) => (
-    <p className="my-5 text-[1.0625rem] leading-[1.75] text-foreground/90">{children}</p>
+    <p className="my-5 break-words text-[1.0625rem] leading-[1.75] text-foreground/90">{children}</p>
   ),
   ul: ({ children }) => (
-    <ul className="my-6 space-y-3 rounded-xl border border-border/70 bg-card/60 p-5 pl-8 [list-style:disc] marker:text-primary/70">
+    <ul className="my-6 space-y-3 rounded-xl border border-border/70 bg-card/60 p-4 pl-7 sm:p-5 sm:pl-8 [list-style:disc] marker:text-primary/70">
       {children}
     </ul>
   ),
   ol: ({ children }) => (
-    <ol className="my-6 space-y-3 rounded-xl border border-border/70 bg-card/60 p-5 pl-8 [list-style:decimal] marker:font-semibold marker:text-primary">
+    <ol className="my-6 space-y-3 rounded-xl border border-border/70 bg-card/60 p-4 pl-7 sm:p-5 sm:pl-8 [list-style:decimal] marker:font-semibold marker:text-primary">
       {children}
     </ol>
   ),
@@ -45,7 +45,7 @@ const components: Components = {
     <li className="pl-1 text-[1.0625rem] leading-[1.7] text-foreground/90">{children}</li>
   ),
   blockquote: ({ children }) => (
-    <figure className="my-8 rounded-xl border border-primary/25 border-l-4 border-l-primary bg-primary/[0.06] p-5 pl-6">
+    <figure className="my-8 rounded-xl border border-primary/25 border-l-4 border-l-primary bg-primary/[0.06] p-4 pl-5 sm:p-5 sm:pl-6">
       <Quote className="mb-2 h-4 w-4 text-primary" aria-hidden />
       <div className="[&>p]:my-2 [&>p]:text-[1.0625rem] [&>p]:italic [&>p]:leading-[1.7] [&>p]:text-foreground/90">
         {children}
