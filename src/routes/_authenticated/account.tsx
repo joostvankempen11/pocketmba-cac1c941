@@ -35,6 +35,7 @@ function AccountPage() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
   const { data: billing } = useBillingStatus();
+  const currency = useCurrency();
   const [billingError, setBillingError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
