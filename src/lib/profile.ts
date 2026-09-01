@@ -1,3 +1,4 @@
+import { PRICES, detectCurrency, formatPrice } from "@/lib/currency";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -47,8 +48,9 @@ export function daysLeft(iso: string | null) {
 }
 
 export function planLabel(p: Profile["subscription_plan"]) {
-  if (p === "monthly") return "Monthly — €29,99 / month";
-  if (p === "yearly") return "Yearly — €119,99 / year";
+  const c = detectCurrency();
+  if (p === "monthly") return `Monthly — ${formatPrice(PRICES.monthly, c)} / month`;
+  if (p === "yearly") return `Yearly — ${formatPrice(PRICES.yearly, c)} / year`;
   if (p === "beta_free") return "Beta — free forever";
   return "No plan yet";
 }

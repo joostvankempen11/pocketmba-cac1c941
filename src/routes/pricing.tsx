@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, GraduationCap } from "lucide-react";
 import { useState } from "react";
 import { useBillingStatus, startCheckout } from "@/lib/billing";
+import { PRICES, formatPrice, useCurrency } from "@/lib/currency";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -27,6 +28,7 @@ const features = [
 
 function Pricing() {
   const { data: billing } = useBillingStatus();
+  const currency = useCurrency();
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const configured = billing?.configured ?? false;
@@ -54,7 +56,7 @@ function Pricing() {
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           <PlanCard
             name="Monthly"
-            price="€29,99"
+            price={formatPrice(PRICES.monthly, currency)}
             period="per month"
             note="7-day free trial, then billed monthly."
             configured={configured}
@@ -63,9 +65,9 @@ function Pricing() {
           />
           <PlanCard
             name="Yearly"
-            price="€119,99"
+            price={formatPrice(PRICES.yearly, currency)}
             period="per year"
-            note="Billed once a year — roughly two-thirds off the monthly price."
+            note="Billed once a year — roughly 66% off the monthly plan."
             highlight
             configured={configured}
             busy={busy === "yearly"}

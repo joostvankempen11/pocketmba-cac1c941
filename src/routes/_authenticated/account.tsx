@@ -3,6 +3,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { AppShell } from "@/components/AppShell";
 import { supabase } from "@/integrations/supabase/client";
 import { daysLeft, planLabel, useProfile } from "@/lib/profile";
+import { PRICES, formatPrice, useCurrency } from "@/lib/currency";
 import { useBillingStatus, openBillingPortal, startCheckout } from "@/lib/billing";
 import { useState } from "react";
 import { Sparkles } from "lucide-react";
@@ -106,7 +107,7 @@ function AccountPage() {
                           disabled={busy}
                           className="inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent disabled:opacity-60"
                         >
-                          Switch to yearly — €119,99
+                          Switch to yearly — {formatPrice(PRICES.yearly, currency)}
                         </button>
                       )}
                     </div>
