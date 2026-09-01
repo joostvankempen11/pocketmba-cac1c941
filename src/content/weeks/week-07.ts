@@ -54,7 +54,64 @@ Queueing theory shows wait time explodes nonlinearly as utilization approaches 1
 - **Make-to-stock vs make-to-order** — finished-goods inventory vs lead time. Do you buy a dress off the rack (stock) or have one tailored (order)? Stocking goods provides instant gratification but risks unsold waste; ordering allows for customization but requires the customer to wait.
 - **Push vs pull** — schedule by forecast (pushing products into the market based on a guess) or by downstream demand signal (pulling only when a customer buys). Toyota's kanban is the canonical pull system. A push system might result in a warehouse full of winter coats in July because a forecast was wrong.
 - **Batch vs flow** — large batches (baking 100 cookies at once) amortize setup cost but create lumpy WIP; small batches (baking 5 at a time) smooth flow but require fast changeovers (cleaning the tray quickly). Changeover is the time spent switching from making one product to another; if this time is high, you are forced into large, inefficient batches.
-- **Centralized vs distributed** — one big plant vs many small ones; cost-of-scale (big is cheaper per unit) vs cost-of-distance (small is closer to the customer) trade-off. For example, Amazon has a few massive regional hubs (centralized) but also thousands of local delivery vans (distributed) to balance shipping costs with speed.`,
+- **Centralized vs distributed** — one big plant vs many small ones; cost-of-scale (big is cheaper per unit) vs cost-of-distance (small is closer to the customer) trade-off. For example, Amazon has a few massive regional hubs (centralized) but also thousands of local delivery vans (distributed) to balance shipping costs with speed.
+
+## Variability and the hidden cost of "efficiency"
+
+Most process failures are not capacity failures — they are variability failures. A process can have "enough" average capacity and still collapse into chronic queues if the *arrival* and *service* times bounce around unpredictably. This is the core insight of queueing theory, and it is one of the least intuitive ideas in operations because our instinct is to think in averages, not distributions.
+
+Consider a walk-in clinic that sees an average of 10 patients an hour and has capacity for 10 patients an hour. On paper, utilization is 100% and the math looks perfect. In practice, patients don't arrive exactly six minutes apart — some show up back-to-back, some don't show up for twenty minutes. Because there is zero slack, every burst of early arrivals creates a permanent backlog that never clears, because the clinic never has spare capacity to catch up. The **coefficient of variation** (standard deviation divided by the mean) of both arrivals and service times is the hidden variable managers ignore when they plan capacity off average demand alone.
+
+The practical fix is not "work harder" — it's "design for variability." Three concrete levers:
+
+1. **Buffer capacity**, not just buffer inventory. Keep a float employee, a spare machine, or an on-call technician who absorbs surges instead of pushing them into the queue.
+2. **Pool resources** where possible. One queue feeding four tellers absorbs variability far better than four separate queues, because an idle teller can immediately take the next customer no matter which "line" they were technically in. This is why airports and banks moved to single-line, multi-server systems decades ago.
+3. **Cut variability at the source.** Standardizing how long a task takes — through checklists, templates, or scripted steps — reduces the swings that create backlogs even more effectively than adding staff.
+
+A manager who sees a growing queue and simply adds headcount without checking whether the real driver is variability (not average volume) will overspend on labor and still not fix the wait times.
+
+## Process mapping in practice
+
+Before you can improve a process, you have to see it — literally. A **process map** (also called a flowchart or value stream map) draws every step, decision point, handoff, and wait as a box or arrow on a page, usually left to right in the order work actually happens. The discipline of mapping forces a team to confront an uncomfortable truth: most processes look nothing like what people believe they look like, because everyone only sees their own piece of the chain.
+
+Two categories of steps matter enormously once mapped:
+
+- **Value-added steps** — steps the customer would pay for if they could see them happening (baking the bread, diagnosing the patient, writing the code).
+- **Non-value-added steps** — everything else: waiting, rework, unnecessary approvals, walking to get a form signed, re-entering the same data into a second system.
+
+In most unexamined processes, **less than 10% of total flow time is value-added work**; the rest is waiting and handoffs. This is why "working faster" on the value-added steps barely moves the needle — the real prize is squeezing out the 90% that is queueing and handoff delay. A hospital discharge, for example, might take 30 minutes of actual clinical work spread across a 6-hour flow time, with the rest consumed by waiting for a doctor's signature, a pharmacy delivery, and a bed-cleaning crew.
+
+A common mistake: mapping the process as it is *supposed* to work (the "happy path" in the procedures manual) instead of how it actually runs on a chaotic Tuesday with two people out sick. Always map from direct observation (genchi genbutsu — "go and see," a concept we return to in the lean lesson) rather than from memory or policy documents.
+
+## Capacity planning and the utilization trap
+
+Capacity decisions are some of the most expensive a manager makes, because capacity is usually "lumpy" — you can't buy 1.3 ovens; you buy one or two. This creates a permanent tension: build capacity ahead of demand and you carry idle cost; build behind demand and you turn away customers (or worse, serve them badly).
+
+Three practical capacity strategies:
+
+- **Lead strategy** — build capacity ahead of forecast demand. Common in industries with long lead times to add capacity (semiconductor fabs, power plants) where waiting for proof of demand means missing the market entirely.
+- **Lag strategy** — add capacity only after demand is confirmed. Conservative and cash-efficient, but risks losing customers to competitors during the gap.
+- **Match strategy** — add capacity in small increments, tracking demand as closely as possible. Requires flexible, modular capacity (temp staff, cloud computing, contract manufacturing) rather than large indivisible investments.
+
+Cloud computing is the modern embodiment of the match strategy: a company can rent exactly the server capacity it needs this hour and release it the next, something that was structurally impossible when "capacity" meant a physical data center that took 18 months to build. This flexibility is why many manufacturers now also lease equipment or use contract manufacturers for demand spikes rather than owning every machine outright.
+
+## Common mistakes managers make with process metrics
+
+- **Confusing utilization with productivity.** A worker who is "busy" 100% of the time producing defects or working on the wrong priority is not productive — utilization measures activity, not value delivered.
+- **Optimizing a local metric instead of the system metric.** A call center that rewards agents for short call times can inadvertently increase total flow time if agents rush customers off the phone only to have them call back with the same unresolved issue.
+- **Ignoring changeover and setup time when calculating capacity.** A machine "rated" for 100 units/hour that requires a 45-minute changeover between product types effectively delivers far less if changeovers happen often.
+- **Treating averages as the whole story.** Two processes with the same average flow time can have wildly different customer experiences if one has tight, predictable timing and the other swings from 5 minutes to 5 hours.
+
+On Monday morning, a manager applies all of this by first drawing the actual process (not the idealized one), measuring where WIP piles up highest (that's the bottleneck), checking whether the bottleneck is starved by variability rather than average capacity, and only then deciding whether the fix is "add capacity," "reduce variability," or "stop feeding it more work than it can absorb."
+`,
+      takeaways: [
+        "System throughput is capped by the slowest step (the bottleneck), so improving any other step is wasted investment until the constraint itself is addressed.",
+        "Little's Law (Inventory = Throughput × Flow time) means the only way to cut wait times without adding capacity is to cut the amount of work sitting in the system.",
+        "Wait times explode nonlinearly as utilization nears 100%, so deliberately keeping slack at the bottleneck reduces total queueing more than squeezing every step to full capacity.",
+        "Most unexamined processes spend under 10% of total flow time on actual value-added work, with the rest lost to waiting, handoffs, and rework.",
+        "Variability, not just average volume, causes chronic backlogs, so buffering capacity and pooling resources often fixes queues that adding headcount cannot.",
+        "Process maps should reflect how work actually happens on a bad day, not the idealized version in a policy manual, or the diagnosis will miss the real constraint.",
+      ],
       videos: [
         { title: "Business Process Analysis", source: "YouTube", videoId: "1E6II2U1shY", fallbackSearchQuery: "business process analysis explained" },
         { title: "Performance Management", source: "YouTube", videoId: "BXD8VaO-Dss", fallbackSearchQuery: "performance management operations" },
@@ -111,7 +168,60 @@ Causes: demand forecasting based on orders rather than POS (Point of Sale) data,
 
 ## Just-in-time and its limits
 
-JIT minimizes inventory by tight coupling with suppliers and frequent small deliveries. This philosophy, pioneered by Toyota, aims to have parts arrive exactly when they are needed for production, rather than sitting in a warehouse. Hugely improved **capital efficiency**—which is how well a company turns its investments into profit—for decades — until COVID-19 and the chip shortage reminded everyone that lean supply chains are *fragile* supply chains. If a single supplier skips a delivery, the whole factory stops. The post-2020 shift to "just-in-case" buffers is a recalibration, not a rejection. It is moving from extreme efficiency to a balance of efficiency and resilience.`,
+JIT minimizes inventory by tight coupling with suppliers and frequent small deliveries. This philosophy, pioneered by Toyota, aims to have parts arrive exactly when they are needed for production, rather than sitting in a warehouse. Hugely improved **capital efficiency**—which is how well a company turns its investments into profit—for decades — until COVID-19 and the chip shortage reminded everyone that lean supply chains are *fragile* supply chains. If a single supplier skips a delivery, the whole factory stops. The post-2020 shift to "just-in-case" buffers is a recalibration, not a rejection. It is moving from extreme efficiency to a balance of efficiency and resilience.
+
+## ABC analysis: not all inventory deserves the same attention
+
+Most companies hold thousands of SKUs, but the value is never distributed evenly. **ABC analysis** applies the Pareto principle (roughly 80% of value comes from 20% of items) to inventory management: rank items by annual dollar usage (unit cost × annual volume) and sort into three tiers.
+
+| Tier | Share of SKUs | Share of annual $ usage | Management approach |
+|------|---------------|--------------------------|----------------------|
+| A | ~10-20% | ~70-80% | Tight control: frequent counts, high service levels, close supplier relationships |
+| B | ~30% | ~15-25% | Moderate control: periodic review, standard service levels |
+| C | ~50-60% | ~5% | Loose control: order in bulk infrequently, simple reorder-point rules |
+
+A hospital's A items might be a handful of high-cost surgical implants; its C items might be thousands of low-cost cotton swabs. Spending the same forecasting effort and safety-stock precision on swabs as on implants wastes management attention on items where being wrong costs almost nothing, while under-managing the implants where a stockout could cancel a surgery. The Monday-morning application: pull an inventory report sorted by annual dollar usage, draw the cumulative percentage line, and reallocate review frequency and safety stock effort toward the top of the list.
+
+## Reorder point systems
+
+EOQ answers "how much to order"; the **reorder point (ROP)** answers "when to order." The formula:
+
+\`ROP = (Average daily demand × Lead time in days) + Safety stock\`
+
+Worked example: a hardware store sells 40 units of a specific drill bit per day on average, the supplier's lead time is 7 days, and the store keeps 60 units of safety stock. ROP = (40 × 7) + 60 = 280 + 60 = **340 units**. When the shelf count drops to 340, the store places a new order — timed so the replenishment arrives just as the safety stock would otherwise start being used.
+
+Two common reorder policies:
+
+- **Continuous review (Q, R) system** — inventory is tracked constantly (as in most modern point-of-sale and warehouse systems), and a fixed order quantity Q is triggered every time stock hits reorder point R. Best when demand is steady and system visibility is real-time.
+- **Periodic review (s, S) system** — inventory is checked only at fixed intervals (weekly, monthly), and enough is ordered to bring stock back up to a target level S. Common when counting is manual or supplier deliveries are scheduled on fixed routes (a bread delivery truck that visits every Tuesday).
+
+A frequent mistake is calculating ROP using average lead time while ignoring lead-time *variability* — if a supplier's delivery time swings between 5 and 12 days, using the 7-day average understates the safety stock actually needed, and stockouts appear even though the "average" math looked fine on a spreadsheet.
+
+## Inventory turnover and days of supply
+
+Two metrics translate raw inventory numbers into something a finance team and an operations team can both use to judge performance:
+
+- **Inventory turnover = Cost of goods sold ÷ Average inventory value.** A grocery chain might turn inventory 15-20 times a year (fresh product moves fast); a luxury watch retailer might turn inventory less than once a year (slow-moving, high-margin goods). Neither is "wrong" — turnover targets depend on the margin structure and shelf life of the category.
+- **Days of supply (or days of inventory on hand) = 365 ÷ Inventory turnover.** This translates turnover into an intuitive number: "we hold 45 days of supply" is easier for a non-financial manager to act on than "our turnover ratio is 8.1."
+
+Worked example: a company has $2,000,000 in cost of goods sold per year and average inventory of $250,000. Turnover = 2,000,000 / 250,000 = **8 times per year**, or 365/8 ≈ **46 days of supply**. If a competitor in the same category holds only 25 days of supply, that competitor is either better at demand forecasting, has shorter supplier lead times, or is taking on more stockout risk — the number alone doesn't say which, and a good manager investigates before copying the competitor's number blindly.
+
+## Supply chain risk and dual sourcing
+
+Beyond the bullwhip effect, modern supply chains face **concentration risk** — relying on a single supplier, region, or transportation route for a critical input. The 2011 Thailand floods (which halted global hard-drive production for months) and the 2021 Suez Canal blockage (which stranded roughly $9 billion of trade per day) both illustrate how a single point of failure thousands of miles away can shut down operations that seem unrelated on the surface.
+
+The classic hedge is **dual sourcing** — qualifying two suppliers for the same critical component, even if one is slightly more expensive. The extra cost functions like an insurance premium: you pay a small, known amount continuously to avoid a large, unpredictable loss. Companies increasingly also map their **tier-2 and tier-3 suppliers** (their suppliers' suppliers), because a single-sourced sub-component three layers deep in the chain can be just as damaging as a single-sourced primary supplier, and it's often invisible until a crisis reveals it.
+
+The manager's practical checklist: for every critical input, ask (1) how many qualified suppliers exist, (2) how long would it take to switch or add a supplier in an emergency, and (3) what is the geographic concentration of both direct and indirect suppliers. If the honest answers are "one," "months," and "all in one region," that input is a latent risk sitting on the balance sheet disguised as an efficient supply chain.
+`,
+      takeaways: [
+        "EOQ is a robust rule of thumb because total cost stays flat near the optimum, so the real value lies in the direction it implies when order or holding costs shift, not in exact precision.",
+        "Achieving 99% service level requires roughly three times the safety stock of 90% service, so uniform high service targets across all SKUs waste cash on low-value items.",
+        "ABC analysis shows that a small share of SKUs typically drives most of the annual dollar usage, so review frequency and safety stock effort should concentrate there, not spread evenly.",
+        "The bullwhip effect is caused by structural ordering behavior (batching, forecasting off orders instead of point-of-sale data), not by real swings in end-consumer demand.",
+        "Reorder points calculated from average lead time alone understate the safety stock needed when lead times are variable, producing stockouts despite seemingly correct math.",
+        "Concentration risk in a supply chain is often invisible because it hides in tier-2 or tier-3 suppliers, so resilience requires mapping beyond direct, first-tier vendors.",
+      ],
       videos: [
         { title: "Inventory Management EOQ", source: "YouTube", videoId: "0NOER-Lle-0", fallbackSearchQuery: "EOQ economic order quantity" },
         { title: "The Bullwhip Effect", source: "YouTube", videoId: "sZnxWVKhObo", fallbackSearchQuery: "bullwhip effect supply chain explained" },

@@ -63,7 +63,10 @@ function LessonPage() {
           <article className="w-full max-w-[45rem] lg:mx-auto">
             <LessonMarkdown body={l.body} title={l.title} />
 
-            <KeyTakeaways summary={l.summary} sections={extractSections(l.body)} />
+            <KeyTakeaways
+              summary={l.summary}
+              sections={l.takeaways?.length ? l.takeaways : extractSections(l.body)}
+            />
 
             <div className="mt-12 border-t border-border pt-2">
               <FurtherStudy videos={l.videos} readings={l.readings} lessonTitle={l.title} />

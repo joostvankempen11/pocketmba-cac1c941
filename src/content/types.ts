@@ -16,6 +16,8 @@ export type Lesson = {
   title: string;
   summary: string;
   body: string; // markdown
+  /** Authored insight summaries shown in the Key Takeaways block. */
+  takeaways?: string[];
   videos?: Resource[];
   readings?: Resource[];
   exercise?: Exercise;

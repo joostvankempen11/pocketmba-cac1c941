@@ -46,7 +46,63 @@ This is harder than it looks. Expect to revise each section at least once based 
 
 ## After the capstone
 
-The point isn't to launch the business in your capstone. It's to have built the *mental model* of a complete business that you can re-apply to every situation you encounter for the rest of your career. Reading a 10-K (the massive annual report large public companies must file), evaluating a new initiative, considering a job offer at a startup, sitting on a board — the same integrated framework applies. You now have it.`,
+The point isn't to launch the business in your capstone. It's to have built the *mental model* of a complete business that you can re-apply to every situation you encounter for the rest of your career. Reading a 10-K (the massive annual report large public companies must file), evaluating a new initiative, considering a job offer at a startup, sitting on a board — the same integrated framework applies. You now have it.
+
+## A worked example: integrating the five sections for one business
+
+Abstract advice about "consistency" only becomes real once you watch it happen. Imagine a capstone built around a hypothetical company called Northstar Meal Kits, a subscription service delivering pre-portioned dinner ingredients to urban professionals. Here is how a student's five sections should visibly lean on each other, sentence by sentence, rather than sitting side by side as five unrelated essays stapled together.
+
+In the industry section, the student runs Five Forces (a framework from Michael Porter that scores how much profit an industry can sustain based on the bargaining power of buyers and suppliers, the threat of new entrants, substitutes, and rivalry among existing players) and concludes that meal-kit delivery is a brutal, low-moat business: rivalry is fierce (Blue Apron, HelloFresh, and grocery-chain private-label kits all compete), switching costs for customers are close to zero (cancel one subscription, start another, in five minutes), and suppliers of fresh produce have some power because volume matters for freshness contracts. The one lever available is a "moat" built on hyper-local sourcing relationships and a tightly optimized last-mile delivery network that is expensive for a new entrant to replicate quickly.
+
+That conclusion should then visibly shape the marketing section. If the moat is local sourcing and delivery density, the STP (Segmentation, Targeting, Positioning) work should target a *geographically concentrated* segment — say, professionals within a 12-mile radius of three specific metro hubs — rather than a vague national audience, because delivery density is what makes the economics work. The value proposition should foreground freshness and local farm partnerships (the actual moat), not "convenience" alone, since convenience is trivially copied by every competitor already in the market. CLV and CAC numbers should reflect a premium price point consistent with a "quality, not just convenience" position: if the plan claims a $14.99/meal premium price, the CAC assumptions (what it costs in advertising and promotions to acquire one paying subscriber) cannot casually borrow numbers from a discount competitor's investor deck.
+
+The operating model section must then make the moat operationally real. If the pitch depends on local sourcing and delivery density, the plan needs regional micro-fulfillment centers, not one centralized national warehouse — a structural choice with real cost consequences. This is also where org design and culture (Week 8 material) matter: a company betting on "farm relationships" needs regional purchasing managers with authority to build supplier trust, not a single centralized buyer optimizing purely for the lowest unit cost across the country.
+
+The financial plan then has to carry the cost structure that these operating choices imply. Regional micro-fulfillment centers cost more per unit than one giant warehouse — the three-statement projection should show higher fixed costs per region but the premium pricing and higher retention (lower churn, because local freshness is harder for competitors to match) should still produce a positive contribution margin and a path to a healthy NPV. If a student's spreadsheet quietly reverts to industry-average costs because that was easier to find, the financial plan silently contradicts the operating model and the whole story falls apart under scrutiny.
+
+Finally, the execution roadmap sequences the real risks in this specific story: can the company actually sign exclusive-enough regional produce contracts before a well-funded competitor enters the same three metro hubs? What is the earliest, cheapest experiment that would tell you whether local sourcing genuinely improves retention, before you spend millions building micro-fulfillment centers everywhere? A generic roadmap ("hire salespeople, launch marketing, scale") ignores the one risk this specific plan actually depends on.
+
+Notice what happened across all five sections: one strategic idea (local sourcing as a moat) touched the customer targeting, the pricing, the org chart, the cost structure, and the risk list. That is what "integration" means in practice, and it is exactly what separates a capstone that reads like five independent homework assignments from one that reads like an executive actually thinking about one business.
+
+## Common failure patterns and how to catch them in your own draft
+
+Having graded and reviewed many capstones, a few failure patterns recur constantly. Learning to spot them in your own draft before submission will save you a full revision cycle.
+
+**The "copy-paste industry" failure.** A student writes a generic Five Forces analysis that could describe almost any industry — "there is some competition, some buyer power, moderate entry barriers" — without any numbers or named competitors specific to their business. The fix: force yourself to name at least three real or realistic competitors, cite at least one real cost or price figure (even an estimate, clearly labeled as such), and state which force is strongest *and why it matters for your specific strategy*.
+
+**The "financials from nowhere" failure.** A financial plan appears with reasonable-looking numbers (a 20% revenue growth rate, a 60% gross margin) that have no visible link to the strategy or operating model described elsewhere in the plan. If your operating model says you hire a lean, highly automated team, your labor costs as a percentage of revenue should be low; if your strategy is "white-glove, high-touch service," they should be high. Every major assumption in your model should be traceable to a sentence somewhere else in your plan.
+
+**The "risk section as afterthought" failure.** Many students write four strong sections and then a perfunctory risk paragraph — "there is competitive risk and economic risk" — with no mitigation and no early warning signs to watch for. A strong risk section instead names the two or three risks that would actually kill *this specific plan* (not generic business risks that apply to every company on earth) and states what evidence, visible within the first six to twelve months, would tell you the risk is materializing.
+
+**The "adjective inflation" failure.** Phrases like "massive market opportunity," "unparalleled customer experience," and "best-in-class operations" convey confidence but zero information. Replace every such adjective with a number, a comparison, or a named example: not "massive market opportunity" but "a $4.2B addressable market growing 8% annually, per a cited source, with the top three incumbents holding a combined 35% share, leaving room for a focused regional entrant."
+
+## Time management across the five sections
+
+A realistic way to budget your capstone time, assuming roughly 15–20 hours total across a week or two, looks like this:
+
+| Section | Approx. hours | Primary risk if rushed |
+|---|---|---|
+| Industry & competitive analysis | 2–3 | Generic, uncited claims that don't inform strategy |
+| Customer & marketing strategy | 3–4 | Value proposition disconnected from the moat identified in industry analysis |
+| Operating model | 2–3 | Org design that couldn't actually deliver the promised customer experience |
+| Financial plan | 4–5 | Numbers that don't reconcile with strategy or operating costs |
+| Execution roadmap & risks | 2–3 | Generic risks instead of the specific ones this plan depends on |
+| Integration pass (final read-through) | 2 | Skipping this step is the single most common reason plans feel disjointed |
+
+That final integration pass deserves special emphasis: block time, after all five sections are individually complete, to read the whole plan start to finish as if you were a skeptical investor seeing it for the first time. Look specifically for numbers or claims in one section that contradict another. This single pass, more than any individual section's polish, is usually what moves a plan from a B to an A.
+
+## Applying this beyond the classroom
+
+The habit you are building — checking that a strategic story and its supporting numbers are mutually consistent — is exactly the skill a board member uses when reviewing a CEO's quarterly presentation, that a private equity analyst uses when diligencing an acquisition target, and that a hiring manager should use (but often doesn't) when evaluating a candidate's resume against the story they tell in an interview. If someone claims to be a "detail-oriented, careful operator" but their resume shows three jobs abandoned within six months each, the story and the evidence don't match — and that mismatch is worth noticing, in a capstone or in a real boardroom. The capstone is deliberately built to give you practice doing this once, thoroughly, on a business simple enough to hold in your head, so that you can do it faster and more instinctively on the far messier, higher-stakes situations you'll face afterward.
+`,
+      takeaways: [
+        "A capstone earns a strong grade only when one strategic idea visibly constrains the targeting, pricing, org design, cost structure, and risk list in every other section.",
+        "Generic claims like \"massive opportunity\" or \"unmatched service\" carry no information; replace every adjective with a number, a named competitor, or a cited source.",
+        "Financial assumptions must trace back to a specific sentence in your strategy or operating model, not to an industry-average number pulled from a generic source.",
+        "The risk section should name the two or three failure modes specific to your plan, plus the early evidence that would reveal each one, not a generic list that fits any business.",
+        "Reserve a final integration pass, reading the whole plan as a skeptical investor would, because that single step catches the contradictions individual sections miss.",
+        "The underlying skill \u2014 checking that a story and its numbers agree \u2014 is the same one boards, investors, and hiring managers use to evaluate claims for the rest of your career."
+      ],
       videos: [
         { title: "How to Write a Business Plan", source: "YouTube", videoId: "n6ecdYd8T6o", fallbackSearchQuery: "how to write business plan" },
         { title: "The Business of Storytelling", source: "YouTube", videoId: "WKIZ0bicfFw", fallbackSearchQuery: "business of storytelling numbers narrative" },
