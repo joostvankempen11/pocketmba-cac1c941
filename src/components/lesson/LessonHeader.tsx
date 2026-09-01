@@ -26,7 +26,7 @@ export function LessonHeader({
 }) {
   return (
     <header className="border-b border-border bg-card/50">
-      <div className="mx-auto max-w-4xl px-6 py-8">
+      <div className="mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-6">
         <Link
           to="/week/$week"
           params={{ week: String(week) }}
@@ -35,7 +35,7 @@ export function LessonHeader({
           <ArrowLeft className="h-3.5 w-3.5" /> Week {week} · {weekTitle}
         </Link>
 
-        <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em]">
+        <div className="mt-4 flex flex-wrap items-center gap-1.5 sm:gap-2 text-[11px] font-semibold uppercase tracking-[0.12em]">
           <span className="rounded-full bg-primary/10 px-2.5 py-1 text-primary">
             Lesson {index + 1} of {total}
           </span>
@@ -54,11 +54,11 @@ export function LessonHeader({
           )}
         </div>
 
-        <h1 className="mt-4 max-w-3xl font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+        <h1 className="mt-4 max-w-3xl text-balance font-serif text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-4xl">
           {lessonTitle}
         </h1>
         {summary && (
-          <p className="mt-3 max-w-[62ch] text-base leading-relaxed text-muted-foreground">{summary}</p>
+          <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-relaxed text-muted-foreground sm:text-base">{summary}</p>
         )}
 
         <div className="mt-6">

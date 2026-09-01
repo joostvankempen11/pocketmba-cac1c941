@@ -58,9 +58,9 @@ function LessonPage() {
         modulePct={modulePct}
       />
 
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_20rem]">
+      <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-10 lg:py-10">
         <div className="min-w-0">
-          <article className="mx-auto w-full max-w-[45rem]">
+          <article className="w-full max-w-[45rem] lg:mx-auto">
             <LessonMarkdown body={l.body} title={l.title} />
 
             <KeyTakeaways summary={l.summary} sections={extractSections(l.body)} />
@@ -71,7 +71,7 @@ function LessonPage() {
 
             {l.exercise && <LessonExercise lessonTitle={l.title} exercise={l.exercise} />}
 
-            <section className="mt-14 rounded-2xl border border-border bg-card p-5">
+            <section className="mt-14 rounded-2xl border border-border bg-card p-4 sm:p-5">
               <div className="flex flex-col gap-4">
                 <div className="flex flex-wrap items-center gap-3">
                   <button

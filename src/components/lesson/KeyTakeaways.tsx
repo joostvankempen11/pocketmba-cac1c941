@@ -15,10 +15,10 @@ export function KeyTakeaways({ summary, sections }: { summary: string; sections:
   if (!summary && sections.length === 0) return null;
   return (
     <section className="mt-12 overflow-hidden rounded-2xl border border-primary/25 bg-primary/[0.05]">
-      <div className="flex items-center gap-2 border-b border-primary/20 bg-primary/10 px-5 py-3 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
+      <div className="flex items-center gap-2 border-b border-primary/20 bg-primary/10 px-4 py-3 sm:px-5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
         <Sparkles className="h-4 w-4" /> Key takeaways
       </div>
-      <div className="px-5 py-5">
+      <div className="px-4 py-5 sm:px-5">
         {summary && <p className="text-[1.0625rem] leading-[1.7] text-foreground/90">{summary}</p>}
         {sections.length > 0 && (
           <ul className="mt-4 space-y-2">
