@@ -233,6 +233,42 @@ export type Database = {
         }
         Relationships: []
       }
+      lessons: {
+        Row: {
+          content: string
+          created_at: string
+          estimated_read_time: number | null
+          id: string
+          lesson_number: number
+          order_index: number | null
+          summary: string | null
+          title: string
+          week_number: number
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          estimated_read_time?: number | null
+          id?: string
+          lesson_number: number
+          order_index?: number | null
+          summary?: string | null
+          title: string
+          week_number: number
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          estimated_read_time?: number | null
+          id?: string
+          lesson_number?: number
+          order_index?: number | null
+          summary?: string | null
+          title?: string
+          week_number?: number
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           beta_user_number: number | null
