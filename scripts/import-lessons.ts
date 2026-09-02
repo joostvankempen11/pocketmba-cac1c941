@@ -26,7 +26,7 @@ function parseCsv(text: string): Row[] {
           i++;
         } else inQuotes = false;
       } else field += ch;
-о    } else if (ch === '"') inQuotes = true;
+    } else if (ch === '"') inQuotes = true;
     else if (ch === ",") {
       row.push(field);
       field = "";
