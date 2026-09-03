@@ -11,6 +11,19 @@ export function extractSections(body: string): string[] {
     .slice(0, 8);
 }
 
+/** Pulls bullet points out of the lesson's own "Key Takeaways" section, if present. */
+export function extractKeyTakeaways(body: string): string[] {
+  const match = body.match(/^#{1,3}\s*Key Takeaways\s*$([\s\S]*?)(?=^#{1,3}\s|\Z)/im);
+  if (!match) return [];
+  return match[1]
+    .split("\n")
+    .map((line) => line.match(/^\s*(?:[-*]|\d+\.)\s+(.*)$/))
+    .filter((m): m is RegExpMatchArray => Boolean(m))
+    .map((m) => m[1].replace(/[*_`]/g, "").trim())
+    .filter(Boolean)
+    .slice(0, 8);
+}
+
 export function KeyTakeaways({ summary, sections }: { summary: string; sections: string[] }) {
   if (!summary && sections.length === 0) return null;
   return (

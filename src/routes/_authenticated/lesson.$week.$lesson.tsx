@@ -6,7 +6,8 @@ import { LessonExercise } from "@/components/LessonExercise";
 import { LessonHeader } from "@/components/lesson/LessonHeader";
 import { LessonOutline } from "@/components/lesson/LessonOutline";
 import { LessonMarkdown } from "@/components/lesson/LessonMarkdown";
-import { KeyTakeaways, extractSections } from "@/components/lesson/KeyTakeaways";
+import { KeyTakeaways, extractKeyTakeaways, extractSections } from "@/components/lesson/KeyTakeaways";
+import { LessonAssessment } from "@/components/LessonAssessment";
 import { getWeek } from "@/content/curriculum";
 import { useProgress } from "@/lib/progress-store";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
@@ -65,7 +66,13 @@ function LessonPage() {
 
             <KeyTakeaways
               summary={l.summary}
-              sections={l.takeaways?.length ? l.takeaways : extractSections(l.body)}
+              sections={
+                l.takeaways?.length
+                  ? l.takeaways
+                  : extractKeyTakeaways(l.body).length
+                    ? extractKeyTakeaways(l.body)
+                    : extractSections(l.body)
+              }
             />
 
             <div className="mt-12 border-t border-border pt-2">
@@ -73,6 +80,8 @@ function LessonPage() {
             </div>
 
             {l.exercise && <LessonExercise lessonTitle={l.title} exercise={l.exercise} />}
+
+            {l.assessment && <LessonAssessment lessonTitle={l.title} assessment={l.assessment} />}
 
             <section className="mt-14 rounded-2xl border border-border bg-card p-4 sm:p-5">
               <div className="flex flex-col gap-4">

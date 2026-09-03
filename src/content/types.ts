@@ -18,9 +18,23 @@ export type Lesson = {
   body: string; // markdown
   /** Authored insight summaries shown in the Key Takeaways block. */
   takeaways?: string[];
+  /** 5 MCQs + 2 scenario cases + 1 reflection prompt for this lesson. */
+  assessment?: LessonAssessment;
   videos?: Resource[];
   readings?: Resource[];
   exercise?: Exercise;
+};
+
+export type ScenarioQuestion = {
+  id: string;
+  prompt: string;
+  guidance: string;
+};
+
+export type LessonAssessment = {
+  mcqs: QuizQuestion[];
+  scenarios: ScenarioQuestion[];
+  reflection: string;
 };
 
 export type QuizQuestion = {

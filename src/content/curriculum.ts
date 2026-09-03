@@ -1,4 +1,4 @@
-import type { CapstoneSection, Week } from "./types";
+import type { CapstoneSection, Lesson, Week } from "./types";
 import { week01 } from "./weeks/week-01";
 import { week02 } from "./weeks/week-02";
 import { week03 } from "./weeks/week-03";
@@ -11,15 +11,45 @@ import { week09 } from "./weeks/week-09";
 import { week10 } from "./weeks/week-10";
 import { week11 } from "./weeks/week-11";
 import { week12 } from "./weeks/week-12";
+import { lessonContent } from "./lessons-content";
+import { lessonAssessments } from "./assessments.generated";
 
-export const weeks: Week[] = [
+const baseWeeks: Week[] = [
   week01, week02, week03, week04, week05, week06,
   week07, week08, week09, week10, week11, week12,
 ];
 
+/**
+ * The curriculum text and assessments come from the imported Lessons table.
+ * Week metadata (title, tagline, topics, assignment) and per-lesson extras
+ * (videos, readings, applied exercise) are preserved from the existing course,
+ * and lesson ids (l1…l4) stay stable so saved progress keeps matching.
+ */
+export const weeks: Week[] = baseWeeks.map((w) => {
+  const lessons: Lesson[] = lessonContent
+    .filter((c) => c.week === w.week)
+    .map((c) => {
+      const existing = w.lessons.find((l) => l.id === c.lessonId);
+      const assessment = lessonAssessments[`${c.week}-${c.lessonId}`];
+      return {
+        ...existing,
+        id: c.lessonId,
+        title: c.title,
+        summary: c.summary,
+        body: c.body,
+        takeaways: undefined,
+        assessment,
+      } satisfies Lesson;
+    });
+
+  const quiz = lessons.flatMap((l) => l.assessment?.mcqs ?? []);
+  return { ...w, lessons, quiz: quiz.length ? quiz : w.quiz };
+});
+
 export function getWeek(n: number): Week | undefined {
   return weeks.find((w) => w.week === n);
 }
+
 
 export const capstoneSections: CapstoneSection[] = [
   {
