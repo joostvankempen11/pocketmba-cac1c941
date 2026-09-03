@@ -69,9 +69,13 @@ def render(content: str) -> str:
                     pending = n.group(1)
                     continue
                 text = p.replace("**", "")
+                if text.endswith(":") and not items:
+                    out.append(text)
+                    continue
                 items.append(f"{pending}. {text}" if pending else f"- {text}")
                 pending = None
-            out.append("\n".join(items))
+            if items:
+                out.append("\n".join(items))
         else:
             out.append(f"## {label}")
             for p in paras:
@@ -80,6 +84,24 @@ def render(content: str) -> str:
     # formulas inside callouts stay monospace
     text = "\n\n".join(x for x in out if x.strip())
     return text
+
+
+LEAD = re.compile(r"^(by the end of this lesson[^:]*:|after completing this lesson[^:]*:|in this lesson[^:]*:)\s*", re.I)
+
+
+VERBS = ("Explain|Identify|Distinguish|Describe|Apply|Differentiate|Analyze|Analyse|Evaluate|Calculate|Understand|Compare|Interpret|Assess|Recognize|Define|Outline|Discuss|Use|Estimate|Build|Design|Determine|Construct|Diagnose")
+SPLIT = re.compile(r"(?<=[a-z,)])\s+(?=(?:%s)\s)" % VERBS)
+
+
+def summarize(purpose: str) -> str:
+    text = LEAD.sub("", purpose.strip()).strip()
+    first = SPLIT.split(text)[0].strip().rstrip(".")
+    if 20 <= len(first) <= 240:
+        return first + "."
+    if len(text) <= 240:
+        return text
+    cut = text[:240]
+    return cut[: cut.rfind(" ")].rstrip(".,;") + "..."
 
 
 def ts(s: str) -> str:
@@ -92,7 +114,7 @@ def main():
     for r in rows:
         week = int(r["week_number"])
         idx = int(r["order_index"])
-        entries.append((week, idx, r["title"].strip(), r["purpose"].strip(), render(r["content"])))
+        entries.append((week, idx, r["title"].strip(), summarize(r["purpose"]), render(r["content"])))
     entries.sort(key=lambda e: (e[0], e[1]))
 
     parts = [
