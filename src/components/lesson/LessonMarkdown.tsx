@@ -9,27 +9,27 @@ import { Quote } from "lucide-react";
  */
 const components: Components = {
   h1: ({ children }) => (
-    <h2 className="mt-14 scroll-mt-24 border-b border-border pb-3 font-serif text-[1.5rem] font-semibold sm:text-[1.75rem] leading-tight tracking-tight text-foreground first:mt-0">
+    <h2 className="mt-14 scroll-mt-24 break-words border-b border-border pb-3 font-serif text-[1.375rem] sm:text-[1.75rem] font-semibold leading-tight tracking-tight text-foreground first:mt-0">
       {children}
     </h2>
   ),
   h2: ({ children }) => (
-    <h3 className="mt-12 scroll-mt-24 font-serif text-xl font-semibold sm:text-2xl leading-snug tracking-tight text-primary first:mt-0">
+    <h3 className="mt-12 scroll-mt-24 break-words font-serif text-lg font-semibold sm:text-2xl leading-snug tracking-tight text-primary first:mt-0">
       {children}
     </h3>
   ),
   h3: ({ children }) => (
-    <h4 className="mt-9 scroll-mt-24 font-serif text-lg font-semibold italic leading-snug text-foreground">
+    <h4 className="mt-9 scroll-mt-24 break-words font-serif text-base sm:text-lg font-semibold italic leading-snug text-foreground">
       {children}
     </h4>
   ),
   h4: ({ children }) => (
-    <h5 className="mt-8 text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+    <h5 className="mt-8 break-words text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
       {children}
     </h5>
   ),
   p: ({ children }) => (
-    <p className="my-5 break-words text-[1.0625rem] leading-[1.75] text-foreground/90">{children}</p>
+    <p className="my-5 break-words text-[1rem] leading-[1.8] sm:text-[1.0625rem] text-foreground/90">{children}</p>
   ),
   ul: ({ children }) => (
     <ul className="my-6 space-y-3 rounded-xl border border-border/70 bg-card/60 p-4 pl-7 sm:p-5 sm:pl-8 [list-style:disc] marker:text-primary/70">
@@ -42,7 +42,7 @@ const components: Components = {
     </ol>
   ),
   li: ({ children }) => (
-    <li className="pl-1 text-[1.0625rem] leading-[1.7] text-foreground/90">{children}</li>
+    <li className="pl-1 break-words text-[1rem] leading-[1.75] sm:text-[1.0625rem] text-foreground/90">{children}</li>
   ),
   blockquote: ({ children }) => (
     <figure className="my-8 rounded-xl border border-primary/25 border-l-4 border-l-primary bg-primary/[0.06] p-4 pl-5 sm:p-5 sm:pl-6">
@@ -103,5 +103,8 @@ function stripLeadingTitle(body: string, title: string) {
 }
 
 export function LessonMarkdown({ body, title }: { body: string; title: string }) {
-  return <ReactMarkdown components={components}>{stripLeadingTitle(body, title)}</ReactMarkdown>;
+  return <div className="w-full max-w-full [overflow-wrap:anywhere]">
+      <ReactMarkdown components={components}>{stripLeadingTitle(body, title)}</ReactMarkdown>
+    </div>
+  );
 }
