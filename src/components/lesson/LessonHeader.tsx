@@ -54,11 +54,11 @@ export function LessonHeader({
           )}
         </div>
 
-        <h1 className="mt-4 max-w-3xl text-balance font-serif text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-4xl">
+        <h1 className="mt-4 max-w-3xl text-balance break-words font-serif text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-4xl">
           {lessonTitle}
         </h1>
         {summary && (
-          <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-relaxed text-muted-foreground sm:text-base">{summary}</p>
+          <p className="mt-3 max-w-[62ch] break-words text-[0.95rem] leading-relaxed text-muted-foreground sm:text-base">{summary}</p>
         )}
 
         <div className="mt-6">
