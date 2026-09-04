@@ -59,9 +59,9 @@ function LessonPage() {
         modulePct={modulePct}
       />
 
-      <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-10 lg:py-10">
+      <div className="mx-auto grid w-full max-w-7xl gap-8 overflow-x-hidden px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-10 lg:py-10">
         <div className="min-w-0">
-          <article className="w-full max-w-[45rem] lg:mx-auto">
+          <article className="w-full min-w-0 max-w-[45rem] lg:mx-auto">
             <LessonMarkdown body={l.body} title={l.title} />
 
             <KeyTakeaways
