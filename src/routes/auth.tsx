@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import logoFull from "@/assets/umba-logo-full.png.asset.json";
-import paperBg from "@/assets/paper-bg.jpg.asset.json";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
@@ -75,10 +74,7 @@ function AuthPage() {
   }
 
   return (
-    <div
-      className="flex min-h-screen items-center justify-center bg-background bg-cover bg-center px-4 py-12"
-      style={{ backgroundImage: `url(${paperBg.url})` }}
-    >
+    <div className="flex min-h-screen items-center justify-center bg-background px-4 py-12">
       <div className="w-full max-w-md">
         <Link to="/" className="mb-8 flex items-center justify-center">
           <img
