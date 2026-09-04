@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import logoFull from "@/assets/umba-logo-full.png.asset.json";
-import paperBg from "@/assets/paper-bg.jpg.asset.json";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({
