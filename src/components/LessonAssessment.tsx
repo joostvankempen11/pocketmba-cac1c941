@@ -1,10 +1,9 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useServerFn } from "@tanstack/react-start";
-import { CheckCircle2, ClipboardCheck, Loader2, MessageSquare, Send, XCircle } from "lucide-react";
+import { Loader2, MessageSquare, Send } from "lucide-react";
 import type { LessonAssessment as Assessment } from "@/content/types";
 import { exerciseFeedback } from "@/lib/exercise.functions";
-import { cn } from "@/lib/utils";
 
 function WrittenAnswer({
   lessonTitle,

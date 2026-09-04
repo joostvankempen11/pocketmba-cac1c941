@@ -74,10 +74,7 @@ function AuthPage() {
   }
 
   return (
-    <div
-      className="flex min-h-screen items-center justify-center bg-background bg-cover bg-center px-4 py-12"
-      style={{ backgroundImage: `url(${paperBg.url})` }}
-    >
+    <div className="flex min-h-screen items-center justify-center bg-background px-4 py-12">
       <div className="w-full max-w-md">
         <Link to="/" className="mb-8 flex items-center justify-center">
           <img
