@@ -103,7 +103,8 @@ function stripLeadingTitle(body: string, title: string) {
 }
 
 export function LessonMarkdown({ body, title }: { body: string; title: string }) {
-  return <div className="w-full max-w-full [overflow-wrap:anywhere]">
+  return (
+    <div className="w-full max-w-full [overflow-wrap:anywhere]">
       <ReactMarkdown components={components}>{stripLeadingTitle(body, title)}</ReactMarkdown>
     </div>
   );
