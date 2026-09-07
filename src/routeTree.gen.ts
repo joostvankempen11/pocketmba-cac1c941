@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PricingRouteImport } from './routes/pricing'
-import { Route as DebugLessonRouteImport } from './routes/debug-lesson'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AccessEndedRouteImport } from './routes/access-ended'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
@@ -32,11 +31,6 @@ import { Route as AuthenticatedAssignmentWeekIdRouteImport } from './routes/_aut
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DebugLessonRoute = DebugLessonRouteImport.update({
-  id: '/debug-lesson',
-  path: '/debug-lesson',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -131,7 +125,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
-  '/debug-lesson': typeof DebugLessonRoute
   '/pricing': typeof PricingRoute
   '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
@@ -151,7 +144,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
-  '/debug-lesson': typeof DebugLessonRoute
   '/pricing': typeof PricingRoute
   '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
@@ -173,7 +165,6 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
-  '/debug-lesson': typeof DebugLessonRoute
   '/pricing': typeof PricingRoute
   '/_authenticated/account': typeof AuthenticatedAccountRoute
   '/_authenticated/capstone': typeof AuthenticatedCapstoneRoute
@@ -195,7 +186,6 @@ export interface FileRouteTypes {
     | '/'
     | '/access-ended'
     | '/auth'
-    | '/debug-lesson'
     | '/pricing'
     | '/account'
     | '/capstone'
@@ -215,7 +205,6 @@ export interface FileRouteTypes {
     | '/'
     | '/access-ended'
     | '/auth'
-    | '/debug-lesson'
     | '/pricing'
     | '/account'
     | '/capstone'
@@ -236,7 +225,6 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/access-ended'
     | '/auth'
-    | '/debug-lesson'
     | '/pricing'
     | '/_authenticated/account'
     | '/_authenticated/capstone'
@@ -258,7 +246,6 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AccessEndedRoute: typeof AccessEndedRoute
   AuthRoute: typeof AuthRoute
-  DebugLessonRoute: typeof DebugLessonRoute
   PricingRoute: typeof PricingRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiPublicWebhooksStripeRoute: typeof ApiPublicWebhooksStripeRoute
@@ -271,13 +258,6 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/pricing'
       preLoaderRoute: typeof PricingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/debug-lesson': {
-      id: '/debug-lesson'
-      path: '/debug-lesson'
-      fullPath: '/debug-lesson'
-      preLoaderRoute: typeof DebugLessonRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -438,7 +418,6 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AccessEndedRoute: AccessEndedRoute,
   AuthRoute: AuthRoute,
-  DebugLessonRoute: DebugLessonRoute,
   PricingRoute: PricingRoute,
   ApiChatRoute: ApiChatRoute,
   ApiPublicWebhooksStripeRoute: ApiPublicWebhooksStripeRoute,
