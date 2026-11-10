@@ -10,11 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PricingRouteImport } from './routes/pricing'
-import { Route as IndexRouteImport } from './routes/index_'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AccessEndedRouteImport } from './routes/access-ended'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as IndexIndexRouteImport } from './routes/index.index'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedTutorRouteImport } from './routes/_authenticated/tutor'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
@@ -34,11 +34,6 @@ const PricingRoute = PricingRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/index_',
-  path: '/index',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AuthRoute = AuthRouteImport.update({
   id: '/auth',
   path: '/auth',
@@ -56,6 +51,11 @@ const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexIndexRoute = IndexIndexRouteImport.update({
+  id: '/index/',
+  path: '/index/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiChatRoute = ApiChatRouteImport.update({
@@ -131,7 +131,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
-  '/index': typeof IndexRoute
   '/pricing': typeof PricingRoute
   '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
@@ -141,6 +140,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
+  '/index/': typeof IndexIndexRoute
   '/quiz/$week': typeof AuthenticatedQuizWeekRoute
   '/week/$week': typeof AuthenticatedWeekWeekRoute
   '/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
@@ -151,7 +151,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
-  '/index': typeof IndexRoute
   '/pricing': typeof PricingRoute
   '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
@@ -161,6 +160,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
+  '/index': typeof IndexIndexRoute
   '/quiz/$week': typeof AuthenticatedQuizWeekRoute
   '/week/$week': typeof AuthenticatedWeekWeekRoute
   '/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
@@ -173,7 +173,6 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
-  '/index_': typeof IndexRoute
   '/pricing': typeof PricingRoute
   '/_authenticated/account': typeof AuthenticatedAccountRoute
   '/_authenticated/capstone': typeof AuthenticatedCapstoneRoute
@@ -183,6 +182,7 @@ export interface FileRoutesById {
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
   '/_authenticated/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
+  '/index/': typeof IndexIndexRoute
   '/_authenticated/quiz/$week': typeof AuthenticatedQuizWeekRoute
   '/_authenticated/week/$week': typeof AuthenticatedWeekWeekRoute
   '/_authenticated/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
@@ -195,7 +195,6 @@ export interface FileRouteTypes {
     | '/'
     | '/access-ended'
     | '/auth'
-    | '/index'
     | '/pricing'
     | '/account'
     | '/capstone'
@@ -205,6 +204,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/tutor'
     | '/api/chat'
+    | '/index/'
     | '/quiz/$week'
     | '/week/$week'
     | '/assignment/$week/$id'
@@ -215,7 +215,6 @@ export interface FileRouteTypes {
     | '/'
     | '/access-ended'
     | '/auth'
-    | '/index'
     | '/pricing'
     | '/account'
     | '/capstone'
@@ -225,6 +224,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/tutor'
     | '/api/chat'
+    | '/index'
     | '/quiz/$week'
     | '/week/$week'
     | '/assignment/$week/$id'
@@ -236,7 +236,6 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/access-ended'
     | '/auth'
-    | '/index_'
     | '/pricing'
     | '/_authenticated/account'
     | '/_authenticated/capstone'
@@ -246,6 +245,7 @@ export interface FileRouteTypes {
     | '/_authenticated/dashboard'
     | '/_authenticated/tutor'
     | '/api/chat'
+    | '/index/'
     | '/_authenticated/quiz/$week'
     | '/_authenticated/week/$week'
     | '/_authenticated/assignment/$week/$id'
@@ -258,9 +258,9 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AccessEndedRoute: typeof AccessEndedRoute
   AuthRoute: typeof AuthRoute
-  IndexRoute: typeof IndexRoute
   PricingRoute: typeof PricingRoute
   ApiChatRoute: typeof ApiChatRoute
+  IndexIndexRoute: typeof IndexIndexRoute
   ApiPublicWebhooksStripeRoute: typeof ApiPublicWebhooksStripeRoute
 }
 
@@ -271,13 +271,6 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/pricing'
       preLoaderRoute: typeof PricingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/index_': {
-      id: '/index_'
-      path: '/index'
-      fullPath: '/index'
-      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -306,6 +299,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/index/': {
+      id: '/index/'
+      path: '/index'
+      fullPath: '/index/'
+      preLoaderRoute: typeof IndexIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/chat': {
@@ -438,9 +438,9 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AccessEndedRoute: AccessEndedRoute,
   AuthRoute: AuthRoute,
-  IndexRoute: IndexRoute,
   PricingRoute: PricingRoute,
   ApiChatRoute: ApiChatRoute,
+  IndexIndexRoute: IndexIndexRoute,
   ApiPublicWebhooksStripeRoute: ApiPublicWebhooksStripeRoute,
 }
 export const routeTree = rootRouteImport
