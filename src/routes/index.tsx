@@ -58,9 +58,6 @@ function Landing() {
             See pricing
           </Link>
         </div>
-        <p className="mt-4 text-sm text-muted-foreground">
-          The first 10 members get lifetime access, free.
-        </p>
 
         <h2 className="mt-16 text-lg font-semibold">The curriculum</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">

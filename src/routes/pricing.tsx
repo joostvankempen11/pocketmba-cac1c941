@@ -50,7 +50,7 @@ function Pricing() {
         </Link>
         <h1 className="mt-10 text-3xl font-semibold tracking-tight">Simple pricing</h1>
         <p className="mt-2 text-muted-foreground">
-          Start with a 7-day free trial. Cancel anytime. The first 10 members join free, forever.
+          Start with a 7-day free trial. Cancel anytime.
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -88,8 +88,7 @@ function Pricing() {
 
         {!configured && (
           <p className="mt-10 rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
-            Payments aren't set up yet — check back soon. Accounts and the free-beta places work
-            today; the first 10 members get full access without any payment.
+            Payments aren't set up yet — check back soon.
           </p>
         )}
       </div>

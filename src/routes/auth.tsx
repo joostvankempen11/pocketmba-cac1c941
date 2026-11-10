@@ -90,7 +90,7 @@ function AuthPage() {
           <p className="mt-1 text-sm text-muted-foreground">
             {mode === "signin"
               ? "Welcome back — pick up where you left off."
-              : "Start your 7-day free trial. The first 10 members join free, forever."}
+              : "Start your 7-day free trial."}
           </p>
 
           <button
