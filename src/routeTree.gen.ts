@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as IndexRouteImport } from './routes/index_'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AccessEndedRouteImport } from './routes/access-ended'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
@@ -31,6 +32,11 @@ import { Route as AuthenticatedAssignmentWeekIdRouteImport } from './routes/_aut
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/index_',
+  path: '/index',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -125,6 +131,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
+  '/index': typeof IndexRoute
   '/pricing': typeof PricingRoute
   '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
@@ -144,6 +151,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
+  '/index': typeof IndexRoute
   '/pricing': typeof PricingRoute
   '/account': typeof AuthenticatedAccountRoute
   '/capstone': typeof AuthenticatedCapstoneRoute
@@ -165,6 +173,7 @@ export interface FileRoutesById {
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/access-ended': typeof AccessEndedRoute
   '/auth': typeof AuthRoute
+  '/index_': typeof IndexRoute
   '/pricing': typeof PricingRoute
   '/_authenticated/account': typeof AuthenticatedAccountRoute
   '/_authenticated/capstone': typeof AuthenticatedCapstoneRoute
@@ -186,6 +195,7 @@ export interface FileRouteTypes {
     | '/'
     | '/access-ended'
     | '/auth'
+    | '/index'
     | '/pricing'
     | '/account'
     | '/capstone'
@@ -205,6 +215,7 @@ export interface FileRouteTypes {
     | '/'
     | '/access-ended'
     | '/auth'
+    | '/index'
     | '/pricing'
     | '/account'
     | '/capstone'
@@ -225,6 +236,7 @@ export interface FileRouteTypes {
     | '/_authenticated'
     | '/access-ended'
     | '/auth'
+    | '/index_'
     | '/pricing'
     | '/_authenticated/account'
     | '/_authenticated/capstone'
@@ -246,6 +258,7 @@ export interface RootRouteChildren {
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AccessEndedRoute: typeof AccessEndedRoute
   AuthRoute: typeof AuthRoute
+  IndexRoute: typeof IndexRoute
   PricingRoute: typeof PricingRoute
   ApiChatRoute: typeof ApiChatRoute
   ApiPublicWebhooksStripeRoute: typeof ApiPublicWebhooksStripeRoute
@@ -258,6 +271,13 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/pricing'
       preLoaderRoute: typeof PricingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/index_': {
+      id: '/index_'
+      path: '/index'
+      fullPath: '/index'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -418,6 +438,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AccessEndedRoute: AccessEndedRoute,
   AuthRoute: AuthRoute,
+  IndexRoute: IndexRoute,
   PricingRoute: PricingRoute,
   ApiChatRoute: ApiChatRoute,
   ApiPublicWebhooksStripeRoute: ApiPublicWebhooksStripeRoute,
