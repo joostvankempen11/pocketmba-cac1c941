@@ -14,6 +14,7 @@ import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AccessEndedRouteImport } from './routes/access-ended'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as IndexIndexRouteImport } from './routes/index.index'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as AuthenticatedTutorRouteImport } from './routes/_authenticated/tutor'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
@@ -50,6 +51,11 @@ const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexIndexRoute = IndexIndexRouteImport.update({
+  id: '/index/',
+  path: '/index/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ApiChatRoute = ApiChatRouteImport.update({
@@ -134,6 +140,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
+  '/index/': typeof IndexIndexRoute
   '/quiz/$week': typeof AuthenticatedQuizWeekRoute
   '/week/$week': typeof AuthenticatedWeekWeekRoute
   '/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
@@ -153,6 +160,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof AuthenticatedDashboardRoute
   '/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
+  '/index': typeof IndexIndexRoute
   '/quiz/$week': typeof AuthenticatedQuizWeekRoute
   '/week/$week': typeof AuthenticatedWeekWeekRoute
   '/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
@@ -174,6 +182,7 @@ export interface FileRoutesById {
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
   '/_authenticated/tutor': typeof AuthenticatedTutorRoute
   '/api/chat': typeof ApiChatRoute
+  '/index/': typeof IndexIndexRoute
   '/_authenticated/quiz/$week': typeof AuthenticatedQuizWeekRoute
   '/_authenticated/week/$week': typeof AuthenticatedWeekWeekRoute
   '/_authenticated/assignment/$week/$id': typeof AuthenticatedAssignmentWeekIdRoute
@@ -195,6 +204,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/tutor'
     | '/api/chat'
+    | '/index/'
     | '/quiz/$week'
     | '/week/$week'
     | '/assignment/$week/$id'
@@ -214,6 +224,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/tutor'
     | '/api/chat'
+    | '/index'
     | '/quiz/$week'
     | '/week/$week'
     | '/assignment/$week/$id'
@@ -234,6 +245,7 @@ export interface FileRouteTypes {
     | '/_authenticated/dashboard'
     | '/_authenticated/tutor'
     | '/api/chat'
+    | '/index/'
     | '/_authenticated/quiz/$week'
     | '/_authenticated/week/$week'
     | '/_authenticated/assignment/$week/$id'
@@ -248,6 +260,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   PricingRoute: typeof PricingRoute
   ApiChatRoute: typeof ApiChatRoute
+  IndexIndexRoute: typeof IndexIndexRoute
   ApiPublicWebhooksStripeRoute: typeof ApiPublicWebhooksStripeRoute
 }
 
@@ -286,6 +299,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/index/': {
+      id: '/index/'
+      path: '/index'
+      fullPath: '/index/'
+      preLoaderRoute: typeof IndexIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/api/chat': {
@@ -420,6 +440,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   PricingRoute: PricingRoute,
   ApiChatRoute: ApiChatRoute,
+  IndexIndexRoute: IndexIndexRoute,
   ApiPublicWebhooksStripeRoute: ApiPublicWebhooksStripeRoute,
 }
 export const routeTree = rootRouteImport
