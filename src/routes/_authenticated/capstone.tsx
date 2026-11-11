@@ -9,7 +9,14 @@ import { useProgress } from "@/lib/progress-store";
 import { Loader2, Trophy } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/capstone")({
-  head: () => ({ meta: [{ title: "Capstone — 12-Week MBA" }] }),
+  head: () => ({ meta: [
+    { title: "Capstone — 12-Week MBA" },
+    { name: "description", content: "Develop your business strategy across five capstone sections." },
+    { property: "og:title", content: "Capstone — 12-Week MBA" },
+    { property: "og:description", content: "Develop your business strategy across five capstone sections." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary" },
+  ] }),
   component: CapstonePage,
 });
 

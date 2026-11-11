@@ -12,6 +12,8 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { supabase } from "@/integrations/supabase/client";
+import { recallCheckoutPlan } from "@/lib/checkout-intent";
 
 function NotFoundComponent() {
   return (
@@ -88,8 +90,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "PocketMBA" },
       { name: "twitter:description", content: "MBA Fast Track offers a comprehensive 12-week MBA program within a mobile application." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c156682b-f10c-4d38-8b58-5d6367facb7e/id-preview-abc2082c--30979ff8-edbb-4141-b117-b04b9002bb06.lovable.app-1781593846620.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c156682b-f10c-4d38-8b58-5d6367facb7e/id-preview-abc2082c--30979ff8-edbb-4141-b117-b04b9002bb06.lovable.app-1781593846620.png" },
     ],
     links: [
       {
@@ -127,6 +127,26 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event) => {
+      if (event !== "SIGNED_IN" && event !== "SIGNED_OUT" && event !== "USER_UPDATED") return;
+      // Leave the auth client's callback before requesting session-dependent work.
+      setTimeout(() => {
+        void router.invalidate();
+        if (event !== "SIGNED_OUT") void queryClient.invalidateQueries();
+        if (event === "SIGNED_IN") {
+          const plan = recallCheckoutPlan();
+          const path = router.state.location.pathname;
+          if (plan && (path === "/" || path === "/auth")) {
+            void router.navigate({ to: "/checkout", search: { plan }, replace: true });
+          }
+        }
+      }, 0);
+    });
+    return () => subscription.unsubscribe();
+  }, [queryClient, router]);
 
   return (
     <QueryClientProvider client={queryClient}>

@@ -7,6 +7,10 @@ export const Route = createFileRoute("/_authenticated/curriculum")({
     meta: [
       { title: "Curriculum — 12-Week MBA" },
       { name: "description", content: "All twelve weeks of the MBA program." },
+      { property: "og:title", content: "Curriculum — 12-Week MBA" },
+      { property: "og:description", content: "All twelve weeks of the MBA program." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Curriculum,

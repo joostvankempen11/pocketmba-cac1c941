@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { getBillingStatus, createCheckoutSession, createPortalSession } from "./billing.functions";
+import { clearCheckoutPlan } from "./checkout-intent";
 
 export const PAYMENTS_UNAVAILABLE_MESSAGE = "Payments aren't set up yet — check back soon.";
 
@@ -24,6 +25,7 @@ export async function startCheckout(plan: "monthly" | "yearly"): Promise<string 
     data: { plan, accessToken: token, origin: window.location.origin },
   });
   if (!res.ok) return res.message;
+  clearCheckoutPlan();
   window.location.href = res.url;
   return null;
 }
