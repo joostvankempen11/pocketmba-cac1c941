@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { weeks } from "@/content/curriculum";
 import { ArrowRight } from "lucide-react";
 import logoSymbol from "@/assets/umba-symbol.png.asset.json";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,6 +20,11 @@ export const Route = createFileRoute("/")({
 });
 
 function Landing() {
+  const { data: signedIn } = useQuery({
+    queryKey: ["public-session"],
+    queryFn: async () => Boolean((await supabase.auth.getSession()).data.session),
+    staleTime: 30_000,
+  });
   return (
     <div className="min-h-screen bg-background">
       <header className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5">
@@ -28,10 +35,10 @@ function Landing() {
         <nav className="flex items-center gap-2 text-sm">
           <Link to="/pricing" className="rounded-md px-3 py-2 hover:bg-accent">Pricing</Link>
           <Link
-            to="/auth"
+            to={signedIn ? "/account" : "/auth"}
             className="rounded-md bg-primary px-4 py-2 font-medium text-primary-foreground hover:bg-primary/90"
           >
-            Sign in
+            {signedIn ? "Account" : "Sign in"}
           </Link>
         </nav>
       </header>
@@ -47,6 +54,7 @@ function Landing() {
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
             to="/auth"
+            search={{ mode: "signup" }}
             className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
           >
             Start free trial <ArrowRight className="h-4 w-4" />
