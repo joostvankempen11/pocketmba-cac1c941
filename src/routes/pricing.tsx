@@ -1,8 +1,11 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { Check, GraduationCap } from "lucide-react";
 import { useState } from "react";
-import { useBillingStatus, startCheckout } from "@/lib/billing";
+import { useBillingStatus } from "@/lib/billing";
 import { PRICES, formatPrice, useCurrency } from "@/lib/currency";
+import { supabase } from "@/integrations/supabase/client";
+import { checkoutDestination, rememberCheckoutPlan } from "@/lib/checkout-intent";
+import { Button } from "@/components/Button";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -27,6 +30,7 @@ const features = [
 ];
 
 function Pricing() {
+  const navigate = useNavigate();
   const { data: billing } = useBillingStatus();
   const currency = useCurrency();
   const [error, setError] = useState<string | null>(null);
@@ -36,9 +40,15 @@ function Pricing() {
   async function choose(plan: "monthly" | "yearly") {
     setError(null);
     setBusy(plan);
-    const msg = await startCheckout(plan);
-    if (msg) setError(msg);
-    setBusy(null);
+    try {
+      rememberCheckoutPlan(plan);
+      const { data } = await supabase.auth.getSession();
+      await navigate(checkoutDestination(plan, Boolean(data.session)));
+    } catch {
+      setError("Unable to continue right now. Please try again.");
+    } finally {
+      setBusy(null);
+    }
   }
 
   return (
@@ -61,6 +71,7 @@ function Pricing() {
             note="7-day free trial, then billed monthly."
             configured={configured}
             busy={busy === "monthly"}
+            disabled={busy !== null}
             onChoose={() => choose("monthly")}
           />
           <PlanCard
@@ -71,6 +82,7 @@ function Pricing() {
             highlight
             configured={configured}
             busy={busy === "yearly"}
+            disabled={busy !== null}
             onChoose={() => choose("yearly")}
           />
         </div>
@@ -104,6 +116,7 @@ function PlanCard({
   highlight,
   configured,
   busy,
+  disabled,
   onChoose,
 }: {
   name: string;
@@ -113,6 +126,7 @@ function PlanCard({
   highlight?: boolean;
   configured: boolean;
   busy: boolean;
+  disabled: boolean;
   onChoose: () => void;
 }) {
   return (
@@ -128,16 +142,17 @@ function PlanCard({
       </div>
       <p className="mt-3 text-sm text-muted-foreground">{note}</p>
       {configured ? (
-        <button
+        <Button
           onClick={onChoose}
-          disabled={busy}
-          className="mt-5 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60"
+          disabled={disabled}
+          className="mt-5 w-full"
         >
           {busy ? "Opening checkout…" : "Get started"}
-        </button>
+        </Button>
       ) : (
         <Link
           to="/auth"
+          search={{ mode: "signup" }}
           className="mt-5 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
         >
           Create your account
