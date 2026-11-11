@@ -13,9 +13,19 @@ import { useProgress } from "@/lib/progress-store";
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/lesson/$week/$lesson")({
-  head: ({ params }) => ({
-    meta: [{ title: `Lesson — Week ${params.week}` }],
-  }),
+  head: ({ params }) => {
+    const lesson = getWeek(Number(params.week))?.lessons.find((item) => item.id === params.lesson);
+    const title = `${lesson?.title ?? "Lesson"} — Week ${params.week} — 12-Week MBA`;
+    const description = lesson?.summary ?? `Study Week ${params.week} in the MBA program.`;
+    return { meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ] };
+  },
   component: LessonPage,
 });
 

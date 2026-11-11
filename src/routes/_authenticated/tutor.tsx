@@ -3,7 +3,14 @@ import { AppShell } from "@/components/AppShell";
 import { TutorChat } from "@/components/TutorChat";
 
 export const Route = createFileRoute("/_authenticated/tutor")({
-  head: () => ({ meta: [{ title: "AI Tutor — 12-Week MBA" }] }),
+  head: () => ({ meta: [
+    { title: "AI Tutor — 12-Week MBA" },
+    { name: "description", content: "Study business concepts and worked examples with your MBA tutor." },
+    { property: "og:title", content: "AI Tutor — 12-Week MBA" },
+    { property: "og:description", content: "Study business concepts and worked examples with your MBA tutor." },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary" },
+  ] }),
   component: TutorPage,
 });
 

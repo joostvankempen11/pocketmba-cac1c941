@@ -11,6 +11,8 @@ export const Route = createFileRoute("/_authenticated/dashboard")({
       { name: "description", content: "A self-paced MBA program with lessons, quizzes, AI-graded assignments, and a capstone." },
       { property: "og:title", content: "12-Week MBA" },
       { property: "og:description", content: "Build solid business foundations in 12 weeks." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: Dashboard,

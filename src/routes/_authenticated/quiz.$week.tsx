@@ -7,7 +7,14 @@ import { CheckCircle2, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/_authenticated/quiz/$week")({
-  head: ({ params }) => ({ meta: [{ title: `Quiz — Week ${params.week}` }] }),
+  head: ({ params }) => ({ meta: [
+    { title: `Quiz — Week ${params.week} — 12-Week MBA` },
+    { name: "description", content: `Test your understanding of Week ${params.week} in the MBA program.` },
+    { property: "og:title", content: `Quiz — Week ${params.week} — 12-Week MBA` },
+    { property: "og:description", content: `Test your understanding of Week ${params.week} in the MBA program.` },
+    { property: "og:type", content: `website` },
+    { name: "twitter:card", content: `summary` },
+  ] }),
   component: QuizPage,
 });
 

@@ -6,7 +6,14 @@ import { BookOpen, CheckCircle2, ClipboardList, FileQuestion } from "lucide-reac
 
 export const Route = createFileRoute("/_authenticated/week/$week")({
   head: ({ params }) => ({
-    meta: [{ title: `Week ${params.week} — 12-Week MBA` }],
+    meta: [
+      { title: `Week ${params.week} — 12-Week MBA` },
+      { name: "description", content: `Explore Week ${params.week} lessons, quiz, and assignment in your MBA program.` },
+      { property: "og:title", content: `Week ${params.week} — 12-Week MBA` },
+      { property: "og:description", content: `Explore Week ${params.week} lessons, quiz, and assignment in your MBA program.` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ],
   }),
   component: WeekPage,
 });

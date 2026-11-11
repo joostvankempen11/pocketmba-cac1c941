@@ -9,7 +9,14 @@ import { useProgress } from "@/lib/progress-store";
 import { Loader2 } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/assignment/$week/$id")({
-  head: ({ params }) => ({ meta: [{ title: `Assignment — Week ${params.week}` }] }),
+  head: ({ params }) => ({ meta: [
+    { title: `Assignment — Week ${params.week} — 12-Week MBA` },
+    { name: "description", content: `Complete your Week ${params.week} assignment and receive feedback.` },
+    { property: "og:title", content: `Assignment — Week ${params.week} — 12-Week MBA` },
+    { property: "og:description", content: `Complete your Week ${params.week} assignment and receive feedback.` },
+    { property: "og:type", content: `website` },
+    { name: "twitter:card", content: `summary` },
+  ] }),
   component: AssignmentPage,
 });
 
