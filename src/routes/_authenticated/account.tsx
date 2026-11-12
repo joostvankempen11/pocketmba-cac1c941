@@ -92,23 +92,25 @@ function AccountPage() {
                 {billing?.configured ? (
                   <>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Manage your card, invoices or switch to the yearly plan.
+                      {profile.subscription_plan === "lifetime" ? "Your tuition is paid in full — lifetime access, no recurring charges." : profile.stripe_subscription_id ? "Manage your card and invoices." : "Enroll with a one-time tuition payment for lifetime access."}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      <button
-                        onClick={() => run(openBillingPortal)}
-                        disabled={busy}
-                        className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60"
-                      >
-                        Manage billing
-                      </button>
-                      {profile.subscription_plan !== "yearly" && (
+                      {(profile.stripe_customer_id) && (
                         <button
-                          onClick={() => run(() => startCheckout("yearly"))}
+                          onClick={() => run(openBillingPortal)}
                           disabled={busy}
                           className="inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent disabled:opacity-60"
                         >
-                          Switch to yearly — {formatPrice(PRICES.yearly, currency)}
+                          Invoices & billing
+                        </button>
+                      )}
+                      {profile.subscription_status !== "active" && (
+                        <button
+                          onClick={() => run(() => startCheckout("tuition"))}
+                          disabled={busy}
+                          className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60"
+                        >
+                          Enroll now — {formatPrice(PRICES.tuition, currency)}
                         </button>
                       )}
                     </div>
@@ -123,7 +125,7 @@ function AccountPage() {
                       to="/pricing"
                       className="mt-4 inline-flex items-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent"
                     >
-                      View plans
+                      View tuition
                     </Link>
                   </>
                 )}

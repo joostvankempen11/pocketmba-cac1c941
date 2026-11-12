@@ -10,10 +10,10 @@ import { Button } from "@/components/Button";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — 12-Week MBA" },
-      { name: "description", content: "€29,99 per month or €119,99 per year for the full 12-week MBA program, with a 7-day free trial." },
-      { property: "og:title", content: "Pricing — 12-Week MBA" },
-      { property: "og:description", content: "€29,99 monthly or €119,99 yearly. 7-day free trial. Cancel anytime." },
+      { title: "Tuition — 12-Week MBA" },
+      { name: "description", content: "One-time tuition of $997 (regularly $1,497) for lifetime access to the full 12-week MBA program." },
+      { property: "og:title", content: "Tuition — 12-Week MBA" },
+      { property: "og:description", content: "Pay once: $997 instead of $1,497. Lifetime access, no recurring fees." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -22,11 +22,11 @@ export const Route = createFileRoute("/pricing")({
 });
 
 const features = [
-  "12 weeks of structured lessons across 10 disciplines",
-  "AI tutor available around the clock",
-  "Quizzes and AI-graded assignments with rubric feedback",
-  "Hands-on exercises in every lesson",
-  "Capstone project",
+  "Full 12-week MBA curriculum (48 deep-dive lessons)",
+  "24/7 personal AI MBA tutor",
+  "Hands-on business exercises with instant feedback",
+  "Capstone project and shareable certificate",
+  "All future curriculum updates included",
 ];
 
 function Pricing() {
@@ -34,130 +34,70 @@ function Pricing() {
   const { data: billing } = useBillingStatus();
   const currency = useCurrency();
   const [error, setError] = useState<string | null>(null);
-  const [busy, setBusy] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
   const configured = billing?.configured ?? false;
+  const price = formatPrice(PRICES.tuition, currency);
+  const regular = formatPrice(PRICES.tuitionRegular, currency);
+  const saving = formatPrice(PRICES.tuitionRegular - PRICES.tuition, currency);
 
-  async function choose(plan: "monthly" | "yearly") {
+  async function enroll() {
     setError(null);
-    setBusy(plan);
+    setBusy(true);
     try {
-      rememberCheckoutPlan(plan);
+      rememberCheckoutPlan("tuition");
       const { data } = await supabase.auth.getSession();
-      await navigate(checkoutDestination(plan, Boolean(data.session)));
+      await navigate(checkoutDestination("tuition", Boolean(data.session)));
     } catch {
       setError("Unable to continue right now. Please try again.");
     } finally {
-      setBusy(null);
+      setBusy(false);
     }
   }
 
   return (
     <div className="min-h-screen bg-background px-6 py-16">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-xl">
         <Link to="/" className="flex items-center gap-2">
           <GraduationCap className="h-6 w-6 text-primary" />
           <span className="font-semibold">12-Week MBA</span>
         </Link>
-        <h1 className="mt-10 text-3xl font-semibold tracking-tight">Simple pricing</h1>
-        <p className="mt-2 text-muted-foreground">
-          Start with a 7-day free trial. Cancel anytime.
-        </p>
+        <h1 className="mt-10 text-3xl font-semibold tracking-tight">Tuition</h1>
+        <p className="mt-2 text-muted-foreground">One payment. Lifetime access. No subscriptions.</p>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
-          <PlanCard
-            name="Monthly"
-            price={formatPrice(PRICES.monthly, currency)}
-            period="per month"
-            note="7-day free trial, then billed monthly."
-            configured={configured}
-            busy={busy === "monthly"}
-            disabled={busy !== null}
-            onChoose={() => choose("monthly")}
-          />
-          <PlanCard
-            name="Yearly"
-            price={formatPrice(PRICES.yearly, currency)}
-            period="per year"
-            note="Billed once a year — roughly 66% off the monthly plan."
-            highlight
-            configured={configured}
-            busy={busy === "yearly"}
-            disabled={busy !== null}
-            onChoose={() => choose("yearly")}
-          />
+        <div className="mt-8 rounded-xl border border-primary bg-card p-6 sm:p-8">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div className="text-sm font-medium uppercase tracking-wider text-muted-foreground">Early enrollment tuition</div>
+            <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">Save {saving}</span>
+          </div>
+          <div className="mt-4 flex flex-wrap items-baseline gap-3">
+            <span className="text-xl text-muted-foreground line-through" aria-label={`Regular price ${regular}`}>{regular}</span>
+            <span className="text-4xl font-semibold">{price}</span>
+          </div>
+          <p className="mt-2 text-sm text-muted-foreground">One-time payment · Full lifetime access</p>
+
+          <ul className="mt-6 space-y-2">
+            {features.map((f) => (
+              <li key={f} className="flex items-start gap-2 text-sm">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                {f}
+              </li>
+            ))}
+          </ul>
+
+          {configured ? (
+            <Button onClick={enroll} disabled={busy} className="mt-6 w-full">
+              {busy ? "Opening checkout…" : `Enroll now — ${price}`}
+            </Button>
+          ) : (
+            <p className="mt-6 rounded-lg border border-border p-4 text-sm text-muted-foreground">
+              Payments aren't set up yet — check back soon.
+            </p>
+          )}
+          <p className="mt-3 text-center text-xs text-muted-foreground">No recurring charges · No monthly fees</p>
         </div>
 
         {error && <p className="mt-4 text-sm text-destructive">{error}</p>}
-
-        <ul className="mt-10 grid gap-2 sm:grid-cols-2">
-          {features.map((f) => (
-            <li key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-              {f}
-            </li>
-          ))}
-        </ul>
-
-        {!configured && (
-          <p className="mt-10 rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">
-            Payments aren't set up yet — check back soon.
-          </p>
-        )}
       </div>
-    </div>
-  );
-}
-
-function PlanCard({
-  name,
-  price,
-  period,
-  note,
-  highlight,
-  configured,
-  busy,
-  disabled,
-  onChoose,
-}: {
-  name: string;
-  price: string;
-  period: string;
-  note: string;
-  highlight?: boolean;
-  configured: boolean;
-  busy: boolean;
-  disabled: boolean;
-  onChoose: () => void;
-}) {
-  return (
-    <div
-      className={
-        "rounded-xl border bg-card p-6 " + (highlight ? "border-primary" : "border-border")
-      }
-    >
-      <div className="text-sm font-medium uppercase tracking-wider text-muted-foreground">{name}</div>
-      <div className="mt-2 flex items-baseline gap-2">
-        <span className="text-3xl font-semibold">{price}</span>
-        <span className="text-sm text-muted-foreground">{period}</span>
-      </div>
-      <p className="mt-3 text-sm text-muted-foreground">{note}</p>
-      {configured ? (
-        <Button
-          onClick={onChoose}
-          disabled={disabled}
-          className="mt-5 w-full"
-        >
-          {busy ? "Opening checkout…" : "Get started"}
-        </Button>
-      ) : (
-        <Link
-          to="/auth"
-          search={{ mode: "signup" }}
-          className="mt-5 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-        >
-          Create your account
-        </Link>
-      )}
     </div>
   );
 }

@@ -56,6 +56,20 @@ export const Route = createFileRoute("/api/public/webhooks/stripe")({
 
         switch (event.type) {
           case "checkout.session.completed": {
+            if (obj.mode === "payment") {
+              // One-time tuition: grant lifetime access once paid.
+              if (obj.payment_status !== "paid") break;
+              await admin
+                .from("profiles")
+                .update({
+                  subscription_status: "active",
+                  subscription_plan: "lifetime",
+                  trial_ends_at: null,
+                  stripe_customer_id: typeof obj.customer === "string" ? obj.customer : null,
+                })
+                .eq("id", userId);
+              break;
+            }
             await admin
               .from("profiles")
               .update({
@@ -99,6 +113,15 @@ export const Route = createFileRoute("/api/public/webhooks/stripe")({
           }
           case "invoice.payment_failed": {
             await admin.from("profiles").update({ subscription_status: "expired" }).eq("id", userId);
+            break;
+          }
+          case "checkout.session.async_payment_succeeded": {
+            if (obj.mode === "payment") {
+              await admin
+                .from("profiles")
+                .update({ subscription_status: "active", subscription_plan: "lifetime", trial_ends_at: null })
+                .eq("id", userId);
+            }
             break;
           }
           default:

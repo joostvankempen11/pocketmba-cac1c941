@@ -18,7 +18,7 @@ async function accessToken() {
   return data.session?.access_token ?? null;
 }
 
-export async function startCheckout(plan: "monthly" | "yearly"): Promise<string | null> {
+export async function startCheckout(plan: "tuition"): Promise<string | null> {
   const token = await accessToken();
   if (!token) return "Please sign in first.";
   const res = await createCheckoutSession({

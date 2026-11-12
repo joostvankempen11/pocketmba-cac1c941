@@ -1,7 +1,7 @@
-export type CheckoutPlan = "monthly" | "yearly";
+export type CheckoutPlan = "tuition";
 
 export function parseCheckoutPlan(value: unknown): CheckoutPlan | undefined {
-  return value === "monthly" || value === "yearly" ? value : undefined;
+  return value === "tuition" ? value : undefined;
 }
 
 const STORAGE_KEY = "mba-checkout-intent";

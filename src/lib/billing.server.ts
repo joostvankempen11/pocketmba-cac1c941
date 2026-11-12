@@ -6,17 +6,15 @@ import type { Database } from "@/integrations/supabase/types";
 
 export type StripeConfig = {
   secretKey: string;
-  monthlyPriceId: string;
-  yearlyPriceId: string;
+  tuitionPriceId: string;
 };
 
 /** Returns null when Stripe isn't configured yet. Read per-request. */
 export function getStripeConfig(): StripeConfig | null {
   const secretKey = process.env['STRIPE_SECRET_KEY'];
-  const monthlyPriceId = process.env['STRIPE_MONTHLY_PRICE_ID'];
-  const yearlyPriceId = process.env['STRIPE_YEARLY_PRICE_ID'];
-  if (!secretKey || !monthlyPriceId || !yearlyPriceId) return null;
-  return { secretKey, monthlyPriceId, yearlyPriceId };
+  const tuitionPriceId = process.env['STRIPE_TUITION_PRICE_ID'];
+  if (!secretKey || !tuitionPriceId) return null;
+  return { secretKey, tuitionPriceId };
 }
 
 export const PAYMENTS_UNAVAILABLE_MESSAGE =

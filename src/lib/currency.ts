@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export type Currency = "EUR" | "USD";
 
-export const PRICES = { monthly: 29.99, yearly: 119.99 } as const;
+export const PRICES = { monthly: 29.99, yearly: 119.99, tuition: 997, tuitionRegular: 1497 } as const;
 
 /** Non-Europe/* zones that are still European (or euro-adjacent) territories. */
 const EUROPEAN_EXTRA_TZ = new Set([
@@ -38,6 +38,10 @@ export function useCurrency(): Currency {
 }
 
 export function formatPrice(amount: number, currency: Currency): string {
+  if (Number.isInteger(amount)) {
+    const n = amount.toLocaleString(currency === "EUR" ? "de-DE" : "en-US");
+    return currency === "EUR" ? `€${n}` : `$${n}`;
+  }
   return currency === "EUR"
     ? `€${amount.toFixed(2).replace(".", ",")}`
     : `$${amount.toFixed(2)}`;

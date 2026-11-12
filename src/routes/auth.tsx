@@ -7,7 +7,7 @@ import { Button } from "@/components/Button";
 import { parseCheckoutPlan, recallCheckoutPlan, rememberCheckoutPlan } from "@/lib/checkout-intent";
 
 export const Route = createFileRoute("/auth")({
-  validateSearch: (search: Record<string, unknown>): { mode?: string; plan?: "monthly" | "yearly" } => ({
+  validateSearch: (search: Record<string, unknown>): { mode?: string; plan?: "tuition" } => ({
     mode: typeof search.mode === "string" ? search.mode : undefined,
     plan: parseCheckoutPlan(search.plan),
   }),

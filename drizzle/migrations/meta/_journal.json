@@ -8,6 +8,13 @@
       "when": 1794340614916,
       "tag": "0000_end_first_ten_free_signup_offer",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1794511884114,
+      "tag": "0001_add_lifetime_tuition_plan",
+      "breakpoints": true
     }
   ]
 }

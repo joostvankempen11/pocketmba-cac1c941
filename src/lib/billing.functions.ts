@@ -12,7 +12,7 @@ export const getBillingStatus = createServerFn({ method: "GET" }).handler(async 
 });
 
 const checkoutInput = z.object({
-  plan: z.enum(["monthly", "yearly"]),
+  plan: z.enum(["tuition"]),
   accessToken: z.string().min(1),
   origin: z.string().url(),
 });
@@ -45,6 +45,9 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
     if (profile?.subscription_status === "free_beta") {
       return { ok: false as const, message: "You have free beta access — no payment needed." };
     }
+    if (profile?.subscription_status === "active") {
+      return { ok: false as const, message: "Your tuition is already paid — enjoy the program." };
+    }
 
     let customerId = profile?.stripe_customer_id ?? null;
     if (!customerId) {
@@ -57,21 +60,16 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
     }
 
     const params: Record<string, string> = {
-      mode: "subscription",
+      mode: "payment",
       customer: customerId,
-      "line_items[0][price]":
-        data.plan === "monthly" ? config.monthlyPriceId : config.yearlyPriceId,
+      "line_items[0][price]": config.tuitionPriceId,
       "line_items[0][quantity]": "1",
       success_url: `${data.origin}/dashboard`,
       cancel_url: `${data.origin}/pricing`,
-      "subscription_data[metadata][supabase_user_id]": user.id,
-      "subscription_data[metadata][plan]": data.plan,
       "metadata[supabase_user_id]": user.id,
+      "metadata[plan]": "lifetime",
+      "payment_intent_data[metadata][supabase_user_id]": user.id,
     };
-    if (data.plan === "monthly") {
-      params["subscription_data[trial_period_days]"] = "7";
-      params["payment_method_collection"] = "always";
-    }
 
     const session = await stripeRequest<{ url: string }>(config.secretKey, "checkout/sessions", params);
     return { ok: true as const, url: session.url };

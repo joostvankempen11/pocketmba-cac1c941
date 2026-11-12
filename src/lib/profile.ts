@@ -6,7 +6,7 @@ export type Profile = {
   id: string;
   email: string | null;
   subscription_status: "trialing" | "active" | "free_beta" | "canceled" | "expired";
-  subscription_plan: "monthly" | "yearly" | "beta_free" | null;
+  subscription_plan: "monthly" | "yearly" | "beta_free" | "lifetime" | null;
   trial_ends_at: string | null;
   stripe_customer_id: string | null;
   stripe_subscription_id: string | null;
@@ -51,6 +51,7 @@ export function planLabel(p: Profile["subscription_plan"]) {
   const c = detectCurrency();
   if (p === "monthly") return `Monthly — ${formatPrice(PRICES.monthly, c)} / month`;
   if (p === "yearly") return `Yearly — ${formatPrice(PRICES.yearly, c)} / year`;
+  if (p === "lifetime") return "Full tuition paid — lifetime access";
   if (p === "beta_free") return "Beta — free forever";
   return "No plan yet";
 }
