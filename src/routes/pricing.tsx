@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { Check, GraduationCap } from "lucide-react";
+import { Check, GraduationCap, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { useBillingStatus } from "@/lib/billing";
 import { PRICES, formatPrice, useCurrency } from "@/lib/currency";
@@ -27,6 +27,7 @@ const features = [
   "Hands-on business exercises with instant feedback",
   "Capstone project and shareable certificate",
   "All future curriculum updates included",
+  "30-day risk-free money-back guarantee",
 ];
 
 function Pricing() {
@@ -94,6 +95,24 @@ function Pricing() {
             </p>
           )}
           <p className="mt-3 text-center text-xs text-muted-foreground">No recurring charges · No monthly fees</p>
+
+          <div className="mt-6 flex items-start gap-3 rounded-lg border border-border bg-muted/40 p-4">
+            <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+            <div className="text-sm">
+              <p className="font-semibold">30-day 100% money-back guarantee</p>
+              <p className="mt-1 text-muted-foreground">
+                Explore the full program risk-free. If it's not the right fit, get a full refund within 30 days — no questions asked.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-xl border border-border bg-card p-5 text-center text-sm">
+          <p className="font-semibold">Want to explore first?</p>
+          <p className="mt-1 text-muted-foreground">Start your 7-day free trial — instant full access, no card needed.</p>
+          <Link to="/auth" search={{ mode: "signup" } as never} className="mt-3 inline-block font-medium text-primary underline underline-offset-4">
+            Start 7-day free trial
+          </Link>
         </div>
 
         {error && <p className="mt-4 text-sm text-destructive">{error}</p>}
