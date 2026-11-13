@@ -110,7 +110,7 @@ function Pricing() {
         <div className="mt-6 rounded-xl border border-border bg-card p-5 text-center text-sm">
           <p className="font-semibold">Want to explore first?</p>
           <p className="mt-1 text-muted-foreground">Start your 7-day free trial — instant full access, no card needed.</p>
-          <Link to="/auth" search={{ mode: "signup" } as never} className="mt-3 inline-block font-medium text-primary underline underline-offset-4">
+          <Link to="/auth" search={{ mode: "signup" }} className="mt-3 inline-block font-medium text-primary underline underline-offset-4">
             Start 7-day free trial
           </Link>
         </div>
