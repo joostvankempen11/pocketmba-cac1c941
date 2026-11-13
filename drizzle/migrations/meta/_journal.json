@@ -15,6 +15,13 @@
       "when": 1794511884114,
       "tag": "0001_add_lifetime_tuition_plan",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794547615408,
+      "tag": "0002_restrict_study_group_messages_to_members",
+      "breakpoints": true
     }
   ]
 }

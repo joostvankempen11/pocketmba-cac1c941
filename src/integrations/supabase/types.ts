@@ -407,7 +407,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      is_study_group_member: {
+        Args: { _group_id: string; _user_id: string }
+        Returns: boolean
+      }
     }
     Enums: {
       subscription_plan: "monthly" | "yearly" | "beta_free" | "lifetime"
