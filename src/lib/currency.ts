@@ -1,6 +1,6 @@
 export type Currency = "EUR" | "USD";
 
-export const PRICES = { monthly: 29.99, yearly: 119.99, tuition: 997, tuitionRegular: 1497 } as const;
+export const PRICES = { monthly: 29.99, yearly: 119.99, tuition: 597, tuitionRegular: 997 } as const;
 
 /** Stripe charges in USD, so every visitor sees USD to match checkout exactly. */
 export function detectCurrency(): Currency {

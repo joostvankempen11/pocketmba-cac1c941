@@ -11,9 +11,9 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Tuition — 12-Week MBA" },
-      { name: "description", content: "One-time tuition of $997 (regularly $1,497) for lifetime access to the full 12-week MBA program." },
+      { name: "description", content: "One-time tuition of $597 (regularly $997) for lifetime access to the full 12-week MBA program." },
       { property: "og:title", content: "Tuition — 12-Week MBA" },
-      { property: "og:description", content: "Pay once: $997 instead of $1,497. Lifetime access, no recurring fees." },
+      { property: "og:description", content: "Pay once: $597 instead of $997. Lifetime access, no recurring fees." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
